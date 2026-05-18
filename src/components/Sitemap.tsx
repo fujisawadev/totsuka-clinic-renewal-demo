@@ -15,26 +15,32 @@ const COLUMNS = [
       { label: "うけ口（下顎前突）", href: "/symptoms/underbite/" },
       { label: "出っ歯（上顎前突）", href: "/symptoms/overbite/" },
       { label: "乱杭歯・開咬", href: "/symptoms/crowded-openbite/" },
-    ],
-  },
-  {
-    label: "その他の治療",
-    items: [
       { label: "外科治療", href: "/surgical/" },
       { label: "抜歯について", href: "/extraction/" },
       { label: "アフターケア", href: "/aftercare/" },
     ],
   },
   {
-    label: "院について",
+    label: "医院について",
     items: [
-      { label: "初診の方へ", href: "/first-visit/" },
+      { label: "院長紹介", href: "/doctor/" },
+      { label: "年別症例件数", href: "/achievements/" },
       { label: "院内紹介・交通", href: "/access-info/" },
+      { label: "初診の方へ", href: "/first-visit/" },
+      { label: "インタビュー記事", href: "/interview/" },
+      { label: "採用情報", href: "/recruit/" },
+    ],
+  },
+  {
+    label: "情報・その他",
+    items: [
       { label: "よくある質問", href: "/faq/" },
+      { label: "横浜の矯正歯科 Q&A", href: "/yokohama/" },
+      { label: "お知らせ", href: "/news/" },
       { label: "患者さんへのお願い", href: "/notice/" },
       { label: "治療に関するご注意", href: "/precautionary/" },
       { label: "リスク・副作用について", href: "/risk/" },
-      { label: "お知らせ", href: "/news/" },
+      { label: "リンク集", href: "/links/" },
     ],
   },
 ];

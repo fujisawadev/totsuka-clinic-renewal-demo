@@ -17,7 +17,7 @@ export default function SubPageLayout({ category, enTitle, jpTitle, children }: 
   return (
     <>
       <RevealObserver />
-      <Header />
+      <Header solid homeHref="/" anchorBase="/" />
       <SideActions />
       <main className="pt-16 lg:pt-20">
         <SubPageHero category={category} enTitle={enTitle} jpTitle={jpTitle} />

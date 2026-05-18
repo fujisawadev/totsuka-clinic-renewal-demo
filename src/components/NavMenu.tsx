@@ -19,11 +19,18 @@ const TREATMENT = [
   { label: "治療前後の比較", href: "/before-after/" },
 ];
 const CLINIC = [
-  { label: "初診の方へ", href: "/first-visit/" },
+  { label: "院長紹介", href: "/doctor/" },
+  { label: "年別症例件数", href: "/achievements/" },
   { label: "院内紹介・交通", href: "/access-info/" },
+  { label: "初診の方へ", href: "/first-visit/" },
   { label: "矯正治療料金", href: "/pricing/" },
+  { label: "採用情報", href: "/recruit/" },
+];
+const INFO = [
   { label: "よくある質問", href: "/faq/" },
+  { label: "横浜の矯正歯科 Q&A", href: "/yokohama/" },
   { label: "お知らせ", href: "/news/" },
+  { label: "リンク集", href: "/links/" },
 ];
 
 export default function NavMenu({ open, onClose }: Props) {
@@ -70,7 +77,8 @@ export default function NavMenu({ open, onClose }: Props) {
           <div className="space-y-10">
             <Group label="症状別 / Symptoms" items={SYMPTOMS} />
             <Group label="矯正治療 / Treatment" items={TREATMENT} />
-            <Group label="クリニック / Clinic" items={CLINIC} />
+            <Group label="医院について / Clinic" items={CLINIC} />
+            <Group label="情報・その他 / Info" items={INFO} />
           </div>
         </div>
       </aside>
