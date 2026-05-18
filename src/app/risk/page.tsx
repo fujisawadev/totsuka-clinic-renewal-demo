@@ -1,0 +1,41 @@
+import SubPageLayout from "@/components/SubPageLayout";
+import PageSection from "@/components/PageSection";
+
+export const metadata = {
+  title: "矯正歯科治療における一般的なリスク・副作用について｜ささき矯正歯科クリニック",
+};
+
+const RISKS = [
+  "矯正歯科装置を付けた後しばらくは違和感、不快感、痛みなどが生じることがありますが、一般的には数日〜1、2週間で慣れてきます。",
+  "歯の動き方には個人差があり、予想された治療期間が延長する可能性があります。",
+  "矯正歯科装置の使用状況、顎間ゴムの使用状況、定期的な通院など、矯正歯科治療には患者さんの協力が必要であり、それらが治療結果や治療期間に影響します。",
+  "治療中は矯正歯科装置が歯の表面に付いているため食物が溜まりやすく、また歯が磨きにくくなるため、むし歯や歯周病が生じるリスクが高まります。ハミガキを適切に行い、お口の中を常に清潔に保ち、かかりつけ歯科医に定期的に受診することが大切です。",
+  "歯を動かすことにより歯根が吸収して短くなることや、歯肉がやせて下がることがあります。",
+  "ごくまれに歯が骨と癒着していて歯が動かないことがあります。",
+  "ごくまれに歯を動かすことで神経が障害を受けて壊死することがあります。",
+  "矯正歯科装置などにより金属等のアレルギー症状が出ることがあります。",
+  "治療中に顎関節の痛み、音が鳴る、口が開けにくいなどの症状が生じることがあります。",
+  "治療の経過によっては当初予定していた治療計画を変更する可能性があります。",
+  "歯の形の修正や咬み合わせの微調整を行う可能性があります。",
+  "矯正歯科装置を誤飲する可能性があります。",
+];
+
+export default function Page() {
+  return (
+    <SubPageLayout category="治療に関するご注意" enTitle="RISK" jpTitle="リスク・副作用について">
+      <PageSection>
+        <p className="text-[14px] leading-loose text-[#444] mb-10 max-w-2xl">
+          矯正歯科治療における一般的なリスク・副作用について、以下のとおりご案内いたします。
+        </p>
+        <ol className="space-y-4">
+          {RISKS.map((r, i) => (
+            <li key={i} className="flex items-start gap-4 border-b border-[#e3e3e3]/70 pb-4">
+              <span className="text-[#9a998e] text-sm tracking-widest shrink-0 w-8">{String(i + 1).padStart(2, "0")}</span>
+              <p className="text-[14px] leading-loose text-[#222]">{r}</p>
+            </li>
+          ))}
+        </ol>
+      </PageSection>
+    </SubPageLayout>
+  );
+}

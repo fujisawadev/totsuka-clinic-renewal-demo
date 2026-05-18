@@ -81,7 +81,7 @@ export default function Concept() {
         </div>
 
         <div className="anim mt-16 flex justify-center">
-          <a href="#counseling" className="inline-flex flex-col items-center text-sm text-[#222] hover:text-[#9a998e] transition">
+          <a href="/treatment/" className="inline-flex flex-col items-center text-sm text-[#222] hover:text-[#9a998e] transition">
             <span className="text-[11px] tracking-[0.25em] text-[#9a998e] mb-1">当院の特徴</span>
             <span className="flex items-center gap-3 text-lg tracking-wider">
               View more
@@ -103,7 +103,7 @@ export default function Concept() {
             <div className="hidden lg:block text-[#9a998e] text-3xl">▸</div>
             <div className="anim anim-delay-1 text-[15px] leading-loose">
               <p>まずは <span className="bg-[#fff7c7] px-1">無料の初診相談</span> で、ご相談ください。</p>
-              <p className="mt-2 text-[13px] text-[#666]">お電話 045-871-2281、またはネット予約フォームよりお申し込みいただけます。</p>
+              <p className="mt-2 text-[13px] text-[#666]">お電話 <a href="tel:0458712281" className="link-underline">045-871-2281</a>、または <a href="/first-visit/" className="link-underline">初診の方へ</a> ページよりお申し込みいただけます。</p>
             </div>
           </div>
         </div>

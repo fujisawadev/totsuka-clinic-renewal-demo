@@ -5,28 +5,25 @@ import { cn } from "@/lib/cn";
 type Props = { open: boolean; onClose: () => void };
 
 const SYMPTOMS = [
-  "上顎前突（出っ歯）",
-  "下顎前突（受け口）",
-  "上下顎前突（口ゴボ）",
-  "叢生（八重歯）",
-  "開咬",
-  "過蓋咬合",
+  { label: "うけ口（下顎前突）", href: "/symptoms/underbite/" },
+  { label: "出っ歯（上顎前突）", href: "/symptoms/overbite/" },
+  { label: "乱杭歯・開咬", href: "/symptoms/crowded-openbite/" },
 ];
-const CATEGORIES = [
-  "小児矯正",
-  "成人矯正",
-  "マウスピース型矯正",
-  "ワイヤー矯正",
-  "舌側矯正",
-  "部分矯正",
+const TREATMENT = [
+  { label: "矯正治療について", href: "/treatment/" },
+  { label: "矯正治療の進め方", href: "/process/" },
+  { label: "矯正装置", href: "/appliance/" },
+  { label: "外科治療", href: "/surgical/" },
+  { label: "抜歯について", href: "/extraction/" },
+  { label: "アフターケア", href: "/aftercare/" },
+  { label: "治療前後の比較", href: "/before-after/" },
 ];
 const CLINIC = [
-  "院長紹介",
-  "院内紹介",
-  "アクセス",
-  "料金",
-  "症例",
-  "よくある質問",
+  { label: "初診の方へ", href: "/first-visit/" },
+  { label: "院内紹介・交通", href: "/access-info/" },
+  { label: "矯正治療料金", href: "/pricing/" },
+  { label: "よくある質問", href: "/faq/" },
+  { label: "お知らせ", href: "/news/" },
 ];
 
 export default function NavMenu({ open, onClose }: Props) {
@@ -71,9 +68,9 @@ export default function NavMenu({ open, onClose }: Props) {
             <span className="text-sm tracking-widest">CLOSE ×</span>
           </button>
           <div className="space-y-10">
-            <Group label="症状別 / Symptoms" links={SYMPTOMS} />
-            <Group label="年齢・装置別 / Categories" links={CATEGORIES} />
-            <Group label="クリニック / Clinic" links={CLINIC} />
+            <Group label="症状別 / Symptoms" items={SYMPTOMS} />
+            <Group label="矯正治療 / Treatment" items={TREATMENT} />
+            <Group label="クリニック / Clinic" items={CLINIC} />
           </div>
         </div>
       </aside>
@@ -81,15 +78,15 @@ export default function NavMenu({ open, onClose }: Props) {
   );
 }
 
-function Group({ label, links }: { label: string; links: string[] }) {
+function Group({ label, items }: { label: string; items: { label: string; href: string }[] }) {
   return (
     <div>
       <div className="section-label mb-4">{label}</div>
       <ul className="space-y-3">
-        {links.map((l) => (
-          <li key={l}>
-            <a href="#" className="link-underline text-[15px]">
-              {l}
+        {items.map((l) => (
+          <li key={l.label}>
+            <a href={l.href} className="link-underline text-[15px]">
+              {l.label}
             </a>
           </li>
         ))}

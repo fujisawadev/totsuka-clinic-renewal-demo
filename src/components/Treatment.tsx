@@ -3,33 +3,34 @@ import Placeholder from "./Placeholder";
 const PLACEHOLDER_BODY = "プレースホルダー本文 ── このカードの説明文が入ります。";
 
 const BY_AGE = [
-  { tag: "child", title: "小児矯正", body: PLACEHOLDER_BODY },
-  { tag: "adult", title: "成人矯正", body: PLACEHOLDER_BODY },
+  { tag: "child", title: "小児矯正", body: PLACEHOLDER_BODY, href: "#" },
+  { tag: "adult", title: "成人矯正", body: PLACEHOLDER_BODY, href: "#" },
 ];
 
 const BY_DEVICE = [
-  { tag: "transparent", title: "半透明の装置", body: PLACEHOLDER_BODY },
-  { tag: "wire", title: "ワイヤー矯正", body: PLACEHOLDER_BODY },
+  { tag: "transparent", title: "半透明の装置", body: PLACEHOLDER_BODY, href: "/appliance/" },
+  { tag: "wire", title: "ワイヤー矯正", body: PLACEHOLDER_BODY, href: "/appliance/" },
 ];
 
 const BY_TYPE = [
-  { tag: "crowded", title: "乱杭歯（叢生）" },
-  { tag: "overbite", title: "出っ歯（上顎前突）" },
-  { tag: "underbite", title: "うけ口（下顎前突）" },
-  { tag: "open bite", title: "開咬" },
+  { tag: "crowded", title: "乱杭歯（叢生）", href: "/symptoms/crowded-openbite/" },
+  { tag: "overbite", title: "出っ歯（上顎前突）", href: "/symptoms/overbite/" },
+  { tag: "underbite", title: "うけ口（下顎前突）", href: "/symptoms/underbite/" },
+  { tag: "open bite", title: "開咬", href: "/symptoms/crowded-openbite/" },
 ];
 
 const RELATED = [
-  { tag: "surgical", title: "外科治療" },
-  { tag: "extraction", title: "抜歯について" },
-  { tag: "aftercare", title: "アフターケア" },
-  { tag: "before/after", title: "治療前後の比較" },
+  { tag: "surgical", title: "外科治療", href: "/surgical/" },
+  { tag: "extraction", title: "抜歯について", href: "/extraction/" },
+  { tag: "aftercare", title: "アフターケア", href: "/aftercare/" },
+  { tag: "before/after", title: "治療前後の比較", href: "/before-after/" },
 ];
 
 function DarkCard({
   tag,
   title,
   body,
+  href = "#",
   ratio = "3/2",
   index = 0,
   size = "lg",
@@ -37,6 +38,7 @@ function DarkCard({
   tag: string;
   title: string;
   body?: string;
+  href?: string;
   ratio?: string;
   index?: number;
   size?: "lg" | "sm";
@@ -44,7 +46,7 @@ function DarkCard({
   const isLg = size === "lg";
   return (
     <a
-      href="#"
+      href={href}
       className={`anim anim-delay-${Math.min((index % 3) + 1, 3)} group relative block overflow-hidden`}
       style={{ aspectRatio: ratio }}
     >
