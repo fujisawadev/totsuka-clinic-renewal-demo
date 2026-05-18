@@ -143,18 +143,16 @@
     background: var(--color-muted-hover);
   }
 
-  /* Scroll-reveal animation */
+  /* Scroll-reveal — JS adds .anim-hide to elements below the fold; IO then
+     removes it as they enter the viewport. Static HTML stays fully visible. */
   .anim {
-    opacity: 0;
-    transform: translateY(40px);
     transition:
-      opacity 0.8s var(--ease-clinic),
-      transform 0.8s var(--ease-clinic);
-    will-change: opacity, transform;
+      opacity 0.7s var(--ease-clinic),
+      transform 0.7s var(--ease-clinic);
   }
-  .anim.is-visible {
-    opacity: 1;
-    transform: none;
+  .anim.anim-hide {
+    opacity: 0;
+    transform: translateY(28px);
   }
   .anim-delay-1 {
     transition-delay: 0.15s;
