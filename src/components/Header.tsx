@@ -38,7 +38,7 @@ export default function Header() {
                 scrolled ? "text-[#222]" : "text-white"
               )}
             >
-              ◯◯歯科クリニック
+              ささき矯正歯科クリニック
             </span>
             <span
               className={cn(
@@ -46,7 +46,7 @@ export default function Header() {
                 scrolled ? "text-[#9a998e]" : "text-white/80"
               )}
             >
-              CLINIC NAME LOGO
+              SASAKI ORTHODONTIC CLINIC
             </span>
           </a>
 

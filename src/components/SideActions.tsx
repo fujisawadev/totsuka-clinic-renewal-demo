@@ -1,17 +1,16 @@
 const DESKTOP_ACTIONS = [
-  { label: "03-0000-0000", href: "tel:0300000000" },
-  { label: "初診相談", href: "#" },
+  { label: "045-871-2281", href: "tel:0458712281" },
+  { label: "初診相談", href: "#counseling" },
   { label: "WEB予約", href: "#" },
-  { label: "メール", href: "#" },
-  { label: "LINE", href: "#" },
+  { label: "アクセス", href: "#access" },
   { label: "診療時間", href: "#access" },
 ];
 
 const MOBILE_ACTIONS = [
-  { label: "TEL", href: "tel:0300000000" },
+  { label: "TEL", href: "tel:0458712281" },
   { label: "WEB予約", href: "#" },
-  { label: "LINE", href: "#" },
-  { label: "診療時間", href: "#access" },
+  { label: "初診相談", href: "#counseling" },
+  { label: "アクセス", href: "#access" },
 ];
 
 export default function SideActions() {

@@ -1,9 +1,12 @@
 import Header from "@/components/Header";
 import SideActions from "@/components/SideActions";
 import Hero from "@/components/Hero";
+import News from "@/components/News";
 import Greeting from "@/components/Greeting";
 import Concept from "@/components/Concept";
 import Treatment from "@/components/Treatment";
+import Pricing from "@/components/Pricing";
+import FAQ from "@/components/FAQ";
 import Counseling from "@/components/Counseling";
 import Clinic from "@/components/Clinic";
 import FooterAccess from "@/components/FooterAccess";
@@ -19,9 +22,12 @@ export default function Home() {
       <SideActions />
       <main>
         <Hero />
+        <News />
         <Greeting />
         <Concept />
         <Treatment />
+        <Pricing />
+        <FAQ />
         <Counseling />
         <Clinic />
       </main>

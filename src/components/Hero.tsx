@@ -13,12 +13,12 @@ export default function Hero() {
 
       <div className="relative z-10 min-h-screen min-h-[720px] flex flex-col">
         <div className="pt-28 lg:pt-32 px-6 lg:px-10">
-          <p className="anim text-[11px] lg:text-[13px] tracking-[0.15em] text-white/95">◯◯駅徒歩◯分</p>
+          <p className="anim text-[11px] lg:text-[13px] tracking-[0.15em] text-white/95">戸塚駅東口より徒歩3分</p>
           <p className="anim text-[11px] lg:text-[13px] tracking-[0.15em] text-white/95">日本矯正歯科学会 認定医</p>
           <div className="w-12 h-px bg-white/70 my-4 lg:my-5" />
           <div className="anim anim-delay-1">
-            <p className="text-2xl lg:text-3xl tracking-[0.2em]">◯◯歯科クリニック</p>
-            <p className="text-[10px] lg:text-[11px] tracking-[0.3em] mt-2 text-white/85">CLINIC NAME ORTHODONTIC CLINIC</p>
+            <p className="text-2xl lg:text-3xl tracking-[0.2em]">ささき矯正歯科クリニック</p>
+            <p className="text-[10px] lg:text-[11px] tracking-[0.3em] mt-2 text-white/85">SASAKI ORTHODONTIC CLINIC</p>
           </div>
         </div>
 
@@ -26,9 +26,9 @@ export default function Hero() {
 
         <div className="px-6 lg:px-10 pb-24 lg:pb-32">
           <h1 className="anim anim-delay-2 text-base lg:text-xl leading-[2] tracking-wider text-white/95">
-            ここにキャッチコピーが入ります。
+            患者さんを笑顔に導く
             <br />
-            （2〜3行・後ほど差し替え予定）
+            横浜市戸塚区の矯正歯科専門医院
           </h1>
         </div>
       </div>

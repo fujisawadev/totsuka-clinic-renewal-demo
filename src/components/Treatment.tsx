@@ -3,24 +3,27 @@ import Placeholder from "./Placeholder";
 const PLACEHOLDER_BODY = "プレースホルダー本文 ── このカードの説明文が入ります。";
 
 const BY_AGE = [
-  { tag: "child", title: "小児矯正（6〜12歳）", body: PLACEHOLDER_BODY },
+  { tag: "child", title: "小児矯正", body: PLACEHOLDER_BODY },
   { tag: "adult", title: "成人矯正", body: PLACEHOLDER_BODY },
 ];
 
 const BY_DEVICE = [
-  { tag: "mouth piece", title: "マウスピース型矯正装置", body: PLACEHOLDER_BODY },
+  { tag: "transparent", title: "半透明の装置", body: PLACEHOLDER_BODY },
   { tag: "wire", title: "ワイヤー矯正", body: PLACEHOLDER_BODY },
-  { tag: "lingual", title: "舌側矯正", body: PLACEHOLDER_BODY },
-  { tag: "partial", title: "部分矯正", body: PLACEHOLDER_BODY },
 ];
 
 const BY_TYPE = [
-  { tag: "crowded", title: "ガタガタ（叢生）" },
+  { tag: "crowded", title: "乱杭歯（叢生）" },
   { tag: "overbite", title: "出っ歯（上顎前突）" },
-  { tag: "underbite", title: "受け口（下顎前突）" },
-  { tag: "spaced", title: "口ゴボ" },
-  { tag: "open", title: "開咬" },
-  { tag: "deep", title: "過蓋咬合" },
+  { tag: "underbite", title: "うけ口（下顎前突）" },
+  { tag: "open bite", title: "開咬" },
+];
+
+const RELATED = [
+  { tag: "surgical", title: "外科治療" },
+  { tag: "extraction", title: "抜歯について" },
+  { tag: "aftercare", title: "アフターケア" },
+  { tag: "before/after", title: "治療前後の比較" },
 ];
 
 function DarkCard({
@@ -105,10 +108,19 @@ export default function Treatment() {
           </div>
         </div>
 
-        <div>
+        <div className="mb-20">
           <SubHeader jp="不正咬合の種類から探す" />
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
             {BY_TYPE.map((c, i) => (
+              <DarkCard key={c.tag} {...c} ratio="1/1" index={i} size="sm" />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <SubHeader jp="関連メニュー" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+            {RELATED.map((c, i) => (
               <DarkCard key={c.tag} {...c} ratio="1/1" index={i} size="sm" />
             ))}
           </div>

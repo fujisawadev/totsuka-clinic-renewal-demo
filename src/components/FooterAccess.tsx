@@ -1,12 +1,29 @@
 import Placeholder from "./Placeholder";
 
 const INFO: Array<[string, React.ReactNode]> = [
-  ["住所", "〒000-0000　東京都◯◯区◯◯ 0-0-0 ◯◯ビル B1F"],
-  ["アクセス", "〇〇駅 徒歩◯分"],
-  ["駐車場", "近隣のコインパーキングをご利用ください"],
-  ["電話番号", <a key="tel" href="tel:0300000000" className="link-underline">03-0000-0000</a>],
-  ["診療時間", "平日 10:00 – 19:00 ／ 土日 9:00 – 17:00"],
-  ["休診日", "水曜・祝日"],
+  ["医院名", "ささき矯正歯科クリニック"],
+  ["院長", "佐々木 光司"],
+  ["住所", "〒244-0816 横浜市戸塚区上倉田町493-1 NOBオグシビル5F"],
+  ["アクセス", "戸塚駅東口より徒歩3分"],
+  ["TEL", <a key="tel" href="tel:0458712281" className="link-underline">045-871-2281</a>],
+  ["FAX", "045-871-2412"],
+  [
+    "診療時間",
+    <span key="hours" className="leading-relaxed">
+      平日 10:00 – 12:00 ／ 14:00 – 19:00
+      <br />
+      土・日 10:00 – 13:00 ／ 15:00 – 19:00
+    </span>,
+  ],
+  ["休診日", "月・木・祝"],
+  [
+    "駐車場",
+    <span key="park" className="leading-relaxed">
+      TY上倉田駐車場（アピタななめ向かい・ハックドラッグ脇）と提携。
+      <br />
+      時間分のサービス券をお渡しします。駐輪場は近隣をご利用ください。
+    </span>,
+  ],
 ];
 
 function SnsCircle({ initial, label }: { initial: string; label: string }) {
@@ -38,8 +55,8 @@ export default function FooterAccess() {
 
           <div className="anim anim-delay-1">
             <div className="mb-6">
-              <p className="text-2xl tracking-[0.15em]">◯◯歯科クリニック</p>
-              <p className="text-[11px] tracking-[0.25em] text-[#9a998e] mt-1">CLINIC NAME ORTHODONTIC CLINIC</p>
+              <p className="text-2xl tracking-[0.15em]">ささき矯正歯科クリニック</p>
+              <p className="text-[11px] tracking-[0.25em] text-[#9a998e] mt-1">SASAKI ORTHODONTIC CLINIC</p>
             </div>
 
             <div className="flex gap-3 mb-8">
@@ -51,7 +68,7 @@ export default function FooterAccess() {
               {INFO.map(([label, value]) => (
                 <div
                   key={label}
-                  className="grid grid-cols-[6rem_1fr] gap-4 border-b border-[#e3e3e3]/70 pb-3"
+                  className="grid grid-cols-[5.5rem_1fr] gap-4 border-b border-[#e3e3e3]/70 pb-3"
                 >
                   <dt className="text-[#9a998e] tracking-wider text-[13px]">{label}</dt>
                   <dd className="text-[#222]">{value}</dd>
@@ -59,18 +76,20 @@ export default function FooterAccess() {
               ))}
             </dl>
 
-            <div className="mt-8 flex gap-3">
+            <div className="mt-8 flex gap-3 flex-wrap">
               <a
-                href="#"
+                href="https://www.google.com/maps?q=横浜市戸塚区上倉田町493-1"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="inline-block bg-[#9a998e] text-white text-sm tracking-widest px-6 py-3 hover:bg-[#b5b4a8] transition"
               >
                 Google Map
               </a>
               <a
-                href="#"
+                href="tel:0458712281"
                 className="inline-block border border-[#9a998e] text-[#9a998e] text-sm tracking-widest px-6 py-3 hover:bg-[#9a998e] hover:text-white transition"
               >
-                Apple Map
+                電話で問い合わせる
               </a>
             </div>
           </div>

@@ -1,16 +1,16 @@
 import Placeholder from "./Placeholder";
 
 const FEATURES = [
-  { num: "01", title: "ここに特徴 1 のタイトル" },
-  { num: "02", title: "ここに特徴 2 のタイトル" },
-  { num: "03", title: "ここに特徴 3 のタイトル" },
+  { num: "01", title: "1987年開業以来、地域に根ざした矯正治療", body: "開業から続く実績と臨床経験をもとに、患者さま一人ひとりに最適な治療をご提案します。" },
+  { num: "02", title: "矯正専門の歯科医院", body: "矯正歯科学会認定医による、矯正治療に特化した診療をご提供します。" },
+  { num: "03", title: "患者さん本位の診療", body: "アットホームな雰囲気のなかで、よくお話を伺い、個々に適した治療プランを一緒に考えます。" },
 ];
 
 const CHECKLIST = [
-  "チェック項目 1（プレースホルダー）",
-  "チェック項目 2（プレースホルダー）",
-  "チェック項目 3（プレースホルダー）",
-  "チェック項目 4（プレースホルダー）",
+  "歯並び・噛み合わせが気になる方",
+  "お子さまの矯正治療を検討中の方",
+  "大人になってから矯正を考え始めた方",
+  "他院で相談したが踏み出せなかった方",
 ];
 
 export default function Concept() {
@@ -42,9 +42,12 @@ export default function Concept() {
           </div>
           <div className="lg:col-span-6 anim anim-delay-1">
             <div className="space-y-5 text-[15px] leading-loose text-[#222]">
-              <p>──── プレースホルダー本文 ────</p>
-              <p>このセクションの導入文が入ります。読者の悩みや想いに語りかける文章を 5〜8 行程度で記述いただく想定です。実コンテンツに差し替え予定。</p>
-              <p>段落 2：医院として伝えたいメッセージを記述いただきます。</p>
+              <p>
+                ささき矯正歯科クリニックは、矯正専門の歯科医院です。1987年の開業以来、地域に根ざし、矯正専門の歯科医として大学病院での勤務経験と長年の臨床経験をもとに、患者さん一人ひとりに最適な矯正治療をご提供しています。
+              </p>
+              <p>
+                アットホームな雰囲気のなかで、患者さん本位の診療を行っておりますので、安心して通院いただけます。
+              </p>
             </div>
             <div className="w-full h-px bg-[#e3e3e3] my-10" />
           </div>
@@ -70,7 +73,7 @@ export default function Concept() {
                 </div>
                 <h3 className="text-xl lg:text-3xl text-white tracking-wider">{f.title}</h3>
                 <p className="text-white/85 text-[13px] lg:text-[14px] leading-loose mt-4 max-w-xl">
-                  プレースホルダー本文 ── 各特徴の説明文がここに入ります（2〜3行を想定）。
+                  {f.body}
                 </p>
               </div>
             </article>
@@ -78,7 +81,7 @@ export default function Concept() {
         </div>
 
         <div className="anim mt-16 flex justify-center">
-          <a href="#" className="inline-flex flex-col items-center text-sm text-[#222] hover:text-[#9a998e] transition">
+          <a href="#counseling" className="inline-flex flex-col items-center text-sm text-[#222] hover:text-[#9a998e] transition">
             <span className="text-[11px] tracking-[0.25em] text-[#9a998e] mb-1">当院の特徴</span>
             <span className="flex items-center gap-3 text-lg tracking-wider">
               View more
@@ -99,9 +102,8 @@ export default function Concept() {
             </ul>
             <div className="hidden lg:block text-[#9a998e] text-3xl">▸</div>
             <div className="anim anim-delay-1 text-[15px] leading-loose">
-              <p>本当に信頼できる矯正治療をお探しのあなたへ ──</p>
-              <p className="mt-2">まずは <span className="bg-[#fff7c7] px-1">無料カウンセリング</span> から、当院の矯正治療に触れてみてください。</p>
-              <p className="mt-1 text-[13px] text-[#9a998e]">（プレースホルダー：実コピーに差し替え予定）</p>
+              <p>まずは <span className="bg-[#fff7c7] px-1">無料の初診相談</span> で、ご相談ください。</p>
+              <p className="mt-2 text-[13px] text-[#666]">お電話 045-871-2281、またはネット予約フォームよりお申し込みいただけます。</p>
             </div>
           </div>
         </div>

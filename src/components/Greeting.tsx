@@ -18,24 +18,28 @@ export default function Greeting() {
             className="w-full"
           />
           <div className="mt-6 lg:mt-8 max-w-md">
-            <p className="text-xs text-[#9a998e] tracking-wider">日本矯正歯科学会 認定医</p>
-            <p className="text-xs text-[#9a998e] tracking-wider">◯◯歯科クリニック 院長</p>
+            <p className="text-xs text-[#9a998e] tracking-wider">日本矯正歯科学会 認定医／歯学博士</p>
+            <p className="text-xs text-[#9a998e] tracking-wider">ささき矯正歯科クリニック 院長</p>
             <p className="mt-3 text-2xl tracking-wider">
-              ◯◯ ◯◯
-              <span className="ml-3 text-sm text-[#9a998e]">Family Name Given Name</span>
+              佐々木 光司
+              <span className="ml-3 text-sm text-[#9a998e]">Koji Sasaki</span>
             </p>
           </div>
         </div>
 
         <div className="lg:col-span-4 anim anim-delay-1">
           <div
-            className="text-[15px] leading-[2.4] text-[#222] tracking-wider max-h-[600px]"
+            className="text-[15px] leading-[2.4] text-[#222] tracking-wider max-h-[700px]"
             style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
           >
             <p>
-              ここに院長メッセージが入ります（縦書き）。プレースホルダー本文：実際の文章は既存サイトから抽出した内容に差し替え予定です。<br />
-              段落 2：診療方針や日々の想いを記述いただきます。<br />
-              段落 3：締めのメッセージ。
+              歯並びや噛み合わせが悪いと、虫歯や歯周病になりやすく、咀嚼機能の低下や心理的な負担につながることもあります。私自身が不正咬合に悩んでいたこともあり、横浜市戸塚区で矯正歯科医の道を選びました。
+              <br />
+              <br />
+              皆さんの歯並びが良くなるにつれ表情が明るく豊かになり、笑顔で通院いただけるようになるのを見るのは本当に嬉しい瞬間です。治療の際は、患者さんに我慢を強いるようなことは行いません。
+              <br />
+              <br />
+              治療に対するご要望や不安は一人ひとり異なりますので、よく話し合い、個々に適した「患者さん本位の治療」を心掛けています。これからも地域の皆さまに信頼いただける医療を提供してまいります。
             </p>
           </div>
         </div>

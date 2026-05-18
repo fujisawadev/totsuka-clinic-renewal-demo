@@ -1,25 +1,42 @@
 const COLUMNS = [
   {
-    label: "症状から探す",
-    items: ["上顎前突", "下顎前突", "上下顎前突", "叢生", "開咬", "過蓋咬合"],
-  },
-  {
-    label: "年齢から探す",
-    items: ["小児矯正", "成人矯正", "シニア矯正"],
-  },
-  {
-    label: "装置・方法",
+    label: "矯正治療",
     items: [
-      "マウスピース型矯正",
-      "ワイヤー矯正",
-      "舌側矯正",
-      "部分矯正",
-      "表側ワイヤー",
+      { label: "矯正治療について", href: "#orthodontic-treatment" },
+      { label: "矯正治療の進め方", href: "#" },
+      { label: "矯正装置", href: "#" },
+      { label: "矯正治療料金", href: "#" },
+      { label: "治療前後の比較", href: "#" },
     ],
   },
   {
-    label: "クリニック",
-    items: ["院長紹介", "院内設備", "料金", "症例", "アクセス", "よくある質問"],
+    label: "症状別",
+    items: [
+      { label: "うけ口（下顎前突）", href: "#" },
+      { label: "出っ歯（上顎前突）", href: "#" },
+      { label: "乱杭歯（叢生）", href: "#" },
+      { label: "開咬", href: "#" },
+    ],
+  },
+  {
+    label: "その他の治療",
+    items: [
+      { label: "外科治療", href: "#" },
+      { label: "抜歯について", href: "#" },
+      { label: "アフターケア", href: "#" },
+    ],
+  },
+  {
+    label: "院について",
+    items: [
+      { label: "院長あいさつ", href: "#greeting" },
+      { label: "院内紹介・交通", href: "#access" },
+      { label: "初診の方へ", href: "#counseling" },
+      { label: "よくある質問", href: "#" },
+      { label: "患者さんへのお願い", href: "#" },
+      { label: "治療に関するご注意", href: "#" },
+      { label: "リスク・副作用について", href: "#" },
+    ],
   },
 ];
 
@@ -35,12 +52,12 @@ export default function Sitemap() {
               </div>
               <ul className="space-y-3">
                 {c.items.map((i) => (
-                  <li key={i}>
+                  <li key={i.label}>
                     <a
-                      href="#"
+                      href={i.href}
                       className="text-[14px] text-white/80 hover:text-white hover:underline underline-offset-4 transition"
                     >
-                      {i}
+                      {i.label}
                     </a>
                   </li>
                 ))}
