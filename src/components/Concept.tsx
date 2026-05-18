@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Placeholder from "./Placeholder";
 
 const FEATURES = [
@@ -15,7 +16,7 @@ const CHECKLIST = [
 
 export default function Concept() {
   return (
-    <section id="concept" className="relative bg-white py-24 lg:py-40 overflow-hidden">
+    <section id="concept" className="relative bg-white py-16 lg:py-40 overflow-hidden">
       <div
         aria-hidden
         className="hidden lg:block absolute top-0 left-[5%] w-[280px] h-[280px] border-[14px] border-[#9a998e]/15 pointer-events-none"
@@ -32,9 +33,10 @@ export default function Concept() {
       <div className="container-clinic relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-start">
           <div className="lg:col-span-2 anim">
-            <h2 className="section-eyebrow mb-6">Concept</h2>
+            <h2 className="section-eyebrow mb-2 lg:mb-6">Concept</h2>
+            <p className="text-sm tracking-[0.3em] text-[#9a998e] lg:hidden">コンセプト</p>
             <p
-              className="text-[18px] tracking-[0.4em] text-[#9a998e]"
+              className="hidden lg:block text-[18px] tracking-[0.4em] text-[#9a998e]"
               style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
             >
               コンセプト
@@ -60,19 +62,19 @@ export default function Concept() {
           {FEATURES.map((f, i) => (
             <article
               key={f.num}
-              className={`anim anim-delay-${Math.min(i + 1, 3)} relative h-[260px] lg:h-[360px] overflow-hidden`}
+              className={`anim anim-delay-${Math.min(i + 1, 3)} relative h-[220px] sm:h-[280px] lg:h-[360px] overflow-hidden`}
             >
               <Placeholder label={`特徴 ${f.num}`} className="absolute inset-0 w-full h-full" />
-              <div className="absolute inset-0 bg-[rgba(20,20,20,0.45)]" />
-              <div className="relative h-full flex flex-col justify-center px-8 lg:px-16">
-                <div className="flex items-center gap-4 text-white/90 mb-4">
-                  <span className="text-base tracking-widest">{f.num}</span>
+              <div className="absolute inset-0 bg-[rgba(20,20,20,0.5)]" />
+              <div className="relative h-full flex flex-col justify-center px-6 lg:px-16">
+                <div className="flex items-center gap-3 lg:gap-4 text-white/90 mb-3 lg:mb-4">
+                  <span className="text-sm lg:text-base tracking-widest">{f.num}</span>
                   <span className="w-px h-4 bg-white/40" />
-                  <span className="text-xs tracking-[0.3em] uppercase">feature</span>
-                  <span className="w-12 h-px bg-white/40" />
+                  <span className="text-[10px] lg:text-xs tracking-[0.3em] uppercase">feature</span>
+                  <span className="w-8 lg:w-12 h-px bg-white/40" />
                 </div>
-                <h3 className="text-xl lg:text-3xl text-white tracking-wider">{f.title}</h3>
-                <p className="text-white/85 text-[13px] lg:text-[14px] leading-loose mt-4 max-w-xl">
+                <h3 className="text-lg lg:text-3xl text-white tracking-wider leading-snug">{f.title}</h3>
+                <p className="text-white/85 text-[12px] lg:text-[14px] leading-loose mt-3 lg:mt-4 max-w-xl">
                   {f.body}
                 </p>
               </div>
@@ -81,13 +83,13 @@ export default function Concept() {
         </div>
 
         <div className="anim mt-16 flex justify-center">
-          <a href="/treatment/" className="inline-flex flex-col items-center text-sm text-[#222] hover:text-[#9a998e] transition">
+          <Link href="/treatment/" className="inline-flex flex-col items-center text-sm text-[#222] hover:text-[#9a998e] transition">
             <span className="text-[11px] tracking-[0.25em] text-[#9a998e] mb-1">当院の特徴</span>
             <span className="flex items-center gap-3 text-lg tracking-wider">
               View more
               <span aria-hidden>→</span>
             </span>
-          </a>
+          </Link>
         </div>
 
         <div className="mt-24 lg:mt-32 bg-[#f4f1ea]/50 py-12 lg:py-16 px-8 lg:px-16">
@@ -103,7 +105,7 @@ export default function Concept() {
             <div className="hidden lg:block text-[#9a998e] text-3xl">▸</div>
             <div className="anim anim-delay-1 text-[15px] leading-loose">
               <p>まずは <span className="bg-[#fff7c7] px-1">無料の初診相談</span> で、ご相談ください。</p>
-              <p className="mt-2 text-[13px] text-[#666]">お電話 <a href="tel:0458712281" className="link-underline">045-871-2281</a>、または <a href="/first-visit/" className="link-underline">初診の方へ</a> ページよりお申し込みいただけます。</p>
+              <p className="mt-2 text-[13px] text-[#666]">お電話 <a href="tel:0458712281" className="link-underline">045-871-2281</a>、または <Link href="/first-visit/" className="link-underline">初診の方へ</Link> ページよりお申し込みいただけます。</p>
             </div>
           </div>
         </div>

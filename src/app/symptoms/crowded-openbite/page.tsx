@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
 import Placeholder from "@/components/Placeholder";
@@ -33,8 +34,8 @@ export default function Page() {
 
       <PageSection>
         <div className="text-[12px] text-[#666] leading-loose space-y-1">
-          <p>※ 治療費については <a href="/pricing/" className="link-underline">矯正治療料金</a> をご参照ください。</p>
-          <p>※ 治療等の主なリスク・副作用についての詳細は <a href="/risk/" className="link-underline">リスク・副作用について</a> をご参照ください。</p>
+          <p>※ 治療費については <Link href="/pricing/" className="link-underline">矯正治療料金</Link> をご参照ください。</p>
+          <p>※ 治療等の主なリスク・副作用についての詳細は <Link href="/risk/" className="link-underline">リスク・副作用について</Link> をご参照ください。</p>
         </div>
       </PageSection>
     </SubPageLayout>

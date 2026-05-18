@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import Link from "next/link";
 import { cn } from "@/lib/cn";
 
 type Props = { open: boolean; onClose: () => void };
@@ -93,9 +94,9 @@ function Group({ label, items }: { label: string; items: { label: string; href: 
       <ul className="space-y-3">
         {items.map((l) => (
           <li key={l.label}>
-            <a href={l.href} className="link-underline text-[15px]">
+            <Link href={l.href} className="link-underline text-[15px]" onClick={() => { /* close on click handled by parent? leave navigation default */ }}>
               {l.label}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

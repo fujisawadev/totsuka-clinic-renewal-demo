@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const COLUMNS = [
   {
     label: "矯正治療",
@@ -58,12 +60,12 @@ export default function Sitemap() {
               <ul className="space-y-3">
                 {c.items.map((i) => (
                   <li key={i.label}>
-                    <a
+                    <Link
                       href={i.href}
                       className="text-[14px] text-white/80 hover:text-white hover:underline underline-offset-4 transition"
                     >
                       {i.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

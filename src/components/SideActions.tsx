@@ -33,7 +33,7 @@ export default function SideActions() {
           <a
             key={a.label}
             href={a.href}
-            className="bg-[#f4f1ea] text-[#9a998e] hover:bg-[#e9e3d6] transition flex items-center justify-center py-3 text-xs tracking-wider"
+            className="bg-[#f4f1ea] text-[#9a998e] hover:bg-[#e9e3d6] transition flex items-center justify-center min-h-[52px] py-4 text-xs tracking-wider"
           >
             {a.label}
           </a>

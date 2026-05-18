@@ -80,7 +80,16 @@ function Item({ q, a }: { q: string; a: string }) {
   );
 }
 
-export default function FAQ() {
+export default function FAQ({ headless = false }: { headless?: boolean } = {}) {
+  if (headless) {
+    return (
+      <ul className="anim anim-delay-1 max-w-3xl mx-auto">
+        {ITEMS.map((it) => (
+          <Item key={it.q} {...it} />
+        ))}
+      </ul>
+    );
+  }
   return (
     <section id="faq" className="bg-white py-24 lg:py-32">
       <div className="container-clinic">

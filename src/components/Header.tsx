@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { cn } from "@/lib/cn";
 import NavMenu from "./NavMenu";
 
@@ -36,32 +37,33 @@ export default function Header({ solid = false, homeHref = "#top", anchorBase = 
       <header
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
-          showSolid ? "bg-white/95 backdrop-blur-sm border-b border-[#e3e3e3]" : "bg-transparent"
+          showSolid
+            ? "lg:bg-white/95 lg:backdrop-blur-sm lg:border-b lg:border-[#e3e3e3]"
+            : "bg-transparent"
         )}
       >
         <div className="flex items-start justify-between px-6 lg:px-10 pt-5 lg:pt-7 pb-4">
-          <a href={homeHref} className="flex flex-col" aria-label="トップへ">
-            <span
-              className={cn(
-                "text-xl lg:text-2xl tracking-[0.15em] transition-colors",
-                showSolid ? "text-[#222]" : "text-white"
-              )}
-            >
+          <Link
+            href={homeHref}
+            className={cn(
+              "hidden lg:flex flex-col transition-opacity duration-300",
+              showSolid ? "opacity-100" : "opacity-0 pointer-events-none"
+            )}
+            aria-label="トップへ"
+            aria-hidden={!showSolid}
+          >
+            <span className="text-2xl tracking-[0.15em] text-[#222] whitespace-nowrap">
               ささき矯正歯科クリニック
             </span>
-            <span
-              className={cn(
-                "text-[10px] lg:text-[11px] tracking-[0.25em] mt-1 transition-colors",
-                showSolid ? "text-[#9a998e]" : "text-white/80"
-              )}
-            >
+            <span className="text-[11px] tracking-[0.25em] mt-1 text-[#9a998e]">
               SASAKI ORTHODONTIC CLINIC
             </span>
-          </a>
+          </Link>
+          <span className="lg:hidden" aria-hidden />
 
           <nav className="hidden lg:flex items-center gap-8 mt-2">
             {ANCHORS.map((a) => (
-              <a
+              <Link
                 key={a.label}
                 href={`${anchorBase}${a.suffix}`}
                 className={cn(
@@ -70,7 +72,7 @@ export default function Header({ solid = false, homeHref = "#top", anchorBase = 
                 )}
               >
                 {a.label}
-              </a>
+              </Link>
             ))}
             <button
               onClick={() => setOpen((v) => !v)}

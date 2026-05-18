@@ -18,7 +18,7 @@ export default function RevealObserver() {
           }
         }
       },
-      { threshold: 0.05, rootMargin: "0px 0px -3% 0px" }
+      { threshold: 0, rootMargin: "0px 0px -10% 0px" }
     );
     all.forEach((el) => {
       if (el.classList.contains("anim-hide")) io.observe(el);

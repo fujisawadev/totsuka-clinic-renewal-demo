@@ -8,24 +8,24 @@ export default function Hero() {
     >
       <div className="absolute inset-0">
         <Placeholder label="メインビジュアル" className="w-full h-full" />
-        <div className="absolute inset-0 bg-[rgba(26,26,26,0.35)]" />
+        <div className="absolute inset-0 bg-[rgba(26,26,26,0.45)]" />
       </div>
 
       <div className="relative z-10 min-h-screen min-h-[720px] flex flex-col">
-        <div className="pt-28 lg:pt-32 px-6 lg:px-10">
-          <p className="anim text-[11px] lg:text-[13px] tracking-[0.15em] text-white/95">戸塚駅東口より徒歩3分</p>
-          <p className="anim text-[11px] lg:text-[13px] tracking-[0.15em] text-white/95">日本矯正歯科学会 認定医</p>
+        <div className="pt-20 lg:pt-32 px-6 lg:px-10">
+          <p className="anim text-[12px] lg:text-[13px] tracking-[0.15em] text-white/95">戸塚駅東口より徒歩3分</p>
+          <p className="anim text-[12px] lg:text-[13px] tracking-[0.15em] text-white/95">日本矯正歯科学会 認定医</p>
           <div className="w-12 h-px bg-white/70 my-4 lg:my-5" />
           <div className="anim anim-delay-1">
-            <p className="text-2xl lg:text-3xl tracking-[0.2em]">ささき矯正歯科クリニック</p>
-            <p className="text-[10px] lg:text-[11px] tracking-[0.3em] mt-2 text-white/85">SASAKI ORTHODONTIC CLINIC</p>
+            <p className="text-[26px] sm:text-[32px] lg:text-[44px] tracking-[0.04em] sm:tracking-[0.1em] lg:tracking-[0.15em] leading-tight">ささき矯正歯科クリニック</p>
+            <p className="text-[10px] sm:text-[11px] lg:text-[12px] tracking-[0.2em] sm:tracking-[0.25em] mt-2 text-white/85">SASAKI ORTHODONTIC CLINIC</p>
           </div>
         </div>
 
         <div className="flex-1" />
 
-        <div className="px-6 lg:px-10 pb-24 lg:pb-32">
-          <h1 className="anim anim-delay-2 text-base lg:text-xl leading-[2] tracking-wider text-white/95">
+        <div className="px-6 lg:px-10 pb-20 lg:pb-32">
+          <h1 className="anim anim-delay-2 text-base sm:text-lg lg:text-xl leading-[2] tracking-wider text-white">
             患者さんを笑顔に導く
             <br />
             横浜市戸塚区の矯正歯科専門医院

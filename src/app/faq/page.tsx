@@ -14,7 +14,7 @@ export default function Page() {
         <p className="text-[14px] leading-loose text-[#444] mb-10 max-w-2xl">
           患者さまからよく頂く質問と回答をまとめています。こちらをご覧いただいてもご不明な点、ご心配な点などございましたら、お気軽にお問い合わせください。
         </p>
-        <FAQ />
+        <FAQ headless />
       </PageSection>
     </SubPageLayout>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
 import faqs from "@/content/yokohama-faqs.json";
@@ -27,13 +28,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const related = list.filter((x) => x.slug !== f.slug).slice(0, 4);
 
   return (
-    <SubPageLayout category="横浜の矯正歯科 Q&A" enTitle="Q&A" jpTitle={f.q}>
+    <SubPageLayout category="横浜の矯正歯科 Q&A" enTitle="Q&A" jpTitle="よくあるご質問">
       <PageSection>
         <div className="max-w-3xl">
           <p className="text-[12px] tracking-wider text-[#9a998e] mb-6">{f.date}</p>
           <div className="flex items-start gap-4 lg:gap-6 mb-8">
             <span className="text-[#9a998e] text-xl tracking-wider shrink-0">Q.</span>
-            <h2 className="flex-1 text-lg lg:text-xl leading-relaxed">{f.q}</h2>
+            <h2 className="flex-1 text-lg lg:text-2xl leading-relaxed tracking-wider">{f.q}</h2>
           </div>
           <div className="flex items-start gap-4 lg:gap-6">
             <span className="text-[#9a998e] text-xl tracking-wider shrink-0">A.</span>
@@ -52,16 +53,16 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           {related.map((r) => (
             <li key={r.slug} className="bg-white p-5">
               <p className="text-[11px] tracking-wider text-[#9a998e] mb-2">{r.date}</p>
-              <a href={`/yokohama/${r.slug}/`} className="link-underline text-[14px]">
+              <Link href={`/yokohama/${r.slug}/`} className="link-underline text-[14px]">
                 {r.q}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
         <div className="mt-10 text-center">
-          <a href="/yokohama/" className="inline-block border border-[#9a998e] text-[#9a998e] text-sm tracking-widest px-8 py-3 hover:bg-[#9a998e] hover:text-white transition">
+          <Link href="/yokohama/" className="inline-block border border-[#9a998e] text-[#9a998e] text-sm tracking-widest px-8 py-3 hover:bg-[#9a998e] hover:text-white transition">
             Q&A 一覧に戻る
-          </a>
+          </Link>
         </div>
       </PageSection>
     </SubPageLayout>

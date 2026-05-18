@@ -9,15 +9,15 @@ const STEPS = [
 
 export default function Counseling() {
   return (
-    <section id="counseling" className="bg-white py-24 lg:py-40">
+    <section id="counseling" className="bg-white py-16 lg:py-40">
       <div className="px-6 lg:px-10">
-        <div className="anim text-center mb-12 lg:mb-16">
+        <div className="anim text-center mb-10 lg:mb-16">
           <h2 className="section-eyebrow">Counseling</h2>
-          <p className="text-sm text-[#9a998e] tracking-[0.3em] mt-2">初診相談・カウンセリング</p>
-          <div className="w-12 h-px bg-[#9a998e]/40 mx-auto mt-6" />
+          <p className="text-xs sm:text-sm text-[#9a998e] tracking-[0.3em] mt-2">初診相談・カウンセリング</p>
+          <div className="w-10 h-px bg-[#9a998e]/40 mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-12 items-center max-w-[1400px] mx-auto mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-12 items-center max-w-[1400px] mx-auto mb-12 lg:mb-20">
           <div className="anim">
             <Placeholder label="カウンセリング写真 1" ratio="4/5" className="w-full max-w-md mx-auto lg:ml-auto" />
           </div>

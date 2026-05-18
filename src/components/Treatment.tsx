@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Placeholder from "./Placeholder";
 
 const PLACEHOLDER_BODY = "プレースホルダー本文 ── このカードの説明文が入ります。";
@@ -45,7 +46,7 @@ function DarkCard({
 }) {
   const isLg = size === "lg";
   return (
-    <a
+    <Link
       href={href}
       className={`anim anim-delay-${Math.min((index % 3) + 1, 3)} group relative block overflow-hidden`}
       style={{ aspectRatio: ratio }}
@@ -66,7 +67,7 @@ function DarkCard({
           </div>
         )}
       </div>
-    </a>
+    </Link>
   );
 }
 
@@ -83,36 +84,36 @@ function SubHeader({ jp }: { jp: string }) {
 
 export default function Treatment() {
   return (
-    <section id="orthodontic-treatment" className="bg-white pb-24 lg:pb-40">
-      <Placeholder label="セクションヒーロー" className="w-full" ratio="16/4" />
+    <section id="orthodontic-treatment" className="bg-white pb-16 lg:pb-40">
+      <Placeholder label="セクションヒーロー" className="w-full aspect-[16/8] sm:aspect-[16/6] lg:aspect-[16/4]" />
 
-      <div className="container-clinic pt-16 lg:pt-24">
-        <div className="anim flex flex-col lg:flex-row lg:items-end gap-4 lg:gap-8 mb-20">
+      <div className="container-clinic pt-12 lg:pt-24">
+        <div className="anim flex flex-col items-start gap-1 lg:flex-row lg:items-end lg:gap-8 mb-12 lg:mb-20">
           <h2 className="section-eyebrow">Orthodontic Treatment</h2>
-          <span className="text-[14px] text-[#9a998e] tracking-wider pb-2">矯正治療について</span>
+          <span className="text-[13px] lg:text-[14px] text-[#9a998e] tracking-wider lg:pb-2">矯正治療について</span>
         </div>
 
-        <div className="mb-20">
+        <div className="mb-14 lg:mb-20">
           <SubHeader jp="年齢別で探す" />
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {BY_AGE.map((c, i) => (
               <DarkCard key={c.tag} {...c} ratio="3/2" index={i} />
             ))}
           </div>
         </div>
 
-        <div className="mb-20">
+        <div className="mb-14 lg:mb-20">
           <SubHeader jp="装置・方法から探す" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
             {BY_DEVICE.map((c, i) => (
               <DarkCard key={c.tag} {...c} ratio="3/2" index={i} />
             ))}
           </div>
         </div>
 
-        <div className="mb-20">
+        <div className="mb-14 lg:mb-20">
           <SubHeader jp="不正咬合の種類から探す" />
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
             {BY_TYPE.map((c, i) => (
               <DarkCard key={c.tag} {...c} ratio="1/1" index={i} size="sm" />
             ))}
@@ -121,7 +122,7 @@ export default function Treatment() {
 
         <div>
           <SubHeader jp="関連メニュー" />
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
             {RELATED.map((c, i) => (
               <DarkCard key={c.tag} {...c} ratio="1/1" index={i} size="sm" />
             ))}

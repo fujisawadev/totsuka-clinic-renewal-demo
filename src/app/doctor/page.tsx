@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
 import Placeholder from "@/components/Placeholder";
@@ -128,9 +129,9 @@ export default function Page() {
             <p className="text-[#9a998e] text-xs tracking-[0.3em] mb-2">関連リンク</p>
             <p className="text-[14px] leading-loose">横浜ドクターズにて、横浜市戸塚区の矯正歯科院長としてインタビューを受けました。</p>
           </div>
-          <a href="/interview/" className="inline-block bg-[#9a998e] text-white text-sm tracking-widest px-6 py-3 hover:bg-[#b5b4a8] transition w-fit lg:justify-self-end">
+          <Link href="/interview/" className="inline-block bg-[#9a998e] text-white text-sm tracking-widest px-6 py-3 hover:bg-[#b5b4a8] transition w-fit lg:justify-self-end">
             インタビュー記事を見る
-          </a>
+          </Link>
         </div>
       </PageSection>
     </SubPageLayout>

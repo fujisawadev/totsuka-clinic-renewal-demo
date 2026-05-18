@@ -40,23 +40,23 @@ function SnsCircle({ initial, label }: { initial: string; label: string }) {
 
 export default function FooterAccess() {
   return (
-    <section id="access" className="bg-[#f4f1ea]/30 py-24 lg:py-32">
+    <section id="access" className="bg-[#f4f1ea]/30 py-16 lg:py-32 pb-20 lg:pb-32">
       <div className="container-clinic">
-        <div className="anim text-center mb-16 lg:mb-20">
+        <div className="anim text-center mb-10 lg:mb-20">
           <h2 className="section-eyebrow">Access</h2>
-          <p className="text-sm text-[#9a998e] tracking-[0.3em] mt-2">アクセス</p>
-          <div className="w-12 h-px bg-[#9a998e]/40 mx-auto mt-6" />
+          <p className="text-xs sm:text-sm text-[#9a998e] tracking-[0.3em] mt-2">アクセス</p>
+          <div className="w-10 h-px bg-[#9a998e]/40 mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="anim">
             <Placeholder label="クリニック外観" ratio="4/3" className="w-full" />
           </div>
 
           <div className="anim anim-delay-1">
             <div className="mb-6">
-              <p className="text-2xl tracking-[0.15em]">ささき矯正歯科クリニック</p>
-              <p className="text-[11px] tracking-[0.25em] text-[#9a998e] mt-1">SASAKI ORTHODONTIC CLINIC</p>
+              <p className="text-xl lg:text-2xl tracking-[0.15em]">ささき矯正歯科クリニック</p>
+              <p className="text-[10px] sm:text-[11px] tracking-[0.25em] text-[#9a998e] mt-1">SASAKI ORTHODONTIC CLINIC</p>
             </div>
 
             <div className="flex gap-3 mb-8">
@@ -64,13 +64,13 @@ export default function FooterAccess() {
               <SnsCircle initial="T" label="Tiktok" />
             </div>
 
-            <dl className="space-y-3 text-[14px] leading-loose">
+            <dl className="space-y-3 text-[13px] sm:text-[14px] leading-loose">
               {INFO.map(([label, value]) => (
                 <div
                   key={label}
-                  className="grid grid-cols-[5.5rem_1fr] gap-4 border-b border-[#e3e3e3]/70 pb-3"
+                  className="grid grid-cols-[5rem_1fr] sm:grid-cols-[5.5rem_1fr] gap-3 sm:gap-4 border-b border-[#e3e3e3]/70 pb-3"
                 >
-                  <dt className="text-[#9a998e] tracking-wider text-[13px]">{label}</dt>
+                  <dt className="text-[#9a998e] tracking-wider text-[12px] sm:text-[13px]">{label}</dt>
                   <dd className="text-[#222]">{value}</dd>
                 </div>
               ))}
