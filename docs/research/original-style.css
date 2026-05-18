@@ -1,0 +1,14 @@
+/*!
+Theme Name: Shinagawa Orthodontic Clinic
+Author: Value Link
+Author URI: https://www.valuelink.jp
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: vlortho-framework
+*/
+
+/* for Wordpress Admin */
+body.admin-bar header {
+    top: 32px;
+}

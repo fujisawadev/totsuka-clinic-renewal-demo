@@ -1,0 +1,195 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #222222;
+  --color-muted: #9a998e;
+  --color-muted-strong: #888777;
+  --color-muted-hover: #b5b4a8;
+  --color-soft: #f4f1ea;
+  --color-border: #e3e3e3;
+  --color-dark: #1a1a1a;
+  --color-accent: #9a998e;
+
+  --font-mincho: "Shippori Mincho", "Yu Mincho", serif;
+
+  --breakpoint-sm: 431px;
+  --breakpoint-lg: 1144px;
+
+  --container-clinic: 1120px;
+  --ease-clinic: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@layer base {
+  html {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-mincho);
+    font-size: 14px;
+    line-height: 1.714;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-mincho);
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  ::selection {
+    background: var(--color-muted-hover);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .container-clinic {
+    width: 100%;
+    max-width: var(--container-clinic);
+    margin-inline: auto;
+    padding-inline: 24px;
+  }
+  @media (max-width: 430px) {
+    .container-clinic {
+      padding-inline: 16px;
+    }
+  }
+
+  /* English overline + Japanese subtitle pair used as section heading */
+  .section-eyebrow {
+    font-family: var(--font-mincho);
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--color-muted);
+    line-height: 1;
+  }
+  @media (max-width: 1143px) {
+    .section-eyebrow {
+      font-size: 28px;
+    }
+  }
+  .section-label {
+    font-family: var(--font-mincho);
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    color: var(--color-muted);
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-family: var(--font-mincho);
+    font-size: 32px;
+    line-height: 1.5;
+    color: var(--color-foreground);
+  }
+  @media (max-width: 1143px) {
+    .section-title {
+      font-size: 22px;
+    }
+  }
+
+  /* Inline link with right→left animated underline */
+  .link-underline {
+    position: relative;
+    display: inline-block;
+    color: var(--color-muted);
+    transition: color 0.3s;
+  }
+  .link-underline:hover {
+    color: var(--color-muted-hover);
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--color-muted-hover);
+    transition: width 0.3s, left 0.3s, right 0.3s;
+  }
+  .link-underline:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+
+  .view-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    transition: color 0.3s, gap 0.3s;
+  }
+  .view-more::after {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--color-muted);
+    transition: width 0.3s, background 0.3s;
+  }
+  .view-more:hover {
+    color: var(--color-muted-hover);
+    gap: 16px;
+  }
+  .view-more:hover::after {
+    width: 40px;
+    background: var(--color-muted-hover);
+  }
+
+  /* Scroll-reveal animation */
+  .anim {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+      opacity 0.8s var(--ease-clinic),
+      transform 0.8s var(--ease-clinic);
+    will-change: opacity, transform;
+  }
+  .anim.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  .anim-delay-1 {
+    transition-delay: 0.15s;
+  }
+  .anim-delay-2 {
+    transition-delay: 0.3s;
+  }
+  .anim-delay-3 {
+    transition-delay: 0.45s;
+  }
+
+  /* Image placeholder block — used everywhere an <img> would be */
+  .placeholder {
+    background: linear-gradient(135deg, #efece4 0%, #ddd9cd 100%);
+    color: rgba(34, 34, 34, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  .placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(45deg, transparent 0 24px, rgba(154, 153, 142, 0.06) 24px 25px);
+    pointer-events: none;
+  }
+  .placeholder > span {
+    position: relative;
+    z-index: 1;
+    padding: 0 8px;
+  }
+}
