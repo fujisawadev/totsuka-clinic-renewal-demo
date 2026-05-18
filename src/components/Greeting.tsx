@@ -2,45 +2,41 @@ import Placeholder from "./Placeholder";
 
 export default function Greeting() {
   return (
-    <section id="greeting" className="bg-white py-24 lg:py-40">
-      <div className="container-clinic">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          <div className="lg:col-span-5 anim">
-            <div className="section-label mb-4">Greeting</div>
-            <h2 className="section-eyebrow mb-8">院長あいさつ</h2>
-            <h3 className="section-title mb-8 leading-snug">
-              ここに院長メッセージの
-              <br />
-              キャッチコピーが入ります。
-            </h3>
-            <div className="space-y-5 text-[15px] leading-loose text-[#444]">
-              <p>
-                ──── プレースホルダー本文 ────<br />
-                ここには院長からのメッセージが入ります。実際の文章は、既存サイトから抽出した内容に差し替え予定です。
-              </p>
-              <p>
-                段落 2：診療方針や、どのような想いで日々診療されているかを記述いただく想定です。
-              </p>
-              <p>
-                段落 3：締めのメッセージ。患者さまへ向けたコメントなどが入ります。
-              </p>
-            </div>
-            <p className="mt-10 text-sm tracking-wider text-[#9a998e]">
-              院長　◯◯ ◯◯
+    <section id="greeting" className="bg-white pt-24 lg:pt-32 pb-24 lg:pb-40 relative">
+      <div className="container-clinic mb-8 lg:mb-12">
+        <div className="anim flex items-end gap-6 lg:gap-8">
+          <h2 className="section-eyebrow">Greeting</h2>
+          <span className="text-[14px] text-[#9a998e] tracking-wider pb-2">院長あいさつ</span>
+        </div>
+      </div>
+
+      <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-6 lg:px-10">
+        <div className="lg:col-span-8 relative anim">
+          <Placeholder
+            label="院長写真"
+            ratio="16/10"
+            className="w-full"
+          />
+          <div className="mt-6 lg:mt-8 max-w-md">
+            <p className="text-xs text-[#9a998e] tracking-wider">日本矯正歯科学会 認定医</p>
+            <p className="text-xs text-[#9a998e] tracking-wider">◯◯歯科クリニック 院長</p>
+            <p className="mt-3 text-2xl tracking-wider">
+              ◯◯ ◯◯
+              <span className="ml-3 text-sm text-[#9a998e]">Family Name Given Name</span>
             </p>
           </div>
+        </div>
 
-          <div className="lg:col-span-7 relative">
-            <Placeholder
-              label="院長写真"
-              ratio="16/10"
-              className="anim w-full"
-            />
-            <Placeholder
-              label="診療風景"
-              ratio="4/3"
-              className="anim anim-delay-2 absolute -bottom-10 -left-6 lg:-left-16 w-2/5 shadow-xl"
-            />
+        <div className="lg:col-span-4 anim anim-delay-1">
+          <div
+            className="text-[15px] leading-[2.4] text-[#222] tracking-wider max-h-[600px]"
+            style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
+          >
+            <p>
+              ここに院長メッセージが入ります（縦書き）。プレースホルダー本文：実際の文章は既存サイトから抽出した内容に差し替え予定です。<br />
+              段落 2：診療方針や日々の想いを記述いただきます。<br />
+              段落 3：締めのメッセージ。
+            </p>
           </div>
         </div>
       </div>
