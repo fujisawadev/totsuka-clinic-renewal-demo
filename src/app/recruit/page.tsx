@@ -47,7 +47,7 @@ export default function Page() {
 
       <PageSection enTitle="How to apply" jpTitle="応募方法">
         <p className="text-[14px] leading-loose text-[#222] max-w-2xl">
-          ご興味をお持ちの方は、お電話または専用フォームよりお問い合わせください。
+          ご興味をお持ちの方は、お電話または専用フォームよりお問い合わせください。求人媒体経由のご応募も受け付けています。
         </p>
         <div className="mt-6 flex gap-3 flex-wrap">
           <a href="tel:0458712281" className="inline-block bg-[#9a998e] text-white text-sm tracking-widest px-6 py-3 hover:bg-[#b5b4a8] transition">
@@ -58,6 +58,39 @@ export default function Page() {
           </a>
         </div>
         <p className="mt-4 text-[12px] text-[#666]">※ 応募フォームは別途実装予定。</p>
+      </PageSection>
+
+      <PageSection enTitle="Job media" jpTitle="求人媒体にも掲載中" bg="soft">
+        <p className="text-[14px] leading-loose text-[#222] max-w-2xl mb-8">
+          以下の求人媒体にも掲載しています。フォームからの応募もこちらから可能です。
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <a
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="求人媒体バナー 1"
+            className="block bg-white border border-[#e3e3e3] hover:border-[#9a998e] transition p-4"
+          >
+            <div className="placeholder w-full" style={{ aspectRatio: "340 / 106" }}>
+              <span>求人バナー 1（媒体掲載中）</span>
+            </div>
+            <p className="mt-3 text-[12px] text-[#9a998e] tracking-wider">外部求人サイトへ移動 →</p>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="求人媒体バナー 2"
+            className="block bg-white border border-[#e3e3e3] hover:border-[#9a998e] transition p-4"
+          >
+            <div className="placeholder w-full" style={{ aspectRatio: "340 / 106" }}>
+              <span>求人バナー 2（媒体掲載中）</span>
+            </div>
+            <p className="mt-3 text-[12px] text-[#9a998e] tracking-wider">外部求人サイトへ移動 →</p>
+          </a>
+        </div>
+        <p className="mt-6 text-[12px] text-[#666]">※ バナー画像とリンク先 URL は、現行サイト掲載中の媒体（webqua.jp 等）の引継ぎ確認後に反映します。</p>
       </PageSection>
     </SubPageLayout>
   );

@@ -37,7 +37,7 @@ const COLUMNS = [
     label: "情報・その他",
     items: [
       { label: "よくある質問", href: "/faq/" },
-      { label: "横浜の矯正歯科 Q&A", href: "/yokohama/" },
+      { label: "矯正歯科コラム", href: "/columns/" },
       { label: "お知らせ", href: "/news/" },
       { label: "患者さんへのお願い", href: "/notice/" },
       { label: "治療に関するご注意", href: "/precautionary/" },

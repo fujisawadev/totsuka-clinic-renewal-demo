@@ -29,7 +29,7 @@ const CLINIC = [
 ];
 const INFO = [
   { label: "よくある質問", href: "/faq/" },
-  { label: "横浜の矯正歯科 Q&A", href: "/yokohama/" },
+  { label: "矯正歯科コラム", href: "/columns/" },
   { label: "お知らせ", href: "/news/" },
   { label: "リンク集", href: "/links/" },
 ];

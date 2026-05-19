@@ -1,18 +1,6 @@
 import Link from "next/link";
 import Placeholder from "./Placeholder";
 
-const PLACEHOLDER_BODY = "プレースホルダー本文 ── このカードの説明文が入ります。";
-
-const BY_AGE = [
-  { tag: "child", title: "小児矯正", body: PLACEHOLDER_BODY, href: "#" },
-  { tag: "adult", title: "成人矯正", body: PLACEHOLDER_BODY, href: "#" },
-];
-
-const BY_DEVICE = [
-  { tag: "transparent", title: "半透明の装置", body: PLACEHOLDER_BODY, href: "/appliance/" },
-  { tag: "wire", title: "ワイヤー矯正", body: PLACEHOLDER_BODY, href: "/appliance/" },
-];
-
 const BY_TYPE = [
   { tag: "crowded", title: "乱杭歯（叢生）", href: "/symptoms/crowded-openbite/" },
   { tag: "overbite", title: "出っ歯（上顎前突）", href: "/symptoms/overbite/" },
@@ -91,24 +79,6 @@ export default function Treatment() {
         <div className="anim flex flex-col items-start gap-1 lg:flex-row lg:items-end lg:gap-8 mb-12 lg:mb-20">
           <h2 className="section-eyebrow">Orthodontic Treatment</h2>
           <span className="text-[13px] lg:text-[14px] text-[#9a998e] tracking-wider lg:pb-2">矯正治療について</span>
-        </div>
-
-        <div className="mb-14 lg:mb-20">
-          <SubHeader jp="年齢別で探す" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-            {BY_AGE.map((c, i) => (
-              <DarkCard key={c.tag} {...c} ratio="3/2" index={i} />
-            ))}
-          </div>
-        </div>
-
-        <div className="mb-14 lg:mb-20">
-          <SubHeader jp="装置・方法から探す" />
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-            {BY_DEVICE.map((c, i) => (
-              <DarkCard key={c.tag} {...c} ratio="3/2" index={i} />
-            ))}
-          </div>
         </div>
 
         <div className="mb-14 lg:mb-20">

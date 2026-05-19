@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280" />
+    <title>ささき矯正歯科 サイトリニューアル ご説明資料</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-soft: #f4f1ea;
+        --fg: #222;
+        --muted: #9a998e;
+        --muted-2: #b5b4a8;
+        --line: #e3e3e3;
+        --dark: #1a1a1a;
+        --ok: #6e8c5a;
+        --warn: #c89b4a;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: "Shippori Mincho", "Yu Mincho", "ヒラギノ明朝 ProN", serif;
+        font-size: 15px;
+        line-height: 1.8;
+        scroll-behavior: smooth;
+      }
+      a { color: var(--muted); }
+      .slide {
+        min-height: 100vh;
+        padding: 80px 80px 120px;
+        position: relative;
+        scroll-snap-align: start;
+        border-bottom: 1px solid var(--line);
+      }
+      body { scroll-snap-type: y proximity; }
+      .slide-num {
+        position: absolute;
+        top: 30px;
+        right: 60px;
+        font-size: 12px;
+        letter-spacing: 0.25em;
+        color: var(--muted);
+      }
+      h1, h2, h3, h4 { margin: 0; font-weight: 500; letter-spacing: 0.05em; }
+      h1 { font-size: 48px; line-height: 1.4; }
+      h2 { font-size: 34px; line-height: 1.4; margin-bottom: 8px; }
+      h3 { font-size: 20px; line-height: 1.6; margin-bottom: 12px; }
+      .eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.35em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      .divider {
+        width: 40px;
+        height: 1px;
+        background: var(--muted);
+        margin: 24px 0 32px;
+      }
+      .lead {
+        font-size: 17px;
+        line-height: 2;
+        color: #444;
+        max-width: 800px;
+      }
+      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+      .grid-pages { display: grid; grid-template-columns: 1fr 60px 1fr; gap: 0; align-items: stretch; }
+      .col-title {
+        font-size: 13px;
+        letter-spacing: 0.3em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid var(--line);
+      }
+      .arrow-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        font-size: 22px;
+      }
+      .map-table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 24px;
+      }
+      .map-table th,
+      .map-table td {
+        text-align: left;
+        padding: 14px 16px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      .map-table th {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--muted);
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        background: #faf8f3;
+      }
+      .map-table .url {
+        font-family: ui-monospace, "SF Mono", Consolas, monospace;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .map-table tr.row-skip td { background: #fcfaf3; }
+      .map-table tr.row-new td { background: #f5f8ed; }
+      .badge {
+        display: inline-block;
+        padding: 2px 10px;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        border-radius: 999px;
+      }
+      .badge-ok    { background: #e8eee0; color: #5a7548; }
+      .badge-merge { background: #ece7d6; color: #756945; }
+      .badge-new   { background: #dfe9d2; color: #5a7548; }
+      .badge-skip  { background: #f3e6d2; color: #8b6a35; }
+      .badge-placeholder { background: #f0eadf; color: #8a7e5f; }
+      .note {
+        margin-top: 8px;
+        font-size: 12px;
+        color: #777;
+        line-height: 1.7;
+      }
+      .stack { display: flex; flex-direction: column; gap: 10px; }
+      .pill-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+      .pill-list li {
+        padding: 6px 14px;
+        border: 1px solid var(--line);
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        color: #555;
+        background: #faf8f3;
+      }
+      .callout {
+        padding: 24px 28px;
+        background: var(--bg-soft);
+        border-left: 3px solid var(--muted);
+        margin-top: 24px;
+      }
+      .callout-title {
+        font-size: 12px;
+        letter-spacing: 0.25em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .checklist { list-style: none; padding: 0; margin: 0; }
+      .checklist li {
+        padding: 12px 0;
+        border-bottom: 1px dashed var(--line);
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .checkbox {
+        flex-shrink: 0;
+        width: 16px; height: 16px;
+        border: 1px solid var(--muted);
+        margin-top: 4px;
+      }
+      .toc {
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        color: var(--muted);
+      }
+      .toc a {
+        text-decoration: none;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .toc a:hover { color: var(--fg); }
+      .toc .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--muted-2);
+      }
+      .footer-row {
+        margin-top: 60px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        font-size: 11px;
+        color: var(--muted);
+        letter-spacing: 0.15em;
+      }
+      .cover {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 80px;
+        background: var(--bg-soft);
+      }
+      .cover .meta {
+        margin-top: 60px;
+        font-size: 13px;
+        color: var(--muted);
+        letter-spacing: 0.15em;
+      }
+      .url-box {
+        margin-top: 20px;
+        padding: 14px 18px;
+        background: #fff;
+        border: 1px solid var(--line);
+        font-family: ui-monospace, "SF Mono", Consolas, monospace;
+        font-size: 13px;
+        color: var(--fg);
+      }
+      .tree {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+      .tree li {
+        padding: 2px 0;
+        position: relative;
+      }
+      .tree .root { font-weight: 500; color: var(--fg); padding-bottom: 8px; }
+      .tree .home {
+        font-size: 12px;
+        color: var(--muted);
+        margin-left: 6px;
+      }
+      .tree .new-tag {
+        display: inline-block;
+        margin-left: 8px;
+        font-size: 9px;
+        letter-spacing: 0.2em;
+        padding: 1px 6px;
+        background: #dfe9d2;
+        color: #5a7548;
+        border-radius: 2px;
+      }
+      .legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 18px;
+        font-size: 11px;
+        color: #666;
+      }
+      .legend .badge { font-size: 10px; }
+      .home-sections {
+        list-style: none;
+        padding: 0;
+        margin: 24px 0 0;
+      }
+      .home-sections li {
+        padding: 14px 0;
+        display: grid;
+        grid-template-columns: 200px 1fr 220px;
+        gap: 24px;
+        border-bottom: 1px solid var(--line);
+        align-items: baseline;
+      }
+      .home-sections li .label {
+        font-size: 12px;
+        letter-spacing: 0.25em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+      .home-sections li .desc {
+        font-size: 14px;
+        line-height: 1.7;
+      }
+      .home-sections li .where {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .home-sections li .where strong {
+        color: var(--fg);
+        font-weight: 500;
+      }
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        margin-top: 40px;
+      }
+      .stat-grid h3 { font-size: 16px; margin-bottom: 8px; color: #444; }
+      .stat-grid .big { font-size: 48px; line-height: 1; color: var(--muted); margin: 8px 0; }
+      .stat-grid .big small { font-size: 14px; margin-left: 6px; }
+      @media print {
+        .toc { display: none; }
+        .slide { page-break-after: always; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="toc" aria-label="目次">
+      <a href="#cover"><span class="dot"></span><span>01</span></a>
+      <a href="#overview"><span class="dot"></span><span>02</span></a>
+      <a href="#side-by-side"><span class="dot"></span><span>03</span></a>
+      <a href="#mapping"><span class="dot"></span><span>04</span></a>
+      <a href="#columns-section"><span class="dot"></span><span>05</span></a>
+      <a href="#home-sections"><span class="dot"></span><span>06</span></a>
+      <a href="#placeholders"><span class="dot"></span><span>07</span></a>
+      <a href="#decisions"><span class="dot"></span><span>08</span></a>
+    </nav>
+
+    <!-- ============ COVER ============ -->
+    <section class="slide cover" id="cover">
+      <div class="eyebrow">Appendix ── Page Migration Mapping</div>
+      <h1>
+        ささき矯正歯科クリニック<br />
+        ページ別 移管マッピング（付録）
+      </h1>
+      <div class="divider"></div>
+      <p class="lead">
+        本資料は <strong><a href="./proposal.html" style="color: var(--fg); text-decoration: underline; text-decoration-color: var(--muted);">Web サイトリニューアル ご提案資料（proposal.html）</a></strong> の付録です。<br />
+        現行サイト（sasakikyousei.com）の全ページ・全コンテンツが、新しいサイト構造のどの URL に対応するかを 1 つずつ確認できる詳細マッピングです。旧サイトのページが新サイトのどこに対応するか、また、新サイトに「枠」として用意したまま中身がまだ決まっていない箇所もご確認いただけます。
+      </p>
+      <div class="meta">
+        <div>デモURL</div>
+        <div class="url-box">https://fujisawadev.github.io/totsuka-clinic-renewal-demo/</div>
+        <div style="margin-top: 24px;">本編はこちら</div>
+        <div class="url-box"><a href="./proposal.html" style="color: var(--fg); text-decoration: none;">./proposal.html</a></div>
+      </div>
+    </section>
+
+    <!-- ============ OVERVIEW ============ -->
+    <section class="slide" id="overview">
+      <div class="slide-num">02 / 08</div>
+      <div class="eyebrow">Overview</div>
+      <h2>移管の全体像</h2>
+      <div class="divider"></div>
+
+      <div class="stat-grid">
+        <div>
+          <h3>旧サイト 全ページ</h3>
+          <p class="big">114<small>ページ</small></p>
+          <p style="font-size: 12px; color: #666;">基本構造 20 ページ<br />+ 横浜エリア Q&amp;A 94 ページ</p>
+        </div>
+        <div>
+          <h3>新サイト 全ページ</h3>
+          <p class="big">120<small>ページ</small></p>
+          <p style="font-size: 12px; color: #666;">トップ + 25 サブページ<br />+ 横浜 Q&amp;A 94 ページ</p>
+        </div>
+        <div>
+          <h3>カバレッジ</h3>
+          <p class="big">100<small>%</small></p>
+          <p style="font-size: 12px; color: #666;">旧サイト全ページのテキストを移管済み</p>
+        </div>
+        <div>
+          <h3>新設ページ</h3>
+          <p class="big">+6<small>ページ</small></p>
+          <p style="font-size: 12px; color: #666;">院長紹介・年別症例件数・インタビュー・採用情報・リンク集 等</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">この資料の使い方</div>
+        <p style="margin: 0; font-size: 14px;">
+          ① 旧サイトの各ページがどこへ移ったかを <strong>スライド 04（ページ別の対応マッピング）</strong> で確認できます。<br />
+          ② 横浜エリア Q&amp;A（94 件）の移管状況は <strong>スライド 05</strong> で。<br />
+          ③ 旧トップに集約されていたコンテンツの分散先は <strong>スライド 06</strong> で。<br />
+          ④ 新サイトで「枠だけ用意していて中身未定」の箇所は <strong>スライド 07</strong> で確認できます。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ SIDE BY SIDE ============ -->
+    <section class="slide" id="side-by-side">
+      <div class="slide-num">03 / 08</div>
+      <div class="eyebrow">Site Structure</div>
+      <h2>旧サイト・新サイトの構造</h2>
+      <div class="divider"></div>
+
+      <div class="grid-pages">
+        <div>
+          <div class="col-title">旧サイト（sasakikyousei.com）20 ページ</div>
+          <ul class="tree">
+            <li class="root">トップページ <span class="home">(index.html)</span></li>
+            <li>├ 矯正治療について <span class="home">(kyouseitoha.html)</span></li>
+            <li>├ 矯正治療の進め方 <span class="home">(susumekata.html)</span></li>
+            <li>├ 院内紹介・交通 <span class="home">(annai.html)</span></li>
+            <li>├ 初診の方はこちら <span class="home">(first.html)</span></li>
+            <li>├ うけ口 <span class="home">(ukekuti.html)</span></li>
+            <li>├ 出っ歯 <span class="home">(deppa.html)</span></li>
+            <li>├ 乱杭歯・開咬 <span class="home">(rankoukaiko.html)</span></li>
+            <li>├ 外科治療 <span class="home">(geka.html)</span></li>
+            <li>├ 抜歯について <span class="home">(bassi.html)</span></li>
+            <li>├ アフターケアー <span class="home">(afutakea.html)</span></li>
+            <li>├ 治療前後の比較 <span class="home">(hikaku.html)</span></li>
+            <li>├ 矯正装置 <span class="home">(souti.html)</span></li>
+            <li>├ よくある質問 <span class="home">(question.html)</span></li>
+            <li>├ 患者さんへのお願い <span class="home">(notice.html)</span></li>
+            <li>├ 矯正治療料金 <span class="home">(plan.html)</span></li>
+            <li>├ リンク集 <span class="home">(link.html)</span></li>
+            <li>├ 治療に関するご注意 <span class="home">(precautionary.html)</span></li>
+            <li>├ リスク・副作用について <span class="home">(risk.html)</span></li>
+            <li>└ 矯正歯科コラム ハブ <span class="home">(/columns/)</span></li>
+            <li style="padding-left: 32px; color: var(--muted); font-size: 12px;">└ FAQ 記事 × 94</li>
+          </ul>
+        </div>
+        <div class="arrow-col"><span aria-hidden>→</span></div>
+        <div>
+          <div class="col-title">新サイト 26 ページ（+ Q&amp;A 94 ページ）</div>
+          <ul class="tree">
+            <li class="root">トップページ <span class="home">(/)</span></li>
+            <li>├ 矯正治療について <span class="home">(/treatment/)</span></li>
+            <li>├ 矯正治療の進め方 <span class="home">(/process/)</span></li>
+            <li>├ 院内紹介・交通 <span class="home">(/access-info/)</span></li>
+            <li>├ 初診の方へ <span class="home">(/first-visit/)</span></li>
+            <li>├ うけ口（下顎前突） <span class="home">(/symptoms/underbite/)</span></li>
+            <li>├ 出っ歯（上顎前突） <span class="home">(/symptoms/overbite/)</span></li>
+            <li>├ 乱杭歯・開咬 <span class="home">(/symptoms/crowded-openbite/)</span></li>
+            <li>├ 外科治療 <span class="home">(/surgical/)</span></li>
+            <li>├ 抜歯について <span class="home">(/extraction/)</span></li>
+            <li>├ アフターケア <span class="home">(/aftercare/)</span></li>
+            <li>├ 治療前後の比較 <span class="home">(/before-after/)</span></li>
+            <li>├ 矯正装置 <span class="home">(/appliance/)</span></li>
+            <li>├ よくある質問 <span class="home">(/faq/)</span></li>
+            <li>├ 患者さんへのお願い <span class="home">(/notice/)</span></li>
+            <li>├ 矯正治療料金 <span class="home">(/pricing/)</span></li>
+            <li>├ リンク集 <span class="home">(/links/)</span></li>
+            <li>├ 治療に関するご注意 <span class="home">(/precautionary/)</span></li>
+            <li>├ リスク・副作用について <span class="home">(/risk/)</span></li>
+            <li>├ 院長紹介 <span class="home">(/doctor/)</span><span class="new-tag">NEW</span></li>
+            <li>├ 年別症例件数 <span class="home">(/achievements/)</span><span class="new-tag">NEW</span></li>
+            <li>├ インタビュー記事 <span class="home">(/interview/)</span><span class="new-tag">NEW</span></li>
+            <li>├ 採用情報 <span class="home">(/recruit/)</span><span class="new-tag">NEW</span></li>
+            <li>├ お知らせ <span class="home">(/news/)</span><span class="new-tag">NEW</span></li>
+            <li>└ 矯正歯科コラム <span class="home">(/columns/)</span></li>
+            <li style="padding-left: 32px; color: var(--muted); font-size: 12px;">└ コラム記事 × 94 (/columns/[slug]/)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="badge badge-new">NEW</span> 旧トップに集約されていた内容を独立ページとして新設</span>
+      </div>
+    </section>
+
+    <!-- ============ DETAILED MAPPING ============ -->
+    <section class="slide" id="mapping">
+      <div class="slide-num">04 / 08</div>
+      <div class="eyebrow">Page-by-page Mapping</div>
+      <h2>ページ別の対応マッピング</h2>
+      <div class="divider"></div>
+      <p style="font-size: 14px; color: #555; margin-bottom: 8px;">
+        旧サイトの全 20 ページ（横浜セクションのハブ含む）について、新サイトのどのページに対応するかと内容の扱いをまとめました。コラム配下の 94 記事については<a href="#columns-section">スライド 05</a> で詳述します。
+      </p>
+      <div class="legend">
+        <span><span class="badge badge-ok">移管</span> 旧サイトの内容を新サイトの該当ページに記載済み</span>
+        <span><span class="badge badge-merge">統合</span> 旧の複数ページ／セクションを 1 ページにまとめた</span>
+        <span><span class="badge badge-new">新設</span> 旧サイトでは独立していなかったが、新サイトで独立ページ化</span>
+      </div>
+
+      <table class="map-table">
+        <thead>
+          <tr>
+            <th style="width: 28%;">旧サイトのページ</th>
+            <th style="width: 28%;">新サイトの行き先</th>
+            <th style="width: 12%;">扱い</th>
+            <th>備考</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>トップページ</strong><br /><span class="url">index.html</span></td>
+            <td><strong>トップページ</strong><br /><span class="url">/</span></td>
+            <td><span class="badge badge-merge">統合</span></td>
+            <td>院長挨拶・お知らせ等の内容は新サイトの各セクション／ページに分散。詳細は<a href="#home-sections">スライド 06</a>を参照。</td>
+          </tr>
+          <tr>
+            <td>矯正治療について<br /><span class="url">kyouseitoha.html</span></td>
+            <td>矯正治療について<br /><span class="url">/treatment/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>本文を移管。</td>
+          </tr>
+          <tr>
+            <td>矯正治療の進め方<br /><span class="url">susumekata.html</span></td>
+            <td>矯正治療の進め方<br /><span class="url">/process/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>治療の流れ／期間の説明を移管。</td>
+          </tr>
+          <tr>
+            <td>院内紹介・交通<br /><span class="url">annai.html</span></td>
+            <td>院内紹介・交通<br /><span class="url">/access-info/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>医院情報・院内設備 12 項目・駐車場案内を移管。トップ下部の Access セクションでも要点を表示。</td>
+          </tr>
+          <tr>
+            <td>初診の方はこちら<br /><span class="url">first.html</span></td>
+            <td>初診の方へ<br /><span class="url">/first-visit/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>STEP1〜4 の流れ・予約方法・持ち物等を移管。</td>
+          </tr>
+          <tr>
+            <td>うけ口<br /><span class="url">ukekuti.html</span></td>
+            <td>うけ口（下顎前突）<br /><span class="url">/symptoms/underbite/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>症状解説と症例枠を移管。</td>
+          </tr>
+          <tr>
+            <td>出っ歯<br /><span class="url">deppa.html</span></td>
+            <td>出っ歯（上顎前突）<br /><span class="url">/symptoms/overbite/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>症状解説と症例枠を移管。</td>
+          </tr>
+          <tr>
+            <td>乱杭歯・開咬<br /><span class="url">rankoukaiko.html</span></td>
+            <td>乱杭歯・開咬<br /><span class="url">/symptoms/crowded-openbite/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>乱杭歯と開咬の 2 症状をまとめて 1 ページに。</td>
+          </tr>
+          <tr>
+            <td>外科治療<br /><span class="url">geka.html</span></td>
+            <td>外科治療<br /><span class="url">/surgical/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>外科治療の説明を移管。</td>
+          </tr>
+          <tr>
+            <td>抜歯について<br /><span class="url">bassi.html</span></td>
+            <td>抜歯について<br /><span class="url">/extraction/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>本文をそのまま移管。</td>
+          </tr>
+          <tr>
+            <td>アフターケアー<br /><span class="url">afutakea.html</span></td>
+            <td>アフターケア<br /><span class="url">/aftercare/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>保定治療の説明・保定装置 3 種を移管。</td>
+          </tr>
+          <tr>
+            <td>治療前後の比較<br /><span class="url">hikaku.html</span></td>
+            <td>治療前後の比較<br /><span class="url">/before-after/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>4 症状の解説 + Before/After 枠を用意。</td>
+          </tr>
+          <tr>
+            <td>矯正装置<br /><span class="url">souti.html</span></td>
+            <td>矯正装置<br /><span class="url">/appliance/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>マルチブラケットの説明 + 装置 10 種を移管。</td>
+          </tr>
+          <tr>
+            <td>よくある質問<br /><span class="url">question.html</span></td>
+            <td>よくある質問<br /><span class="url">/faq/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>9 問の Q&amp;A をアコーディオン形式で移管。</td>
+          </tr>
+          <tr>
+            <td>患者さんへのお願い<br /><span class="url">notice.html</span></td>
+            <td>患者さんへのお願い<br /><span class="url">/notice/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>8 項目の注意事項 + 装置破損費用を移管。</td>
+          </tr>
+          <tr>
+            <td>矯正治療料金<br /><span class="url">plan.html</span></td>
+            <td>矯正治療料金<br /><span class="url">/pricing/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>料金表 9 行 + デンタルローン案内を移管。</td>
+          </tr>
+          <tr>
+            <td>リンク集<br /><span class="url">link.html</span></td>
+            <td>リンク集<br /><span class="url">/links/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>学会等の 3 リンクを移管。</td>
+          </tr>
+          <tr>
+            <td>治療に関するご注意<br /><span class="url">precautionary.html</span></td>
+            <td>治療に関するご注意<br /><span class="url">/precautionary/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>4 項目を移管。</td>
+          </tr>
+          <tr>
+            <td>一般的なリスク、副作用について<br /><span class="url">risk.html</span></td>
+            <td>リスク・副作用について<br /><span class="url">/risk/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>12 項目を移管。</td>
+          </tr>
+          <tr>
+            <td>矯正歯科コラム（旧 横浜ハブ）<br /><span class="url">yokohama-orthodontic-dentistry/</span></td>
+            <td>矯正歯科コラム<br /><span class="url">/columns/</span></td>
+            <td><span class="badge badge-ok">移管</span></td>
+            <td>ハブページの 12 トピック目次 + 配下 Q&amp;A 94 件の一覧。詳細は<a href="#columns-section">スライド 05</a>。</td>
+          </tr>
+          <tr class="row-new">
+            <td>──<br /><span style="color: var(--muted); font-size: 11px;">旧サイトでは独立ページなし<br />（旧トップに集約）</span></td>
+            <td>院長紹介<br /><span class="url">/doctor/</span></td>
+            <td><span class="badge badge-new">新設</span></td>
+            <td>院長挨拶 + 資格・経歴・所属学会・主な役職・地域医療を独立ページに整理。</td>
+          </tr>
+          <tr class="row-new">
+            <td>──<br /><span style="color: var(--muted); font-size: 11px;">旧トップ内のセクション</span></td>
+            <td>年別症例件数<br /><span class="url">/achievements/</span></td>
+            <td><span class="badge badge-new">新設</span></td>
+            <td>1989〜2018 年（30 年間）の症例件数推移、合計 5,694 件を独立ページに。</td>
+          </tr>
+          <tr class="row-new">
+            <td>──<br /><span style="color: var(--muted); font-size: 11px;">旧トップ内のセクション</span></td>
+            <td>インタビュー記事<br /><span class="url">/interview/</span></td>
+            <td><span class="badge badge-new">新設</span></td>
+            <td>横浜ドクターズインタビューを独立ページ化（外部リンク用枠）。</td>
+          </tr>
+          <tr class="row-new">
+            <td>──<br /><span style="color: var(--muted); font-size: 11px;">旧トップ内のセクション</span></td>
+            <td>採用情報<br /><span class="url">/recruit/</span></td>
+            <td><span class="badge badge-new">新設</span></td>
+            <td>採用情報ページを新設。具体的な募集要項は要原稿。</td>
+          </tr>
+          <tr class="row-new">
+            <td>──<br /><span style="color: var(--muted); font-size: 11px;">旧トップ内のセクション</span></td>
+            <td>お知らせ<br /><span class="url">/news/</span></td>
+            <td><span class="badge badge-new">新設</span></td>
+            <td>旧トップの NEWS セクションを独立ページ化。</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============ YOKOHAMA ============ -->
+    <section class="slide" id="columns-section">
+      <div class="slide-num">05 / 08</div>
+      <div class="eyebrow">Columns Section</div>
+      <h2>矯正歯科コラム（旧横浜セクション）の移管</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        旧サイトの <span class="url">/yokohama-orthodontic-dentistry/</span> 配下は、ハブページ 1 件 + Q&amp;A 記事 94 件で構成されていました。新サイトでも同じ構造で移管しています。
+      </p>
+
+      <div class="grid-2" style="margin-top: 40px;">
+        <div>
+          <h3>ハブページ</h3>
+          <p style="font-size: 14px; line-height: 1.8;">
+            旧 <span class="url">/yokohama-orthodontic-dentistry/</span> → 新 <span class="url">/columns/</span><br />
+            12 トピック目次（横浜で臨床実績の豊富な歯列矯正歯科とは？など）と、配下 Q&amp;A 一覧を表示。<br />
+            <span style="font-size: 12px; color: #777;">※ 各トピックの本文はクリニック側のコンテンツ確定後に流し込み予定。</span>
+          </p>
+        </div>
+        <div>
+          <h3>Q&amp;A 記事 × 94</h3>
+          <p style="font-size: 14px; line-height: 1.8;">
+            旧 <span class="url">faq20190201.html</span> 〜 <span class="url">faq20260518.html</span> （日付順）<br />
+            → 新 <span class="url">/columns/[slug]/</span> として全 94 件を個別ページとして公開。<br />
+            <span style="font-size: 12px; color: #777;">※ 各記事は質問とリード文を表示。本文の精読・最新化はクリニック側で順次対応いただく想定です。</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top: 40px;">
+        <div class="callout-title">94 件の Q&amp;A 記事カバレッジ</div>
+        <p style="margin: 0 0 12px 0; font-size: 13px;">
+          旧サイトに存在する全 94 件の URL（faq20190201〜faq20260518）が、新サイトでも同じスラッグで公開されています。スライド 04 の表とは別にまとめると以下のとおりです:
+        </p>
+        <table class="map-table" style="margin-top: 8px;">
+          <thead>
+            <tr>
+              <th>期間</th>
+              <th>件数</th>
+              <th>新サイトの URL</th>
+              <th>扱い</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2019 年</td>
+              <td>12 件</td>
+              <td><span class="url">/columns/faq2019xxxx/</span></td>
+              <td><span class="badge badge-ok">移管</span></td>
+            </tr>
+            <tr>
+              <td>2020 年</td>
+              <td>12 件</td>
+              <td><span class="url">/columns/faq2020xxxx/</span></td>
+              <td><span class="badge badge-ok">移管</span></td>
+            </tr>
+            <tr>
+              <td>2021 年</td>
+              <td>3 件</td>
+              <td><span class="url">/columns/faq2021xxxx/</span></td>
+              <td><span class="badge badge-ok">移管</span></td>
+            </tr>
+            <tr>
+              <td>2022 年</td>
+              <td>7 件</td>
+              <td><span class="url">/columns/faq2022xxxx/</span></td>
+              <td><span class="badge badge-ok">移管</span></td>
+            </tr>
+            <tr>
+              <td>2023 年</td>
+              <td>12 件</td>
+              <td><span class="url">/columns/faq2023xxxx/</span></td>
+              <td><span class="badge badge-ok">移管</span></td>
+            </tr>
+            <tr>
+              <td>2024 年</td>
+              <td>12 件</td>
+              <td><span class="url">/columns/faq2024xxxx/</span></td>
+              <td><span class="badge badge-ok">移管</span></td>
+            </tr>
+            <tr>
+              <td>2025 年</td>
+              <td>16 件</td>
+              <td><span class="url">/columns/faq2025xxxx/</span></td>
+              <td><span class="badge badge-ok">移管</span></td>
+            </tr>
+            <tr>
+              <td>2026 年</td>
+              <td>20 件</td>
+              <td><span class="url">/columns/faq2026xxxx/</span></td>
+              <td><span class="badge badge-ok">移管</span></td>
+            </tr>
+            <tr style="background: var(--bg-soft);">
+              <td><strong>合計</strong></td>
+              <td><strong>94 件</strong></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ HOME SECTIONS ============ -->
+    <section class="slide" id="home-sections">
+      <div class="slide-num">06 / 08</div>
+      <div class="eyebrow">Home Page Content Breakdown</div>
+      <h2>旧トップページの各セクション → 新サイトでの行き先</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        旧サイトのトップページには「院長挨拶」「資格・経歴」「お知らせ」など複数の情報が 1 ページに集約されていました。新サイトでは、それぞれを適切な独立ページとして分散配置しています。
+      </p>
+
+      <ul class="home-sections">
+        <li>
+          <div class="label">NEWS</div>
+          <div class="desc">臨時休診案内・GW休診案内など。</div>
+          <div class="where">→ <strong>/news/</strong></div>
+        </li>
+        <li>
+          <div class="label">院長挨拶（ご挨拶）</div>
+          <div class="desc">院長メッセージ本文。</div>
+          <div class="where">→ トップ <strong>Greeting</strong> セクション（要約）<br />+ <strong>/doctor/</strong>（フル版）</div>
+        </li>
+        <li>
+          <div class="label">資格・経歴</div>
+          <div class="desc">歯科医師・歯学博士・認定医、大学病院での経歴。</div>
+          <div class="where">→ <strong>/doctor/</strong></div>
+        </li>
+        <li>
+          <div class="label">所属学会・所属機関・主な役職</div>
+          <div class="desc">日本矯正歯科学会、東京矯正歯科学会、戸塚区歯科医師会等。</div>
+          <div class="where">→ <strong>/doctor/</strong></div>
+        </li>
+        <li>
+          <div class="label">地域医療</div>
+          <div class="desc">園歯科医・地域保健委員の活動。</div>
+          <div class="where">→ <strong>/doctor/</strong></div>
+        </li>
+        <li>
+          <div class="label">年別症例件数</div>
+          <div class="desc">10 年毎・30 年間の推移データ（合計 5,694 件）。</div>
+          <div class="where">→ <strong>/achievements/</strong></div>
+        </li>
+        <li>
+          <div class="label">横浜ドクターズインタビュー</div>
+          <div class="desc">外部メディアでのインタビュー紹介。</div>
+          <div class="where">→ <strong>/interview/</strong></div>
+        </li>
+        <li>
+          <div class="label">採用情報</div>
+          <div class="desc">スタッフ採用情報。</div>
+          <div class="where">→ <strong>/recruit/</strong></div>
+        </li>
+        <li>
+          <div class="label">デンタルローン案内</div>
+          <div class="desc">スルガ銀行・アプラスの分割払い案内。</div>
+          <div class="where">→ <strong>/pricing/</strong>（料金ページの注記に統合）</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ PLACEHOLDERS ============ -->
+    <section class="slide" id="placeholders">
+      <div class="slide-num">07 / 08</div>
+      <div class="eyebrow">Placeholder Slots</div>
+      <h2>新サイトに「枠だけ」用意した箇所</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        新サイトのデザインに合わせて表示枠は用意していますが、まだコンテンツが入っていない箇所です。コンテンツが用意でき次第、流し込みます。
+      </p>
+
+      <div class="grid-2" style="margin-top: 40px;">
+        <div>
+          <h3 style="color: var(--muted); font-size: 14px; letter-spacing: 0.2em;">写真（全ページ共通）</h3>
+          <ul class="pill-list" style="margin-top: 16px;">
+            <li>ヒーローのメインビジュアル</li>
+            <li>院長写真</li>
+            <li>診療風景の写真</li>
+            <li>院内設備の写真（12 種類）</li>
+            <li>クリニック外観</li>
+            <li>症例の Before / After 写真</li>
+            <li>カウンセリング風景</li>
+            <li>各装置の写真</li>
+            <li>スタッフ写真（採用ページ用）</li>
+          </ul>
+          <p class="note">いずれも仮のグレーボックスで表示中。実写真をご提供いただき次第、差し替えます。</p>
+        </div>
+
+        <div>
+          <h3 style="color: var(--muted); font-size: 14px; letter-spacing: 0.2em;">テキスト（特定の枠）</h3>
+          <ul class="pill-list" style="margin-top: 16px;">
+            <li>ヒーローのキャッチコピー</li>
+            <li>コンセプトのリード文</li>
+            <li>小児矯正の専用ページ用本文</li>
+            <li>成人矯正の専用ページ用本文</li>
+            <li>マウスピース型矯正の説明文</li>
+            <li>SNS（Instagram / Tiktok）のアカウントURL</li>
+            <li>Google Map の埋め込み</li>
+            <li>採用情報の具体的な募集要項</li>
+            <li>横浜ドクターズインタビューの外部リンクURL</li>
+            <li>横浜セクションの 12 トピック本文</li>
+            <li>横浜 Q&amp;A 94 件の本文精読・最新化</li>
+          </ul>
+          <p class="note">新サイトのデザインに沿って必要な枠を確保しています。原稿の内容は別途ご相談しながら決められます。</p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top: 40px;">
+        <div class="callout-title">補足：トップページに配置した「枠」だが旧サイトに該当コンテンツがないもの</div>
+        <ul style="margin: 0; padding-left: 20px; font-size: 14px;">
+          <li><strong>コンセプト（Concept）</strong>セクション ── 新サイトのデザイン上、医院の方針を伝える重要な枠。旧サイト院長挨拶から 3 つの特徴を抽出して暫定的に表示中</li>
+          <li><strong>年齢別（小児／成人）カード</strong> ── 装置・治療法による分類とは別の入口として用意。旧サイトに専用ページがないため、新ページを作るか別の入口に置き換えるかご相談</li>
+          <li><strong>装置・方法から探す（マウスピース／ワイヤー）カード</strong> ── 旧サイトの「矯正装置」ページに集約。デバイス別の独立ページを作るかご相談</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ DECISIONS ============ -->
+    <section class="slide" id="decisions">
+      <div class="slide-num">08 / 08</div>
+      <div class="eyebrow">Next Steps</div>
+      <h2>ご確認・ご判断いただきたい事項</h2>
+      <div class="divider"></div>
+
+      <ol class="checklist" style="margin-top: 30px;">
+        <li>
+          <span class="checkbox" aria-hidden></span>
+          <div>
+            <strong>小児矯正・成人矯正・マウスピース型矯正</strong>の専用ページは作りますか？<br />
+            <span class="note">旧サイトには専用ページがなく、新サイトの「年齢別」「装置・方法」入口は現状リンク先がありません。</span>
+          </div>
+        </li>
+        <li>
+          <span class="checkbox" aria-hidden></span>
+          <div>
+            <strong>SNS（Instagram / Tiktok）</strong>のアカウントURLをご提供ください。<br />
+            <span class="note">フッターおよび Access ページで使用します。</span>
+          </div>
+        </li>
+        <li>
+          <span class="checkbox" aria-hidden></span>
+          <div>
+            <strong>ヒーロー画像 / 院内写真 / 症例写真</strong>の素材をご提供ください。<br />
+            <span class="note">旧サイトの写真を再利用するか、新規撮影するかをご判断ください。</span>
+          </div>
+        </li>
+        <li>
+          <span class="checkbox" aria-hidden></span>
+          <div>
+            <strong>院長挨拶・キャッチコピー等のテキスト</strong>はこのままでよいですか？<br />
+            <span class="note">新サイトには旧サイト本文を要約して掲載しています。リニューアルを機にリライトされる場合は原稿をお願いします。</span>
+          </div>
+        </li>
+      </ol>
+
+      <div class="footer-row">
+        © ささき矯正歯科クリニック 新サイトリニューアル ── 説明資料
+      </div>
+    </section>
+  </body>
+</html>

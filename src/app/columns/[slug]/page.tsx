@@ -28,7 +28,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const related = list.filter((x) => x.slug !== f.slug).slice(0, 4);
 
   return (
-    <SubPageLayout category="横浜の矯正歯科 Q&A" enTitle="Q&A" jpTitle="よくあるご質問">
+    <SubPageLayout category="矯正歯科コラム" enTitle="COLUMN" jpTitle="よくあるご質問">
       <PageSection>
         <div className="max-w-3xl">
           <p className="text-[12px] tracking-wider text-[#9a998e] mb-6">{f.date}</p>
@@ -48,20 +48,20 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
       </PageSection>
 
-      <PageSection enTitle="Related" jpTitle="関連するQ&A" bg="soft">
+      <PageSection enTitle="Related" jpTitle="関連するコラム" bg="soft">
         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {related.map((r) => (
             <li key={r.slug} className="bg-white p-5">
               <p className="text-[11px] tracking-wider text-[#9a998e] mb-2">{r.date}</p>
-              <Link href={`/yokohama/${r.slug}/`} className="link-underline text-[14px]">
+              <Link href={`/columns/${r.slug}/`} className="link-underline text-[14px]">
                 {r.q}
               </Link>
             </li>
           ))}
         </ul>
         <div className="mt-10 text-center">
-          <Link href="/yokohama/" className="inline-block border border-[#9a998e] text-[#9a998e] text-sm tracking-widest px-8 py-3 hover:bg-[#9a998e] hover:text-white transition">
-            Q&A 一覧に戻る
+          <Link href="/columns/" className="inline-block border border-[#9a998e] text-[#9a998e] text-sm tracking-widest px-8 py-3 hover:bg-[#9a998e] hover:text-white transition">
+            コラム一覧に戻る
           </Link>
         </div>
       </PageSection>

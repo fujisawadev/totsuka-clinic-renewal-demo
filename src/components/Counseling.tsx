@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Placeholder from "./Placeholder";
 
 const STEPS = [
@@ -17,27 +18,35 @@ export default function Counseling() {
           <div className="w-10 h-px bg-[#9a998e]/40 mx-auto mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-12 items-center max-w-[1400px] mx-auto mb-12 lg:mb-20">
-          <div className="anim">
-            <Placeholder label="カウンセリング写真 1" ratio="4/5" className="w-full max-w-md mx-auto lg:ml-auto" />
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-12 items-start max-w-[1400px] mx-auto mb-12 lg:mb-20">
+          <div className="anim lg:pt-0">
+            <Placeholder label="カウンセリング写真 1" ratio="3/4" className="w-full max-w-sm mx-auto lg:ml-auto" />
           </div>
 
-          <div className="anim anim-delay-1 max-w-md text-center text-[14px] leading-[2] text-[#222]">
+          <div className="anim anim-delay-1 max-w-md text-center text-[14px] leading-[2] text-[#222] lg:pt-20">
             <p className="text-[#9a998e] tracking-widest text-xs mb-3">初診相談は無料です</p>
             <p>当院では安心して治療を受けていただけるよう、丁寧なカウンセリングと分かりやすい説明を大切にしています。</p>
             <div className="w-12 h-px bg-[#9a998e]/40 mx-auto my-6" />
             <p>お口のお悩みやご不安な点をしっかりお伺いし、一人ひとりに合った最適な治療計画をご提案いたします。</p>
             <p className="mt-3 text-[13px] text-[#666]">まずはお気軽にご相談ください。</p>
-            <a
-              href="tel:0458712281"
-              className="mt-8 inline-block bg-[#9a998e] text-white text-sm tracking-widest px-10 py-4 hover:bg-[#b5b4a8] transition"
-            >
-              045-871-2281 へ電話する
-            </a>
+            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-stretch sm:items-center">
+              <a
+                href="tel:0458712281"
+                className="inline-flex items-center justify-center whitespace-nowrap bg-[#9a998e] text-white text-sm tracking-widest px-6 py-4 hover:bg-[#b5b4a8] transition"
+              >
+                045-871-2281 へ電話する
+              </a>
+              <Link
+                href="/booking/"
+                className="inline-flex items-center justify-center whitespace-nowrap border border-[#9a998e] text-[#9a998e] text-sm tracking-widest px-6 py-4 hover:bg-[#9a998e] hover:text-white transition"
+              >
+                ネット予約はこちら →
+              </Link>
+            </div>
           </div>
 
-          <div className="anim anim-delay-2">
-            <Placeholder label="カウンセリング写真 2" ratio="4/5" className="w-full max-w-md mx-auto" />
+          <div className="anim anim-delay-2 lg:pt-40">
+            <Placeholder label="カウンセリング写真 2" ratio="4/5" className="w-full max-w-sm mx-auto" />
           </div>
         </div>
 
