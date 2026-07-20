@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1280" />
+    <title>ささき矯正歯科クリニック 予約対応のご提案</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap"
+    />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --bg-soft: #f4f1ea;
+        --bg-paper: #faf8f3;
+        --fg: #222;
+        --muted: #9a998e;
+        --muted-2: #b5b4a8;
+        --line: #e3e3e3;
+        --dark: #1a1a1a;
+        --accent-warm: #c89b4a;
+        --accent-leaf: #6e8c5a;
+      }
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: "Shippori Mincho", "Yu Mincho", "ヒラギノ明朝 ProN", serif;
+        font-size: 15px;
+        line-height: 1.85;
+        scroll-behavior: smooth;
+      }
+      a { color: var(--muted); }
+      .slide {
+        min-height: 100vh;
+        padding: 80px 80px 120px;
+        position: relative;
+        scroll-snap-align: start;
+        border-bottom: 1px solid var(--line);
+      }
+      body { scroll-snap-type: y proximity; }
+      .slide-num {
+        position: absolute;
+        top: 30px;
+        right: 60px;
+        font-size: 12px;
+        letter-spacing: 0.25em;
+        color: var(--muted);
+      }
+      h1, h2, h3, h4 { margin: 0; font-weight: 500; letter-spacing: 0.05em; }
+      h1 { font-size: 52px; line-height: 1.35; }
+      h2 { font-size: 36px; line-height: 1.4; margin-bottom: 8px; }
+      h3 { font-size: 22px; line-height: 1.6; margin-bottom: 12px; }
+      h4 { font-size: 16px; line-height: 1.6; margin-bottom: 8px; color: var(--fg); }
+      .eyebrow {
+        font-size: 13px;
+        letter-spacing: 0.35em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+      .divider {
+        width: 40px;
+        height: 1px;
+        background: var(--muted);
+        margin: 24px 0 32px;
+      }
+      .lead {
+        font-size: 17px;
+        line-height: 2;
+        color: #444;
+        max-width: 820px;
+      }
+      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+      .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+      .grid-ba {
+        display: grid;
+        grid-template-columns: 1fr 60px 1fr;
+        gap: 0;
+        align-items: stretch;
+      }
+      .arrow-col {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--muted);
+        font-size: 22px;
+      }
+      .card {
+        padding: 24px 28px;
+        background: var(--bg-paper);
+        border-left: 3px solid var(--muted);
+      }
+      .card-soft {
+        padding: 24px 28px;
+        background: var(--bg-soft);
+      }
+      .card h4 { margin-bottom: 6px; font-size: 14px; letter-spacing: 0.15em; color: var(--muted); text-transform: uppercase; }
+      .card p { margin: 0; font-size: 14px; line-height: 1.9; color: #333; }
+      .table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 24px;
+      }
+      .table th,
+      .table td {
+        text-align: left;
+        padding: 14px 18px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+        font-size: 14px;
+      }
+      .table th {
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--muted);
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        background: var(--bg-paper);
+      }
+      .url-mono {
+        font-family: ui-monospace, "SF Mono", Consolas, monospace;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 10px;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        border-radius: 999px;
+      }
+      .badge-ok    { background: #e8eee0; color: #5a7548; }
+      .badge-warn  { background: #f3e6d2; color: #8b6a35; }
+      .badge-new   { background: #dfe9d2; color: #5a7548; }
+      .note {
+        margin-top: 8px;
+        font-size: 12px;
+        color: #777;
+        line-height: 1.7;
+      }
+      .callout {
+        padding: 24px 28px;
+        background: var(--bg-soft);
+        border-left: 3px solid var(--muted);
+        margin-top: 24px;
+      }
+      .callout-title {
+        font-size: 12px;
+        letter-spacing: 0.25em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
+      .checklist { list-style: none; padding: 0; margin: 0; }
+      .checklist li {
+        padding: 14px 0;
+        border-bottom: 1px dashed var(--line);
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .checkbox {
+        flex-shrink: 0;
+        width: 18px; height: 18px;
+        border: 1px solid var(--muted);
+        margin-top: 4px;
+      }
+      .checklist strong { color: var(--fg); font-weight: 500; }
+      .toc {
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        color: var(--muted);
+      }
+      .toc a {
+        text-decoration: none;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .toc a:hover { color: var(--fg); }
+      .toc .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--muted-2);
+      }
+      .footer-row {
+        margin-top: 60px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        font-size: 11px;
+        color: var(--muted);
+        letter-spacing: 0.15em;
+      }
+      .cover {
+        background: var(--bg-soft);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .cover .meta {
+        margin-top: 60px;
+        font-size: 13px;
+        color: var(--muted);
+        letter-spacing: 0.15em;
+      }
+      .cover-subtitle {
+        font-size: 18px;
+        letter-spacing: 0.3em;
+        color: var(--muted);
+        margin-top: 24px;
+        margin-bottom: 8px;
+      }
+      .url-box {
+        margin-top: 20px;
+        padding: 18px 22px;
+        background: #fff;
+        border: 1px solid var(--line);
+        font-family: ui-monospace, "SF Mono", Consolas, monospace;
+        font-size: 15px;
+        color: var(--fg);
+        display: inline-block;
+      }
+      .timeline {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap: 24px 32px;
+        margin-top: 32px;
+      }
+      .timeline .when {
+        font-size: 13px;
+        letter-spacing: 0.2em;
+        color: var(--muted);
+        padding-top: 4px;
+      }
+      .timeline .what strong {
+        display: block;
+        font-size: 17px;
+        margin-bottom: 6px;
+        color: var(--fg);
+      }
+      .timeline .what {
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--line);
+      }
+      .goal {
+        padding: 32px 28px;
+        background: var(--bg-paper);
+        position: relative;
+        border-top: 2px solid var(--muted);
+      }
+      .goal .num {
+        font-size: 12px;
+        letter-spacing: 0.3em;
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
+      .goal h3 { font-size: 18px; line-height: 1.6; margin-bottom: 12px; }
+      .goal p { font-size: 13px; line-height: 1.9; color: #555; margin: 0; }
+      .ba-col {
+        padding: 0;
+      }
+      .ba-col h4 {
+        font-size: 12px;
+        letter-spacing: 0.3em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      .ba-col ul { list-style: none; padding: 0; margin: 0; }
+      .ba-col li {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--line);
+        font-size: 14px;
+      }
+      .ba-col li .axis {
+        display: inline-block;
+        min-width: 88px;
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-right: 12px;
+      }
+      .plan-col {
+        padding: 32px 28px;
+        background: var(--bg-paper);
+        border-top: 2px solid var(--muted-2);
+        display: flex;
+        flex-direction: column;
+      }
+      .plan-col.featured {
+        background: var(--bg-soft);
+        border-top: 2px solid var(--accent-leaf);
+      }
+      .plan-col .plan-label {
+        font-size: 12px;
+        letter-spacing: 0.3em;
+        color: var(--muted);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+      .plan-col h3 { font-size: 20px; margin-bottom: 4px; }
+      .plan-col .price {
+        font-size: 28px;
+        margin: 12px 0 4px;
+        color: var(--fg);
+      }
+      .plan-col .price small { font-size: 13px; color: var(--muted); }
+      .plan-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0 0;
+        flex: 1;
+      }
+      .plan-col li {
+        padding: 9px 0;
+        border-bottom: 1px dashed var(--line);
+        font-size: 13px;
+        line-height: 1.7;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+      }
+      .plan-col li .mark { flex-shrink: 0; width: 1.2em; }
+      .plan-col li.excluded { color: #aaa; }
+      .seo-step {
+        padding: 20px 0;
+        border-bottom: 1px solid var(--line);
+        display: grid;
+        grid-template-columns: 40px 1fr;
+        gap: 20px;
+        align-items: start;
+      }
+      .seo-step .stepnum {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--bg-soft);
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        letter-spacing: 0;
+      }
+      .seo-step h4 {
+        font-size: 15px;
+        margin-bottom: 6px;
+      }
+      .seo-step p {
+        font-size: 13px;
+        color: #555;
+        margin: 0;
+        line-height: 1.9;
+      }
+      @media (max-width: 900px) {
+        .slide { padding: 56px 32px 80px; }
+        .slide-num { top: 20px; right: 24px; }
+        h1 { font-size: 32px; line-height: 1.4; }
+        h2 { font-size: 26px; line-height: 1.4; }
+        h3 { font-size: 18px; }
+        .lead { font-size: 15px; line-height: 1.9; }
+        .grid-2,
+        .grid-3 { grid-template-columns: 1fr; gap: 20px; }
+        .grid-ba { grid-template-columns: 1fr; gap: 16px; }
+        .arrow-col { transform: rotate(90deg); padding: 12px 0; }
+        .timeline { grid-template-columns: 1fr; gap: 8px 0; }
+        .timeline .when { padding-top: 0; padding-bottom: 4px; }
+        .timeline .what { padding-bottom: 20px; margin-bottom: 4px; }
+        .toc { right: 14px; gap: 10px; }
+        .toc a span:last-child { display: none; }
+        .url-box { font-size: 12px; padding: 12px 14px; word-break: break-all; }
+        .cover-subtitle { font-size: 14px; letter-spacing: 0.2em; }
+        .cover .meta { margin-top: 32px; }
+        .seo-step { grid-template-columns: 32px 1fr; gap: 12px; }
+        .seo-step .stepnum { width: 28px; height: 28px; font-size: 12px; }
+        .card,
+        .card-soft,
+        .callout { padding: 16px 18px; }
+        .table th,
+        .table td { padding: 10px 12px; font-size: 12px; }
+        .url-mono { font-size: 11px; word-break: break-all; }
+        .ba-col li .axis { display: block; margin-bottom: 4px; }
+        .comparison-scroll { overflow-x: auto; }
+        .comparison-scroll .table { min-width: 720px; }
+      }
+      @media print {
+        .toc { display: none; }
+        .slide { page-break-after: always; min-height: auto; padding: 40px; }
+        body { scroll-snap-type: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="toc" aria-label="目次">
+      <a href="#cover" title="表紙"><span class="dot"></span><span>01</span></a>
+      <a href="#current" title="現状の予約フロー"><span class="dot"></span><span>02</span></a>
+      <a href="#issues" title="現状の課題"><span class="dot"></span><span>03</span></a>
+      <a href="#policy" title="ご提案の方針"><span class="dot"></span><span>04</span></a>
+      <a href="#patterns" title="実現パターンの整理"><span class="dot"></span><span>05</span></a>
+      <a href="#comparison" title="ツール機能比較"><span class="dot"></span><span>06</span></a>
+      <a href="#why-line" title="LINE 予約でできること"><span class="dot"></span><span>07</span></a>
+      <a href="#flow-design" title="新サイトでの動線"><span class="dot"></span><span>08</span></a>
+      <a href="#steps" title="導入ステップ"><span class="dot"></span><span>09</span></a>
+      <a href="#pricing" title="費用"><span class="dot"></span><span>10</span></a>
+      <a href="#decisions" title="ご判断いただきたい事項"><span class="dot"></span><span>11</span></a>
+    </nav>
+
+    <!-- ============ 01 COVER ============ -->
+    <section class="slide cover" id="cover">
+      <div class="eyebrow">Reservation Proposal</div>
+      <h1>ささき矯正歯科クリニック<br />予約対応のご提案</h1>
+      <p class="cover-subtitle">Web サイトリニューアル 追加スコープ</p>
+      <div class="divider"></div>
+      <p class="lead">
+        Web サイトリニューアルに合わせて、患者さまの予約体験を現代の標準へ更新するご提案です。<br />
+        現在の独自予約システムを、多くのクリニックで採用が進む LINE 予約へ移行し、新サイトに最適な予約動線を設けます。
+      </p>
+      <div class="meta">
+        <div>本編資料と併せてご覧ください</div>
+        <div class="url-box">https://fujisawadev.github.io/totsuka-clinic-renewal-demo/docs/proposal.html</div>
+      </div>
+    </section>
+
+    <!-- ============ 02 CURRENT ============ -->
+    <section class="slide" id="current">
+      <div class="slide-num">02 / 11</div>
+      <div class="eyebrow">Current Reservation Flow</div>
+      <h2>現状の予約フロー</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        現在、患者さまの予約は 3 つの経路で受け付けられています。長年の運用で確立された流れであり、特に電話予約は今後も大切な窓口です。
+      </p>
+
+      <div class="grid-3" style="margin-top: 48px;">
+        <div class="goal">
+          <div class="num">01 / TEL</div>
+          <h3>電話予約</h3>
+          <p>
+            045-871-2281。受付時間は平日 10〜12 時 / 14〜19 時、土日 10〜13 時 / 15〜19 時。初診・再診とも対応する中心的な窓口。
+          </p>
+        </div>
+        <div class="goal">
+          <div class="num">02 / WEB</div>
+          <h3>ネット予約（初診のみ）</h3>
+          <p>
+            現行サイト <span class="url-mono">/yoyaku/</span> の予約カレンダーから日時を選択。ただし初診相談専用で、枠が限られる旨の注記つき。再診には使えない。
+          </p>
+        </div>
+        <div class="goal">
+          <div class="num">03 / CARD</div>
+          <h3>院内での次回予約</h3>
+          <p>
+            通院中の患者さまは診療後に「診察予約カード」で次回予約。変更・キャンセルの連絡手段は電話のみ。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">現行ネット予約システムについて</div>
+        <p style="margin: 0; font-size: 14px;">
+          現行の予約カレンダー（<span class="url-mono">/yoyaku/</span>）は、既存ベンダー様が独自開発（フルスクラッチ）された CGI システムです。長年医院の予約受付を支えてきた仕組みですが、リニューアルにあたり「このまま引き継ぐか、置き換えるか」の判断ポイントとなります（次ページ）。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 03 ISSUES ============ -->
+    <section class="slide" id="issues">
+      <div class="slide-num">03 / 11</div>
+      <div class="eyebrow">Issues</div>
+      <h2>リニューアルにあたっての課題</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        課題は 2 つの側面に分かれます。ひとつは独自システムを引き継ぐことの難しさ、もうひとつは患者さまの予約体験がいまの標準から離れつつあることです。
+      </p>
+
+      <div class="grid-2" style="margin-top: 40px;">
+        <div class="card">
+          <h4>System ── 独自システム引継ぎの難しさ</h4>
+          <p style="line-height: 2;">
+            ・独自開発のため、<strong style="color: var(--fg);">仕様書やソースコードの引継ぎが前提</strong>になる<br />
+            ・改修・不具合対応のたびに個別開発が必要（費用と時間）<br />
+            ・セキュリティ更新やサーバー移転への追従も個別対応<br />
+            ・開発者以外が保守しにくく、<strong style="color: var(--fg);">属人化のリスク</strong>がある
+          </p>
+        </div>
+        <div class="card">
+          <h4>Experience ── 患者さまの予約体験のギャップ</h4>
+          <p style="line-height: 2;">
+            ・ネット予約は<strong style="color: var(--fg);">初診のみ</strong>。数年間・月 1 回通院する矯正治療の再診はカバーされない<br />
+            ・予約の変更・キャンセルは受付時間内の電話のみ<br />
+            ・リマインドは行き届きにくく、うっかり忘れは治療計画の遅れに直結<br />
+            ・矯正の主要な患者層（お子さまの保護者・20〜40 代）は、日常連絡の中心が LINE
+          </p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">Key Insight</div>
+        <p style="margin: 0; font-size: 14px;">
+          矯正歯科は「月 1 回 × 数年」の長いお付き合いになる診療科です。初診の予約だけでなく、<strong style="color: var(--fg);">通院中の患者さまとの継続的な接点</strong>まで含めて予約体験を設計することが、無断キャンセルの減少と治療のスムーズな進行につながります。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 04 POLICY ============ -->
+    <section class="slide" id="policy">
+      <div class="slide-num">04 / 11</div>
+      <div class="eyebrow">Our Proposal</div>
+      <h2>ご提案の方針 ──「作る」から「使う」へ</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        予約システムをもう一度フルスクラッチで作り直すのではなく、広く使われている既製サービス（SaaS）を利用する方針をご提案します。開発費ゼロで最新機能が使え、保守やセキュリティ更新はサービス側が担ってくれます。電話予約は、どの構成でもこれまで通り継続します。<br />
+        既製サービスの組み合わせ方にはいくつかのパターンがあるため、次の 3 つの軸で評価・整理します。
+      </p>
+
+      <div class="grid-3" style="margin-top: 48px;">
+        <div class="goal">
+          <div class="num">軸 1 / Operation</div>
+          <h3>受付の手間</h3>
+          <p>
+            予約の受付・変更対応が自動化されるか、スタッフの手作業（電話応対・チャット返信・台帳転記）が発生するか。診療中に対応が滞らない仕組みかどうか。
+          </p>
+        </div>
+        <div class="goal">
+          <div class="num">軸 2 / Reach</div>
+          <h3>通知の到達しやすさ</h3>
+          <p>
+            リマインドが患者さまに「確実に見てもらえる場所」に届くか。メールは埋もれやすく、専用アプリの通知は登録者にしか届きません。LINE は日常的に開くアプリのため到達性が最も高い接点です。
+          </p>
+        </div>
+        <div class="goal">
+          <div class="num">軸 3 / Barrier</div>
+          <h3>患者さまのハードル</h3>
+          <p>
+            予約のために新しいアプリのインストールや会員登録が必要か。LINE の友だち追加だけで済むか。ハードルの高さは初診予約の離脱率に直結します。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">この 3 軸が経営数字につながる理由</div>
+        <p style="margin: 0; font-size: 14px;">
+          通知の到達しやすさは<strong style="color: var(--fg);">無断キャンセル率</strong>に直結します（歯科医院でリマインド導入により 8% → 2% に低下した事例あり）。矯正治療は月 1 回 × 数年の通院なのでリマインドの回数が多く、効果が累積します。受付の手間は<strong style="color: var(--fg);">スタッフの人件費・応対品質</strong>に、患者さまのハードルは<strong style="color: var(--fg);">初診予約の取りこぼし</strong>に、それぞれ跳ね返ります。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 05 PATTERNS ============ -->
+    <section class="slide" id="patterns">
+      <div class="slide-num">05 / 11</div>
+      <div class="eyebrow">Patterns</div>
+      <h2>実現パターンの整理</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        「LINE」と「予約サービス」の組み合わせ方は、大きく 4 パターンに整理できます。実際に他院で使われている構成ばかりで、どれも成立しますが、前ページの 3 軸で評価すると違いがはっきりします。
+      </p>
+
+      <div class="comparison-scroll">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 24%;">パターン</th>
+              <th style="width: 28%;">仕組み</th>
+              <th>受付の手間</th>
+              <th>通知の到達</th>
+              <th>患者さまのハードル</th>
+              <th>費用感</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>A：LINE チャットのみ</strong></td>
+              <td>LINE 公式アカウントを開設し、トークで受付スタッフが手動で予約対応</td>
+              <td>×　全件人力。診療中は返信が滞る</td>
+              <td>○　LINE に届く（リマインドも手動送信）</td>
+              <td>◎　友だち追加のみ</td>
+              <td>0 円</td>
+            </tr>
+            <tr>
+              <td><strong>B：予約サービスのみ</strong></td>
+              <td>HP から予約サービスの画面へ遷移（またはサイト内に埋め込み）。LINE は使わない</td>
+              <td>◎　カレンダーで自動受付</td>
+              <td>△　メール中心で埋もれやすい。専用アプリ型は登録者にしか届かない</td>
+              <td>△　サービスによって会員登録・アプリのインストールが必要</td>
+              <td>月 3,000 円〜数万円</td>
+            </tr>
+            <tr>
+              <td><strong>C：並置ハイブリッド</strong><br /><span class="note" style="margin:0;">品川矯正歯科さんの構成</span></td>
+              <td>予約は予約サービス、LINE は相談・問い合わせのチャット窓口（両者は連携なし）</td>
+              <td>○　予約は自動、チャット分は人力</td>
+              <td>△　予約通知は予約サービス側から。LINE には届かない</td>
+              <td>△　予約時は B と同じ登録が必要</td>
+              <td>予約サービス費＋0 円</td>
+            </tr>
+            <tr>
+              <td><strong>D：LINE 統合型</strong> <span class="badge badge-new">推奨</span></td>
+              <td>LINE 連携型の予約サービスを接続し、予約カレンダー・リマインド・チャットを LINE の 1 窓口に集約</td>
+              <td>◎　予約・変更とも自動。チャット相談も同じ画面で受けられる</td>
+              <td>◎　リマインドが LINE に自動で届く</td>
+              <td>◎　友だち追加のみ</td>
+              <td>月 3,000 円〜</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">参考 ── 品川矯正歯科さんの実例（パターン C）</div>
+        <p style="margin: 0; font-size: 14px;">
+          デザインの参考にされた品川矯正歯科さんは、WEB 予約に melmo（メドレー社の医療予約アプリ。旧 CLINICS）、LINE は手動チャット窓口という<strong style="color: var(--fg);">連携なしの並置構成</strong>です。十分に機能する構成ですが、予約には melmo アプリの会員登録が必要で、リマインドは LINE には届きません。パターン D はこの「予約と LINE の分断」を解消し、同等以上の体験をより低コストで実現する構成です。チャットでのご相談対応（パターン A・C の良さ）も、D では同じ LINE 窓口でそのまま行えます。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 06 COMPARISON ============ -->
+    <section class="slide" id="comparison">
+      <div class="slide-num">06 / 11</div>
+      <div class="eyebrow">Feature Matrix</div>
+      <h2>予約サービスの機能比較</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        候補となる予約サービスを、同じ物差しで並べて比較します。左の 1 列（ポチコ）が「LINE 予約に特化した最小構成」、中央 3 列が「院内業務まで含めた歯科特化型」、右端が品川矯正歯科さんも使う「医療予約アプリ型（melmo）」です。
+      </p>
+
+      <div class="comparison-scroll">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width: 21%;">機能</th>
+              <th>ポチコ<br /><span style="text-transform:none;">LINE 特化</span></th>
+              <th>Ci イージーアポ2<br /><span style="text-transform:none;">歯科特化</span></th>
+              <th>ApoDent<br /><span style="text-transform:none;">歯科特化</span></th>
+              <th>Apotool &amp; Box<br /><span style="text-transform:none;">歯科特化・大手</span></th>
+              <th>melmo（CLINICS）<br /><span style="text-transform:none;">医療予約アプリ</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>空き枠カレンダーから 24 時間予約</strong></td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td><strong>予約の入口</strong></td>
+              <td>LINE 内で完結</td>
+              <td>Web＋LINE（連携オプション）</td>
+              <td>Web＋LINE（連携オプション）</td>
+              <td>Web＋LINE（連携オプション）</td>
+              <td>Web＋melmo アプリ</td>
+            </tr>
+            <tr>
+              <td><strong>患者さまの事前登録</strong></td>
+              <td>友だち追加のみ</td>
+              <td>友だち追加のみ（LINE 利用時）</td>
+              <td>友だち追加のみ（LINE 利用時）</td>
+              <td>友だち追加 または 診察券アプリ</td>
+              <td>melmo アプリの会員登録</td>
+            </tr>
+            <tr>
+              <td><strong>リマインドの到達先</strong></td>
+              <td>LINE</td>
+              <td>メール／SMS／LINE</td>
+              <td>メール／SMS／LINE</td>
+              <td>メール／SMS／アプリ</td>
+              <td>アプリ通知／メール</td>
+            </tr>
+            <tr>
+              <td><strong>患者さまからの変更・キャンセル</strong></td>
+              <td>○　LINE 上で完結</td>
+              <td>○（受付可否を医院側で設定）</td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td><strong>初診／再診のメニュー分け</strong></td>
+              <td>△　予約枠の設定で対応</td>
+              <td>○</td>
+              <td>○　初診・再初診対応</td>
+              <td>○　診療内容ごとに設定</td>
+              <td>○</td>
+            </tr>
+            <tr>
+              <td><strong>院内アポ帳（チェア・担当管理）</strong></td>
+              <td>×　現行の運用を継続</td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+              <td>△　予約管理のみ</td>
+            </tr>
+            <tr>
+              <td><strong>リコール（定期通院）の自動通知</strong></td>
+              <td>×　一斉配信で代替</td>
+              <td>○</td>
+              <td>○</td>
+              <td>○</td>
+              <td>未確認</td>
+            </tr>
+            <tr>
+              <td><strong>レセコン連携</strong></td>
+              <td>×</td>
+              <td>○　オプション（＋500 円/月）</td>
+              <td>○</td>
+              <td>○　設定費 150,000 円</td>
+              <td>未確認</td>
+            </tr>
+            <tr>
+              <td><strong>初期費用</strong></td>
+              <td><strong>0 円</strong></td>
+              <td>50,000 円（税別）</td>
+              <td>99,600 円（税別・LINE 込）</td>
+              <td>300,000 円〜（税別）</td>
+              <td>要問い合わせ</td>
+            </tr>
+            <tr>
+              <td><strong>月額</strong></td>
+              <td><strong>3,000 円（税別）</strong></td>
+              <td>3,980 円（税別・LINE 込）</td>
+              <td>13,000 円（税別・LINE 込）</td>
+              <td>18,000 円＋LINE 連携 25,000 円（税別）</td>
+              <td>要問い合わせ</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">
+        ※ 2026 年 7 月時点の各社公開情報に基づきます。「未確認」は公開情報で確認できなかった項目で、正式な仕様・金額は各社へのお問い合わせで確定します。<br />
+        ※ 歯科特化型のデンタマップ プラス／ジニーは料金・LINE 対応が非公開のため、汎用予約システム（STORES 予約等）は歯科の運用概念（診察券番号・初診/再診区分）がないため、本表からは外しています。<br />
+        ※ LINE 公式アカウント標準の予約機能「LINEで予約」は飲食店向けサービスのため、クリニックでは「LINE 公式アカウント＋予約サービス連携」の構成が標準的です。本資料の「LINE 予約」はこの構成を指します。
+      </p>
+
+      <div class="callout">
+        <div class="callout-title">比較のまとめ ── ポチコと歯科特化型の違い</div>
+        <p style="margin: 0; font-size: 14px;">
+          違いは「<strong style="color: var(--fg);">患者さま向けの予約機能</strong>だけか、<strong style="color: var(--fg);">院内業務（アポ帳・リコール・レセコン連携）のデジタル化</strong>まで含むか」です。歯科特化型は院内の予約台帳ごと置き換えるため機能は厚い一方、初期費用と受付オペレーションの変更を伴います。今回の目的はネット予約の置き換えと患者接点の改善であり、院内運用は現状のまま活かせるため、まずは<strong style="color: var(--fg);">ポチコ（月 3,000 円・初期 0 円）</strong>で始め、将来アポ帳のデジタル化まで踏み込む際に Ci イージーアポ2 等へ移行する二段構えを推奨します。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 07 WHY LINE ============ -->
+    <section class="slide" id="why-line">
+      <div class="slide-num">07 / 11</div>
+      <div class="eyebrow">Before × After</div>
+      <h2>いまできることは、LINE 予約でもできます</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        推奨するパターン D（LINE 統合型）に置き換えた場合の機能対応表です。「使い慣れた予約カレンダーがなくなるのでは」というご心配は不要です。現行のネット予約でできることはすべて LINE 予約でも実現でき、そのうえで通院中の患者さまへの機能が加わります。
+      </p>
+
+      <table class="table" style="margin-top: 32px;">
+        <thead>
+          <tr>
+            <th style="width: 40%;">できること</th>
+            <th>現行ネット予約</th>
+            <th>LINE 予約（導入後）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>カレンダーから空き枠を選んで予約</strong></td>
+            <td>○</td>
+            <td>○　LINE 内にカレンダーを表示し日時を選択</td>
+          </tr>
+          <tr>
+            <td><strong>初診相談専用の予約枠（所要 40 分）</strong></td>
+            <td>○</td>
+            <td>○　現行と同じ条件で枠を設定</td>
+          </tr>
+          <tr>
+            <td><strong>24 時間いつでも予約受付</strong></td>
+            <td>○</td>
+            <td>○</td>
+          </tr>
+          <tr>
+            <td><strong>予約完了の確認通知</strong></td>
+            <td>△　メール</td>
+            <td>○　LINE に即時通知</td>
+          </tr>
+          <tr>
+            <td><strong>前日などの自動リマインド</strong></td>
+            <td>×</td>
+            <td>○　自動送信 <span class="badge badge-new">NEW</span></td>
+          </tr>
+          <tr>
+            <td><strong>患者さまからの予約変更・キャンセル</strong></td>
+            <td>×　電話のみ</td>
+            <td>○　LINE 上で完結 <span class="badge badge-new">NEW</span></td>
+          </tr>
+          <tr>
+            <td><strong>再診・通院中のご連絡</strong></td>
+            <td>×　電話・はがき</td>
+            <td>○　トークでやり取り <span class="badge badge-new">NEW</span></td>
+          </tr>
+          <tr>
+            <td><strong>休診などのお知らせ配信</strong></td>
+            <td>×　サイト掲載のみ</td>
+            <td>○　友だち登録者へ一斉配信 <span class="badge badge-new">NEW</span></td>
+          </tr>
+          <tr>
+            <td><strong>患者さま側のアプリ登録・会員登録</strong></td>
+            <td>不要</td>
+            <td>不要（普段お使いの LINE のみ）</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <div class="callout-title">リマインドの効果</div>
+        <p style="margin: 0; font-size: 14px;">
+          歯科医院では、リマインド配信の導入により<strong style="color: var(--fg);">無断キャンセル率が 8% → 2% に低下した事例</strong>が報告されています。月 1 回 × 数年の通院が続く矯正治療では、うっかり忘れの防止がそのまま治療計画の順調な進行につながります。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 08 FLOW DESIGN ============ -->
+    <section class="slide" id="flow-design">
+      <div class="slide-num">08 / 11</div>
+      <div class="eyebrow">Site Integration</div>
+      <h2>新サイトでの予約動線</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        新サイト（デモ）には、PC では画面右のサイドボタン、スマートフォンでは画面下部の固定バーとして、常時表示の予約動線をすでに設けています。ここに LINE 予約を組み込みます。
+      </p>
+
+      <div class="grid-ba" style="margin-top: 40px;">
+        <div class="ba-col">
+          <h4>現在のデモサイト</h4>
+          <ul>
+            <li><span class="axis">PC</span>右サイド固定「TEL / 初診相談 / WEB予約 / アクセス / 診療時間」</li>
+            <li><span class="axis">SP</span>下部固定バー「TEL / WEB予約 / 初診相談 / アクセス」</li>
+            <li><span class="axis">WEB予約</span>暫定の予約フォームページ（<span class="url-mono">/booking/</span>）へ遷移</li>
+            <li><span class="axis">初診ページ</span>「電話」「ネット予約」の 2 経路を案内</li>
+          </ul>
+        </div>
+        <div class="arrow-col"><span aria-hidden>→</span></div>
+        <div class="ba-col">
+          <h4>LINE 予約 組み込み後</h4>
+          <ul>
+            <li><span class="axis">PC</span>「WEB予約」を「LINE予約」に置換、LINE 公式アカウントへ直接遷移</li>
+            <li><span class="axis">SP</span>下部固定バーからワンタップで LINE 予約へ（アプリが直接開く）</li>
+            <li><span class="axis">Booking</span>暫定フォームページは廃止 or LINE 予約への案内ページに転換</li>
+            <li><span class="axis">初診ページ</span>「電話」「LINE 予約」の 2 経路に更新、友だち追加 QR コードを掲載</li>
+            <li><span class="axis">追加</span>各治療ページ末尾にも LINE 予約 CTA を配置し、読了 → 予約の導線を短縮</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <div class="callout-title">院内での告知もサポート</div>
+        <p style="margin: 0; font-size: 14px;">
+          Web サイトだけでなく、受付に置ける<strong style="color: var(--fg);">友だち追加 QR コードの案内カード（印刷データ）</strong>もご用意可能です。通院中の患者さまが診療後にその場で友だち登録 → 次回からリマインドが届く、という流れを作れます。
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ 09 STEPS ============ -->
+    <section class="slide" id="steps">
+      <div class="slide-num">09 / 11</div>
+      <div class="eyebrow">Setup Steps</div>
+      <h2>導入までのステップ</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        導入は以下のステップで進みます。医院さまの診療を止めることなく、Web サイトリニューアルの公開スケジュールと並走できます。
+      </p>
+
+      <div style="margin-top: 32px;">
+        <div class="seo-step">
+          <div class="stepnum">1</div>
+          <div>
+            <h4>LINE 公式アカウントの開設・認証申請</h4>
+            <p>医院さまの正式名称でアカウントを作成し、認証済アカウント（青バッジ。LINE 内検索に表示される）を申請します。審査は 10 日前後で、医療機関は開設届の写し等の提出を求められる場合があります（書類は医院さまにご用意いただきます）。</p>
+          </div>
+        </div>
+        <div class="seo-step">
+          <div class="stepnum">2</div>
+          <div>
+            <h4>予約ツールの契約・予約枠の設定</h4>
+            <p>予約ツール（ポチコ）を LINE 公式アカウントに接続し、初診相談の予約枠（曜日・時間帯・所要 40 分）を現行カレンダーと同じ条件で設定します。</p>
+          </div>
+        </div>
+        <div class="seo-step">
+          <div class="stepnum">3</div>
+          <div>
+            <h4>あいさつメッセージ・リッチメニューの整備</h4>
+            <p>友だち追加時のあいさつ、トーク画面下部の「予約する・アクセス・診療時間」メニューボタンを設定します。</p>
+          </div>
+        </div>
+        <div class="seo-step">
+          <div class="stepnum">4</div>
+          <div>
+            <h4>新サイトへの動線組み込み</h4>
+            <p>サイドボタン・下部固定バー・初診ページ等を LINE 予約導線に更新します。</p>
+          </div>
+        </div>
+        <div class="seo-step">
+          <div class="stepnum">5</div>
+          <div>
+            <h4>動作確認・運用レクチャー</h4>
+            <p>テスト予約で全経路を確認し、受付スタッフさま向けに管理画面の操作をご説明します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10 PRICING ============ -->
+    <section class="slide" id="pricing">
+      <div class="slide-num">10 / 11</div>
+      <div class="eyebrow">Pricing</div>
+      <h2>費用について</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        費用は「サービス自体の利用料（LINE 社等へのお支払い）」と「導入作業の対応費用（弊社へのお支払い）」の 2 つに分かれます。
+      </p>
+
+      <h3 style="margin-top: 40px;">1. サービス利用料（推奨構成の場合）</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>サービス</th>
+            <th>初期費用</th>
+            <th>月額</th>
+            <th>備考</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>LINE 公式アカウント</strong></td>
+            <td>0 円</td>
+            <td>0 円（コミュニケーションプラン）</td>
+            <td>月 200 通まで配信無料。配信数が増えた場合はライトプラン（月 5,000 円・税別、5,000 通）へ</td>
+          </tr>
+          <tr>
+            <td><strong>予約ツール（ポチコ）</strong></td>
+            <td>0 円</td>
+            <td>3,000 円（税別）</td>
+            <td>予約数無制限・リマインド込み</td>
+          </tr>
+          <tr>
+            <td><strong>合計目安</strong></td>
+            <td><strong>0 円</strong></td>
+            <td><strong>月 3,000 円（税別）〜</strong></td>
+            <td>現行の予約システム保守費と置き換わるイメージです</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">※ 2026 年 7 月時点の公開料金です。歯科特化システムに拡張する場合の費用は前掲の比較表をご参照ください。</p>
+
+      <h3 style="margin-top: 48px;">2. 導入作業の対応費用（3 プラン）</h3>
+      <div class="grid-3" style="margin-top: 24px;">
+        <div class="plan-col">
+          <div class="plan-label">Light</div>
+          <h3>ライト</h3>
+          <div class="price">40,000 円<small>（税別）</small></div>
+          <p style="font-size: 12px; color: #777; margin: 0;">アカウントの開設・設定は医院さま側で行う場合</p>
+          <ul>
+            <li><span class="mark">○</span>新サイトへの LINE 予約動線の組み込み（サイドボタン・下部バー・初診ページ・予約案内ページ）</li>
+            <li><span class="mark">○</span>友だち追加ボタン・QR コードの設置</li>
+            <li class="excluded"><span class="mark">−</span>LINE 公式アカウントの開設・認証申請</li>
+            <li class="excluded"><span class="mark">−</span>予約ツールの契約・予約枠設定</li>
+            <li class="excluded"><span class="mark">−</span>リッチメニュー等の作り込み・運用レクチャー</li>
+          </ul>
+        </div>
+        <div class="plan-col">
+          <div class="plan-label">Standard</div>
+          <h3>スタンダード</h3>
+          <div class="price">90,000 円<small>（税別）</small></div>
+          <p style="font-size: 12px; color: #777; margin: 0;">開設と基本設定まで弊社が代行</p>
+          <ul>
+            <li><span class="mark">○</span>ライトプランの全内容</li>
+            <li><span class="mark">○</span>LINE 公式アカウント開設・認証済アカウント申請の代行</li>
+            <li><span class="mark">○</span>予約ツール（ポチコ）の契約サポート・予約枠の初期設定</li>
+            <li><span class="mark">○</span>自動リマインドの設定</li>
+            <li class="excluded"><span class="mark">−</span>リッチメニュー等の作り込み・院内案内物・運用レクチャー</li>
+          </ul>
+        </div>
+        <div class="plan-col featured">
+          <div class="plan-label">Full Support ── 推奨</div>
+          <h3>フルサポート</h3>
+          <div class="price">150,000 円<small>（税別）</small></div>
+          <p style="font-size: 12px; color: #777; margin: 0;">開設から運用開始まで一括でお任せいただく場合</p>
+          <ul>
+            <li><span class="mark">○</span>スタンダードプランの全内容</li>
+            <li><span class="mark">○</span>リッチメニュー・あいさつメッセージのデザインと設定</li>
+            <li><span class="mark">○</span>院内掲示用の友だち追加 QR 案内カード（印刷データ）</li>
+            <li><span class="mark">○</span>テスト予約による全経路の動作検証</li>
+            <li><span class="mark">○</span>受付スタッフさま向けの運用レクチャー</li>
+            <li><span class="mark">○</span>公開後 1 ヶ月間の設定調整サポート</li>
+          </ul>
+        </div>
+      </div>
+      <p class="note">※ 対応費用は Web サイトリニューアル本体のお見積もりとは別途となります。</p>
+    </section>
+
+    <!-- ============ 11 DECISIONS ============ -->
+    <section class="slide" id="decisions">
+      <div class="slide-num">11 / 11</div>
+      <div class="eyebrow">Decisions</div>
+      <h2>ご判断・ご確認いただきたい事項</h2>
+      <div class="divider"></div>
+      <p class="lead">
+        本日の商談では、以下の点についてご意向をお聞かせください。
+      </p>
+
+      <ul class="checklist" style="margin-top: 32px;">
+        <li>
+          <span class="checkbox" aria-hidden></span>
+          <div>
+            <strong>予約対応をリニューアルのスコープに追加するか</strong>
+            <p class="note">追加いただく場合、上記 3 プランからのご選択となります。</p>
+          </div>
+        </li>
+        <li>
+          <span class="checkbox" aria-hidden></span>
+          <div>
+            <strong>実現パターンと予約サービスの選定</strong>
+            <p class="note">推奨のパターン D（LINE 統合型：LINE 公式アカウント＋ポチコ、月 3,000 円〜）で進めてよいか。品川矯正歯科さんと同様のパターン C（並置型）や、歯科特化システム（Ci イージーアポ2 等）をご希望の場合は再検討します。</p>
+          </div>
+        </li>
+        <li>
+          <span class="checkbox" aria-hidden></span>
+          <div>
+            <strong>対応プラン（ライト・スタンダード・フルサポート）のご選択</strong>
+            <p class="note">迷われる場合は、開設から運用レクチャーまで一括でお任せいただけるフルサポートプランを推奨します。</p>
+          </div>
+        </li>
+        <li>
+          <span class="checkbox" aria-hidden></span>
+          <div>
+            <strong>現行ネット予約（/yoyaku/）の停止時期</strong>
+            <p class="note">新サイト公開と同時に LINE 予約へ切り替え、現行カレンダーは公開停止とする想定です。既存ベンダー様への連絡は引継ぎ事項に含めます。</p>
+          </div>
+        </li>
+        <li>
+          <span class="checkbox" aria-hidden></span>
+          <div>
+            <strong>LINE 公式アカウントの名義・管理者</strong>
+            <p class="note">アカウントは医院さま名義での開設となります。管理者権限は院長先生（または受付責任者さま）に設定し、弊社は運用支援の権限で参加します。</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="footer-row">
+        ささき矯正歯科クリニック 予約対応のご提案 ── Web サイトリニューアル 追加スコープ
+      </div>
+    </section>
+  </body>
+</html>
