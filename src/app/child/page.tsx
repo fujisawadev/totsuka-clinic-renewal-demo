@@ -1,7 +1,7 @@
 import Link from "next/link";
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
-import Placeholder from "@/components/Placeholder";
+import Photo from "@/components/Photo";
 
 export const metadata = {
   title: "小児矯正（1期治療）｜ささき矯正歯科クリニック",
@@ -33,7 +33,7 @@ export default function Page() {
             <p>不正咬合の状態は、お子さま一人ひとりによって千差万別です。どのような症例もすぐに治療を始めた方がよいというわけではなく、当院ではまず検査・診断のうえで、治療を始める適切な時期を見極めます。経過観察が適している場合は、3ヶ月〜6ヶ月おきの定期診査で成長を見守ります。</p>
             <p>お子さまの歯並びで気になることがあれば、まずは無料の初診相談でお気軽にご相談ください。</p>
           </div>
-          <Placeholder label="小児矯正イメージ" ratio="4/3" className="w-full" />
+          <Photo src="/photos/child-image.jpg" alt="歯磨きをするお子さま" ratio="4/3" className="w-full" />
         </div>
       </PageSection>
 

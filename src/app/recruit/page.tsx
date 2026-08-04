@@ -66,31 +66,26 @@ export default function Page() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <a
-            href="#"
+            href="https://www.webqua.jp/ndh/search/45377"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="求人媒体バナー 1"
+            aria-label="クオキャリア 新卒歯科衛生士募集ページ"
             className="block bg-white border border-[#e3e3e3] hover:border-[#9a998e] transition p-4"
           >
-            <div className="placeholder w-full" style={{ aspectRatio: "340 / 106" }}>
-              <span>求人バナー 1（媒体掲載中）</span>
-            </div>
+            <Photo src="/photos/recruit-banner-shinsotsu.jpg" alt="クオキャリア 新卒歯科衛生士募集中" className="w-full" />
             <p className="mt-3 text-[12px] text-[#9a998e] tracking-wider">外部求人サイトへ移動 →</p>
           </a>
           <a
-            href="#"
+            href="https://www.webqua.jp/dh/search/45378"
             target="_blank"
             rel="noreferrer noopener"
-            aria-label="求人媒体バナー 2"
+            aria-label="クオキャリア 経験者歯科衛生士募集ページ"
             className="block bg-white border border-[#e3e3e3] hover:border-[#9a998e] transition p-4"
           >
-            <div className="placeholder w-full" style={{ aspectRatio: "340 / 106" }}>
-              <span>求人バナー 2（媒体掲載中）</span>
-            </div>
+            <Photo src="/photos/recruit-banner-keikensha.jpg" alt="クオキャリア 経験者歯科衛生士募集中" className="w-full" />
             <p className="mt-3 text-[12px] text-[#9a998e] tracking-wider">外部求人サイトへ移動 →</p>
           </a>
         </div>
-        <p className="mt-6 text-[12px] text-[#666]">※ バナー画像とリンク先 URL は、現行サイト掲載中の媒体（webqua.jp 等）の引継ぎ確認後に反映します。</p>
       </PageSection>
     </SubPageLayout>
   );
