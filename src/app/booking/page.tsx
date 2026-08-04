@@ -27,7 +27,7 @@ function StatusMark({ status }: { status: string }) {
 
 export default function Page() {
   return (
-    <SubPageLayout category="初診の方へ" enTitle="BOOKING" jpTitle="初診相談 WEB予約">
+    <SubPageLayout category="初診の方へ" enTitle="BOOKING" jpTitle="初診相談 WEB予約" heroSrc="/photos/clinic-reception.jpg">
       <PageSection>
         <p className="text-[14px] leading-loose text-[#222] max-w-3xl mb-8">
           初診相談は無料です。下記のカレンダーから日時を選択してご予約ください。

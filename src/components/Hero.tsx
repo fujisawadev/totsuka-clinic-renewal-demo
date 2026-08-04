@@ -1,4 +1,4 @@
-import Placeholder from "./Placeholder";
+import HeroSlides from "./HeroSlides";
 
 export default function Hero() {
   return (
@@ -7,7 +7,7 @@ export default function Hero() {
       className="relative min-h-screen min-h-[720px] overflow-hidden text-white"
     >
       <div className="absolute inset-0">
-        <Placeholder label="メインビジュアル" className="w-full h-full" />
+        <HeroSlides />
         <div className="absolute inset-0 bg-[rgba(26,26,26,0.45)]" />
       </div>
 

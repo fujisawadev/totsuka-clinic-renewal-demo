@@ -22,7 +22,7 @@ const RETENTION = [
 
 export default function Page() {
   return (
-    <SubPageLayout category="治療に関するご注意" enTitle="PRECAUTIONARY" jpTitle="治療に関するご注意">
+    <SubPageLayout category="治療に関するご注意" enTitle="PRECAUTIONARY" jpTitle="治療に関するご注意" heroSrc="/photos/clinic-sterilization.jpg">
       <PageSection enTitle="Medical Notes" jpTitle="矯正治療における医学的不利益および不快事項について">
         <ol className="space-y-4 max-w-3xl">
           {MEDICAL.map((t, i) => (

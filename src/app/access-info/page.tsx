@@ -1,24 +1,25 @@
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
-import Placeholder from "@/components/Placeholder";
+import Photo from "@/components/Photo";
+import GoogleMap from "@/components/GoogleMap";
 
 export const metadata = {
   title: "院内紹介・交通｜ささき矯正歯科クリニック",
 };
 
 const FACILITIES = [
-  { name: "ビル1Fの看板", body: "駅から歩いてくるとシルバーの看板が見えます。" },
-  { name: "アピタ側からの看板", body: "アピタ側からくると大きな看板が見えます。" },
-  { name: "オグシオビル入口", body: "奥のエレベーターから5Fにお上がりください。" },
-  { name: "医院入口", body: "エレベーターから降りてすぐ左です。" },
-  { name: "受付", body: "小さいボックスに診察券を入れてください。" },
-  { name: "待合室", body: "ウォーターサーバー完備。ご自由にお飲みください。テレビ等を見てくつろげるスペースです。" },
-  { name: "歯磨きスペース", body: "矯正治療中はこちらで毎回歯磨きレッスンを行います。" },
-  { name: "診療室", body: "明るい診療室です。ベッドは4台あります。" },
-  { name: "レントゲン室", body: "レントゲン室にはCTスキャンを完備しております。" },
-  { name: "オートクレーブ", body: "使用した器具などを滅菌する装置です。" },
-  { name: "相談室", body: "治療についてのお話はこちらで行います。" },
-  { name: "本棚", body: "子供向けの本を沢山ご用意しております。" },
+  { name: "ビル1Fの看板", body: "駅から歩いてくるとシルバーの看板が見えます。", src: "/photos/facility-sign-1f.jpg" },
+  { name: "アピタ側からの看板", body: "アピタ側からくると大きな看板が見えます。", src: "/photos/facility-sign-apita.jpg" },
+  { name: "オグシオビル入口", body: "奥のエレベーターから5Fにお上がりください。", src: "/photos/facility-building-entrance.jpg" },
+  { name: "医院入口", body: "エレベーターから降りてすぐ左です。", src: "/photos/facility-clinic-entrance.jpg" },
+  { name: "受付", body: "小さいボックスに診察券を入れてください。", src: "/photos/facility-reception.jpg" },
+  { name: "待合室", body: "ウォーターサーバー完備。ご自由にお飲みください。テレビ等を見てくつろげるスペースです。", src: "/photos/facility-waiting.jpg" },
+  { name: "歯磨きスペース", body: "矯正治療中はこちらで毎回歯磨きレッスンを行います。", src: "/photos/facility-brushing.jpg" },
+  { name: "診療室", body: "明るい診療室です。ベッドは4台あります。", src: "/photos/facility-treatment.jpg" },
+  { name: "レントゲン室", body: "レントゲン室にはCTスキャンを完備しております。", src: "/photos/facility-xray.jpg" },
+  { name: "オートクレーブ", body: "使用した器具などを滅菌する装置です。", src: "/photos/facility-autoclave.jpg" },
+  { name: "相談室", body: "治療についてのお話はこちらで行います。", src: "/photos/facility-consult.jpg" },
+  { name: "本棚", body: "子供向けの本を沢山ご用意しております。", src: "/photos/facility-books.jpg" },
 ];
 
 const INFO: Array<[string, React.ReactNode]> = [
@@ -34,10 +35,10 @@ const INFO: Array<[string, React.ReactNode]> = [
 
 export default function Page() {
   return (
-    <SubPageLayout category="医院について" enTitle="CLINIC INFO" jpTitle="院内紹介・交通">
+    <SubPageLayout category="医院について" enTitle="CLINIC INFO" jpTitle="院内紹介・交通" heroSrc="/photos/feature-exterior.jpg">
       <PageSection>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          <Placeholder label="クリニック外観" ratio="4/3" className="w-full" />
+          <Photo src="/photos/accessinfo-exterior.jpg" alt="クリニックが入るビルの外観" ratio="4/3" className="w-full" />
           <dl className="space-y-3 text-[14px] leading-loose">
             {INFO.map(([label, value]) => (
               <div key={label} className="grid grid-cols-[5.5rem_1fr] gap-4 border-b border-[#e3e3e3]/70 pb-3">
@@ -59,7 +60,7 @@ export default function Page() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {FACILITIES.map((f) => (
             <article key={f.name}>
-              <Placeholder label={f.name} ratio="4/3" className="w-full mb-3" />
+              <Photo src={f.src} alt={f.name} ratio="4/3" className="w-full mb-3" />
               <h3 className="text-[14px] tracking-wider mb-1">{f.name}</h3>
               <p className="text-[12px] text-[#666] leading-loose">{f.body}</p>
             </article>
@@ -68,7 +69,7 @@ export default function Page() {
       </PageSection>
 
       <PageSection bg="soft">
-        <Placeholder label="Google Map 埋込" ratio="16/6" className="w-full" />
+        <GoogleMap />
       </PageSection>
     </SubPageLayout>
   );

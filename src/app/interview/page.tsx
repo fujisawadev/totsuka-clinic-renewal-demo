@@ -1,6 +1,6 @@
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
-import Placeholder from "@/components/Placeholder";
+import Photo from "@/components/Photo";
 
 export const metadata = {
   title: "横浜ドクターズインタビュー｜ささき矯正歯科クリニック",
@@ -8,10 +8,10 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <SubPageLayout category="メディア掲載" enTitle="INTERVIEW" jpTitle="横浜ドクターズインタビュー">
+    <SubPageLayout category="メディア掲載" enTitle="INTERVIEW" jpTitle="横浜ドクターズインタビュー" heroSrc="/photos/greeting-director-wide.jpg">
       <PageSection>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-          <Placeholder label="インタビュー記事サムネイル" ratio="4/3" className="w-full" />
+          <Photo src="/photos/interview-thumb.jpg" alt="患者さんと語る院長" ratio="4/3" className="w-full" />
           <div>
             <p className="text-[#9a998e] text-xs tracking-[0.3em] mb-3">外部メディア掲載</p>
             <h2 className="text-2xl lg:text-3xl tracking-wider mb-6">

@@ -28,7 +28,7 @@ type FaqItem = { slug: string; date: string; q: string; excerpt: string };
 export default function Page() {
   const list = faqs as FaqItem[];
   return (
-    <SubPageLayout category="コラム・お役立ち情報" enTitle="COLUMNS" jpTitle="矯正歯科コラム">
+    <SubPageLayout category="コラム・お役立ち情報" enTitle="COLUMNS" jpTitle="矯正歯科コラム" heroSrc="/photos/facility-books.jpg">
       <PageSection>
         <p className="text-[14px] leading-loose text-[#222] max-w-3xl">
           矯正歯科に関するよくあるご質問や、矯正治療を検討中の方に役立つ情報をコラム形式でまとめています。横浜・戸塚エリアで矯正歯科をお探しの方の参考になれば幸いです。

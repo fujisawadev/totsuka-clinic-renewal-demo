@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <SubPageLayout category="矯正治療" enTitle="PROCESS" jpTitle="矯正治療の進め方">
+    <SubPageLayout category="矯正治療" enTitle="PROCESS" jpTitle="矯正治療の進め方" heroSrc="/photos/process-hero.jpg">
       <PageSection>
         <p className="text-[14px] leading-loose text-[#222] max-w-3xl">
           矯正医は不正咬合についての相談を受けた場合、治療に先がけて様々な検査を行います。単に口や歯の状態を見ただけでは診断がつかないからです。

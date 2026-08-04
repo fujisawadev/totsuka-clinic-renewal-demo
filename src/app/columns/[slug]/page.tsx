@@ -28,7 +28,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const related = list.filter((x) => x.slug !== f.slug).slice(0, 4);
 
   return (
-    <SubPageLayout category="矯正歯科コラム" enTitle="COLUMN" jpTitle="よくあるご質問">
+    <SubPageLayout category="矯正歯科コラム" enTitle="COLUMN" jpTitle="よくあるご質問" heroSrc="/photos/facility-books.jpg">
       <PageSection>
         <div className="max-w-3xl">
           <p className="text-[12px] tracking-wider text-[#9a998e] mb-6">{f.date}</p>

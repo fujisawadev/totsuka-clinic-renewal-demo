@@ -1,10 +1,10 @@
 import Link from "next/link";
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
-import Placeholder from "@/components/Placeholder";
+import Photo from "@/components/Photo";
 
 export const metadata = {
-  title: "院長紹介｜ささき矯正歯科クリニック",
+  title: "医師・スタッフ紹介｜ささき矯正歯科クリニック",
 };
 
 const QUALIFICATIONS = [
@@ -56,6 +56,35 @@ const REGIONAL = [
   "YMCA とつか乳児保育園・園歯科医（令和2年〜）",
 ];
 
+// ※ 副院長・スタッフの氏名/経歴はダミー原稿。確定原稿受領後に差し替え
+const VICE_QUALIFICATIONS = [
+  "歯科医師（平成◯年〜）◯◯大学歯学部卒業",
+  "歯学博士（平成◯年〜）歯科矯正学",
+  "日本矯正歯科学会認定医（平成◯年〜）",
+];
+
+const VICE_CAREER = [
+  "◯◯大学歯学部矯正学教室（平成◯年〜◯年）",
+  "◯◯歯科クリニック 勤務（平成◯年〜◯年）",
+  "ささき矯正歯科クリニック 副院長（令和◯年〜）",
+];
+
+const VICE_ACADEMIC = [
+  "日本矯正歯科学会 会員",
+  "東京矯正歯科学会 会員",
+];
+
+const CERTIFIED = [
+  { role: "認定医", name: "佐々木 ◯◯", note: "非常勤" },
+  { role: "認定医", name: "◯◯ ◯◯", note: "非常勤" },
+];
+
+const STAFF = [
+  { role: "歯科衛生士", name: "◯◯ ◯◯" },
+  { role: "歯科衛生士", name: "◯◯ ◯◯" },
+  { role: "受付", name: "◯◯ ◯◯" },
+];
+
 function List({ items }: { items: string[] }) {
   return (
     <ul className="space-y-2 text-[14px] leading-loose text-[#222]">
@@ -68,10 +97,10 @@ function List({ items }: { items: string[] }) {
 
 export default function Page() {
   return (
-    <SubPageLayout category="医院について" enTitle="DOCTOR" jpTitle="院長紹介">
-      <PageSection>
+    <SubPageLayout category="医院について" enTitle="DOCTOR & STAFF" jpTitle="医師・スタッフ紹介" heroSrc="/photos/hero-team.jpg">
+      <PageSection enTitle="Director" jpTitle="院長">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-16 items-start">
-          <Placeholder label="院長写真" ratio="3/4" className="w-full" />
+          <Photo src="/photos/doctor-director.jpg" alt="院長 佐々木光司" ratio="3/4" className="w-full" position="top" />
           <div>
             <p className="text-xs text-[#9a998e] tracking-wider mb-1">日本矯正歯科学会 認定医 ／ 歯学博士</p>
             <p className="text-xs text-[#9a998e] tracking-wider">ささき矯正歯科クリニック 院長</p>
@@ -133,6 +162,69 @@ export default function Page() {
             インタビュー記事を見る
           </Link>
         </div>
+      </PageSection>
+
+      <PageSection enTitle="Vice Director" jpTitle="副院長">
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-16 items-start">
+          <Photo src="/photos/doctor-vice.jpg" alt="副院長" ratio="3/4" className="w-full" position="top" />
+          <div>
+            <p className="text-xs text-[#9a998e] tracking-wider">ささき矯正歯科クリニック 副院長</p>
+            <h2 className="mt-3 text-3xl lg:text-4xl tracking-wider">
+              佐々木 ◯◯
+              <span className="ml-4 text-base text-[#9a998e]">Sasaki</span>
+            </h2>
+            <div className="mt-8 space-y-4 text-[14px] leading-loose text-[#222]">
+              <p>ここに副院長のご挨拶文が入ります。診療にあたって大切にしていること、患者さんへのメッセージなどを掲載する想定です。原稿をいただき次第、差し替えいたします。</p>
+              <p>ここに副院長のご挨拶文（続き）が入ります。専門分野やこれまでの経験、地域の患者さんへの想いなどを掲載いただけます。</p>
+            </div>
+            <p className="mt-6 text-[11px] text-[#9a998e] tracking-wider">※ 氏名・文章はダミーです（確定原稿受領後に差し替え）</p>
+          </div>
+        </div>
+      </PageSection>
+
+      <PageSection enTitle="Qualifications" jpTitle="副院長 資格・経歴" bg="soft">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+          <div>
+            <h3 className="text-base mb-4 text-[#9a998e] tracking-widest">資格</h3>
+            <List items={VICE_QUALIFICATIONS} />
+            <h3 className="text-base mt-10 mb-4 text-[#9a998e] tracking-widest">所属学会等</h3>
+            <List items={VICE_ACADEMIC} />
+          </div>
+          <div>
+            <h3 className="text-base mb-4 text-[#9a998e] tracking-widest">経歴</h3>
+            <List items={VICE_CAREER} />
+          </div>
+        </div>
+      </PageSection>
+
+      <PageSection enTitle="Certified Orthodontists" jpTitle="認定医">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <p className="text-[14px] leading-loose text-[#222]">
+            当院では、院長・副院長のほかにも日本矯正歯科学会認定医が診療にあたっています。矯正治療に精通した認定医が複数在籍していることは、当院の特徴のひとつです。
+          </p>
+          <ul className="space-y-2 text-[14px] leading-loose text-[#222]">
+            {CERTIFIED.map((d, i) => (
+              <li key={i} className="flex items-baseline gap-4 border-b border-[#e3e3e3]/70 pb-2">
+                <span className="text-xs text-[#9a998e] tracking-wider w-20 shrink-0">{d.role}</span>
+                <span>{d.name}</span>
+                {d.note && <span className="text-xs text-[#9a998e]">（{d.note}）</span>}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <p className="mt-8 text-[11px] text-[#9a998e] tracking-wider">※ お名前はダミーです（確定原稿受領後に差し替え）</p>
+      </PageSection>
+
+      <PageSection enTitle="Staff" jpTitle="スタッフ" bg="soft">
+        <ul className="max-w-xl space-y-2 text-[14px] leading-loose text-[#222]">
+          {STAFF.map((s, i) => (
+            <li key={i} className="flex items-baseline gap-4 border-b border-[#e3e3e3]/70 pb-2">
+              <span className="text-xs text-[#9a998e] tracking-wider w-20 shrink-0">{s.role}</span>
+              <span>{s.name}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-8 text-[11px] text-[#9a998e] tracking-wider">※ お名前はダミーです（確定原稿受領後に差し替え）</p>
       </PageSection>
     </SubPageLayout>
   );

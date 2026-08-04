@@ -59,7 +59,7 @@ const DECADES = [
 export default function Page() {
   const grandTotal = DECADES.reduce((s, d) => s + d.total, 0);
   return (
-    <SubPageLayout category="医院について" enTitle="ACHIEVEMENTS" jpTitle="年別症例件数">
+    <SubPageLayout category="医院について" enTitle="ACHIEVEMENTS" jpTitle="年別症例件数" heroSrc="/photos/feature-director-desk.jpg">
       <PageSection>
         <p className="text-[14px] leading-loose text-[#222] mb-8 max-w-2xl">
           1987 年の開業以来、矯正専門の歯科医院として多くの症例を診療してまいりました。以下は 10 年毎に区切った 30 年間の推移です。

@@ -1,15 +1,16 @@
 import Link from "next/link";
 import Placeholder from "./Placeholder";
+import Photo from "./Photo";
 
 const BY_TYPE = [
-  { tag: "crowded", title: "乱杭歯（叢生）", href: "/symptoms/crowded-openbite/" },
+  { tag: "crowded", title: "乱杭歯（叢生）", href: "/symptoms/crowded/" },
   { tag: "overbite", title: "出っ歯（上顎前突）", href: "/symptoms/overbite/" },
   { tag: "underbite", title: "うけ口（下顎前突）", href: "/symptoms/underbite/" },
-  { tag: "open bite", title: "開咬", href: "/symptoms/crowded-openbite/" },
+  { tag: "open bite", title: "開咬", href: "/symptoms/openbite/" },
 ];
 
 const RELATED = [
-  { tag: "surgical", title: "外科治療", href: "/surgical/" },
+  { tag: "appliance", title: "矯正装置", href: "/appliance/" },
   { tag: "extraction", title: "抜歯について", href: "/extraction/" },
   { tag: "aftercare", title: "アフターケア", href: "/aftercare/" },
   { tag: "before/after", title: "治療前後の比較", href: "/before-after/" },
@@ -73,7 +74,7 @@ function SubHeader({ jp }: { jp: string }) {
 export default function Treatment() {
   return (
     <section id="orthodontic-treatment" className="bg-white pb-16 lg:pb-40">
-      <Placeholder label="セクションヒーロー" className="w-full aspect-[16/8] sm:aspect-[16/6] lg:aspect-[16/4]" />
+      <Photo src="/photos/treatment-hero.jpg" alt="ささき矯正歯科クリニックの診療室" className="w-full aspect-[16/8] sm:aspect-[16/6] lg:aspect-[16/4]" />
 
       <div className="container-clinic pt-12 lg:pt-24">
         <div className="anim flex flex-col items-start gap-1 lg:flex-row lg:items-end lg:gap-8 mb-12 lg:mb-20">

@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <SubPageLayout category="矯正治療" enTitle="ABOUT ORTHODONTICS" jpTitle="矯正治療について">
+    <SubPageLayout category="矯正治療" enTitle="ABOUT ORTHODONTICS" jpTitle="矯正治療について" heroSrc="/photos/appliance-hero.jpg">
       <PageSection>
         <div className="max-w-3xl space-y-4 text-[14px] leading-loose text-[#222]">
           <p>健康で文化的な生活を送ることは現代人の誰もが望むことです。そして私たちは、健康であるとともに美しくありたいと願っています。きれいに並んだ白い歯は美しさの大きな要素です。</p>

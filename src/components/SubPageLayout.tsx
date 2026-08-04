@@ -10,17 +10,18 @@ type Props = {
   category: string;
   enTitle: string;
   jpTitle: string;
+  heroSrc?: string;
   children: React.ReactNode;
 };
 
-export default function SubPageLayout({ category, enTitle, jpTitle, children }: Props) {
+export default function SubPageLayout({ category, enTitle, jpTitle, heroSrc, children }: Props) {
   return (
     <>
       <RevealObserver />
       <Header solid homeHref="/" anchorBase="/" />
       <SideActions />
       <main className="pt-16 lg:pt-20">
-        <SubPageHero category={category} enTitle={enTitle} jpTitle={jpTitle} />
+        <SubPageHero category={category} enTitle={enTitle} jpTitle={jpTitle} heroSrc={heroSrc} />
         <div className="bg-white">{children}</div>
       </main>
       <footer>

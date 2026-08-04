@@ -13,7 +13,7 @@ const LINKS = [
 
 export default function Page() {
   return (
-    <SubPageLayout category="関連情報" enTitle="LINKS" jpTitle="リンク集">
+    <SubPageLayout category="関連情報" enTitle="LINKS" jpTitle="リンク集" heroSrc="/photos/footer-exterior.jpg">
       <PageSection>
         <p className="text-[14px] leading-loose text-[#222] mb-8 max-w-2xl">
           当クリニックに関わる学会や提携先のリンクです。

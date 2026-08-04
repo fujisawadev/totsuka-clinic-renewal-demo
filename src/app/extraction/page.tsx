@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <SubPageLayout category="治療について" enTitle="EXTRACTION" jpTitle="抜歯について">
+    <SubPageLayout category="治療について" enTitle="EXTRACTION" jpTitle="抜歯について" heroSrc="/photos/treatment-hero.jpg">
       <PageSection>
         <div className="max-w-3xl space-y-4 text-[14px] leading-loose text-[#222]">
           <p>矯正治療を進めるにあたって、ご理解いただきたいことがあります。それは、矯正治療のために永久歯を抜く場合があることです。</p>

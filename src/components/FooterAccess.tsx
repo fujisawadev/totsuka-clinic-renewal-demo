@@ -1,4 +1,5 @@
-import Placeholder from "./Placeholder";
+import Photo from "./Photo";
+import GoogleMap from "./GoogleMap";
 
 const INFO: Array<[string, React.ReactNode]> = [
   ["医院名", "ささき矯正歯科クリニック"],
@@ -50,7 +51,7 @@ export default function FooterAccess() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="anim">
-            <Placeholder label="クリニック外観" ratio="4/3" className="w-full" />
+            <Photo src="/photos/footer-exterior.jpg" alt="クリニックが入るビルの外観" ratio="4/3" className="w-full" />
           </div>
 
           <div className="anim anim-delay-1">
@@ -96,7 +97,7 @@ export default function FooterAccess() {
         </div>
 
         <div className="anim mt-16 lg:mt-20">
-          <Placeholder label="Google Map 埋込" ratio="16/6" className="w-full" />
+          <GoogleMap />
         </div>
       </div>
     </section>

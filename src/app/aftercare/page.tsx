@@ -13,7 +13,7 @@ const RETAINERS = [
 
 export default function Page() {
   return (
-    <SubPageLayout category="治療について" enTitle="AFTERCARE" jpTitle="アフターケア">
+    <SubPageLayout category="治療について" enTitle="AFTERCARE" jpTitle="アフターケア" heroSrc="/photos/aftercare-hero.jpg">
       <PageSection enTitle="Retention" jpTitle="保定治療（あともどりを防ぐために）">
         <div className="max-w-3xl space-y-4 text-[14px] leading-loose text-[#222]">
           <p>本格的な治療が終わって、望んだところに歯が移動し、顔や口もとが改善されても、矯正治療は終わりにはなりません。</p>

@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <SubPageLayout category="その他の治療" enTitle="SURGICAL" jpTitle="外科治療">
+    <SubPageLayout category="その他の治療" enTitle="SURGICAL" jpTitle="外科治療" heroSrc="/photos/surgical-hero.jpg">
       <PageSection enTitle="About" jpTitle="外科治療とは">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div className="space-y-4 text-[14px] leading-loose text-[#222]">

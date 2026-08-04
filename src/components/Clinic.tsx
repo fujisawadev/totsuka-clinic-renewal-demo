@@ -1,6 +1,13 @@
-import Placeholder from "./Placeholder";
+import Photo from "./Photo";
 
-const SLIDES = Array.from({ length: 6 }, (_, i) => `院内 ${i + 1}`);
+const SLIDES = [
+  { label: "受付", src: "/photos/clinic-reception.jpg" },
+  { label: "待合室", src: "/photos/clinic-waiting.jpg" },
+  { label: "診療室", src: "/photos/clinic-treatment-room.jpg" },
+  { label: "歯磨きスペース", src: "/photos/clinic-brushing.jpg" },
+  { label: "レントゲン室", src: "/photos/clinic-xray.jpg" },
+  { label: "滅菌設備", src: "/photos/clinic-sterilization.jpg" },
+];
 
 export default function Clinic() {
   const track = [...SLIDES, ...SLIDES];
@@ -9,12 +16,12 @@ export default function Clinic() {
     <section id="clinic" className="relative bg-white pt-12 lg:pt-16 overflow-hidden">
       <div className="relative w-full">
         <div className="clinic-track flex w-max">
-          {track.map((label, i) => (
+          {track.map((s, i) => (
             <div
               key={i}
               className="shrink-0 w-[70vw] sm:w-[50vw] lg:w-[33.333vw] aspect-[3/2]"
             >
-              <Placeholder label={label} className="w-full h-full" />
+              <Photo src={s.src} alt={s.label} className="w-full h-full" />
             </div>
           ))}
         </div>

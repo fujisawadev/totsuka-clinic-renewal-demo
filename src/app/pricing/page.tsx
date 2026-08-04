@@ -20,7 +20,7 @@ const ROWS = [
 
 export default function Page() {
   return (
-    <SubPageLayout category="料金のご案内" enTitle="PRICING" jpTitle="矯正治療料金">
+    <SubPageLayout category="料金のご案内" enTitle="PRICING" jpTitle="矯正治療料金" heroSrc="/photos/facility-reception.jpg">
       <PageSection bg="soft">
         <p className="text-[14px] leading-loose text-[#444] mb-10 max-w-2xl">
           矯正歯科治療は公的医療保険の適用外の実費（自由）診療となります。料金は税込み表記です。

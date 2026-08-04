@@ -1,4 +1,4 @@
-import Placeholder from "./Placeholder";
+import Photo from "./Photo";
 
 export default function Greeting() {
   return (
@@ -13,7 +13,7 @@ export default function Greeting() {
       {/* Mobile: photo → info → horizontal body text */}
       <div className="lg:hidden px-6">
         <div className="anim mb-8">
-          <Placeholder label="院長写真" ratio="4/5" className="w-full" />
+          <Photo src="/photos/greeting-director.jpg" alt="院長 佐々木光司" ratio="4/5" className="w-full" position="top" />
           <div className="mt-6">
             <p className="text-xs text-[#9a998e] tracking-wider">日本矯正歯科学会 認定医／歯学博士</p>
             <p className="text-xs text-[#9a998e] tracking-wider">ささき矯正歯科クリニック 院長</p>
@@ -39,7 +39,7 @@ export default function Greeting() {
       {/* Desktop: photo + info on left, tategaki on right */}
       <div className="hidden lg:grid relative lg:grid-cols-12 gap-12 px-10">
         <div className="lg:col-span-8 relative anim">
-          <Placeholder label="院長写真" ratio="16/10" className="w-full" />
+          <Photo src="/photos/greeting-director-wide.jpg" alt="院長 佐々木光司" ratio="16/10" className="w-full" />
           <div className="mt-8 max-w-md">
             <p className="text-xs text-[#9a998e] tracking-wider">日本矯正歯科学会 認定医／歯学博士</p>
             <p className="text-xs text-[#9a998e] tracking-wider">ささき矯正歯科クリニック 院長</p>

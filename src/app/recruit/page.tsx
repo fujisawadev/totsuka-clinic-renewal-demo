@@ -1,6 +1,6 @@
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
-import Placeholder from "@/components/Placeholder";
+import Photo from "@/components/Photo";
 
 export const metadata = {
   title: "採用情報｜ささき矯正歯科クリニック",
@@ -30,7 +30,7 @@ export default function Page() {
               ※ このページは設計上の枠です。具体的な募集要項・応募方法は別途ご提供いただいた内容に差し替え予定。
             </p>
           </div>
-          <Placeholder label="スタッフ写真" ratio="4/3" className="w-full" />
+          <Photo src="/photos/recruit-staff.jpg" alt="スタッフ集合写真" ratio="4/3" className="w-full" />
         </div>
       </PageSection>
 

@@ -22,7 +22,7 @@ const PREP = [
 
 export default function Page() {
   return (
-    <SubPageLayout category="初めての方へ" enTitle="FIRST VISIT" jpTitle="初診の方へ">
+    <SubPageLayout category="初めての方へ" enTitle="FIRST VISIT" jpTitle="初診の方へ" heroSrc="/photos/counseling-1.jpg">
       <PageSection>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-12 mb-16">
           <div className="text-[#9a998e] text-xs tracking-[0.3em]">初診相談は無料です</div>

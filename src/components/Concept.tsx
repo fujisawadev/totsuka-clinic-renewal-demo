@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Placeholder from "./Placeholder";
+import Photo from "./Photo";
 
 const FEATURES = [
-  { num: "01", title: "1987年開業以来、地域に根ざした矯正治療", body: "開業から続く実績と臨床経験をもとに、患者さま一人ひとりに最適な治療をご提案します。" },
-  { num: "02", title: "矯正専門の歯科医院", body: "矯正歯科学会認定医による、矯正治療に特化した診療をご提供します。" },
-  { num: "03", title: "患者さん本位の診療", body: "アットホームな雰囲気のなかで、よくお話を伺い、個々に適した治療プランを一緒に考えます。" },
+  { num: "01", title: "1987年開業以来、地域に根ざした矯正治療", body: "開業から続く実績と臨床経験をもとに、患者さま一人ひとりに最適な治療をご提案します。", src: "/photos/feature-exterior.jpg" },
+  { num: "02", title: "6,000症例以上の臨床実績を持つ矯正専門医院", body: "矯正治療に特化した専門医院として、開業以来6,000症例を超える臨床実績。学会でも積極的に症例を発表しています。", src: "/photos/feature-director-desk.jpg" },
+  { num: "03", title: "日本矯正歯科学会認定医による診療", body: "歯学博士・日本矯正歯科学会認定医の院長が診療を担当。大学病院で臨床教授を務めた経験をもとに、患者さん本位の治療をご提供します。", src: "/photos/feature-certificates.jpg" },
 ];
 
 const CHECKLIST = [
@@ -54,7 +54,7 @@ export default function Concept() {
             <div className="w-full h-px bg-[#e3e3e3] my-10" />
           </div>
           <div className="lg:col-span-4 anim anim-delay-2">
-            <Placeholder label="コンセプト写真" ratio="3/4" className="w-full" />
+            <Photo src="/photos/concept-counseling.jpg" alt="患者さんと対話する院長" ratio="3/4" className="w-full" />
           </div>
         </div>
 
@@ -64,7 +64,7 @@ export default function Concept() {
               key={f.num}
               className={`anim anim-delay-${Math.min(i + 1, 3)} relative h-[220px] sm:h-[280px] lg:h-[360px] overflow-hidden`}
             >
-              <Placeholder label={`特徴 ${f.num}`} className="absolute inset-0 w-full h-full" />
+              <Photo src={f.src} alt={f.title} className="absolute inset-0 w-full h-full" />
               <div className="absolute inset-0 bg-[rgba(20,20,20,0.5)]" />
               <div className="relative h-full flex flex-col justify-center px-6 lg:px-16">
                 <div className="flex items-center gap-3 lg:gap-4 text-white/90 mb-3 lg:mb-4">
