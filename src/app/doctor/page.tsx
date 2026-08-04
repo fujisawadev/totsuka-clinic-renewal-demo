@@ -56,11 +56,10 @@ const REGIONAL = [
   "YMCA とつか乳児保育園・園歯科医（令和2年〜）",
 ];
 
-// ※ 副院長・スタッフの氏名/経歴はダミー原稿。確定原稿受領後に差し替え
+// ※ 副院長の経歴・スタッフの氏名はダミー原稿。確定原稿受領後に差し替え
 const VICE_QUALIFICATIONS = [
   "歯科医師（平成◯年〜）◯◯大学歯学部卒業",
-  "歯学博士（平成◯年〜）歯科矯正学",
-  "日本矯正歯科学会認定医（平成◯年〜）",
+  "日本矯正歯科学会認定医（令和6年〜）",
 ];
 
 const VICE_CAREER = [
@@ -168,16 +167,17 @@ export default function Page() {
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-16 items-start">
           <Photo src="/photos/doctor-vice.jpg" alt="副院長" ratio="3/4" className="w-full" position="top" />
           <div>
+            <p className="text-xs text-[#9a998e] tracking-wider mb-1">日本矯正歯科学会 認定医</p>
             <p className="text-xs text-[#9a998e] tracking-wider">ささき矯正歯科クリニック 副院長</p>
             <h2 className="mt-3 text-3xl lg:text-4xl tracking-wider">
-              佐々木 ◯◯
-              <span className="ml-4 text-base text-[#9a998e]">Sasaki</span>
+              佐々木 耀史
+              <span className="ml-4 text-base text-[#9a998e]">Yoji Sasaki</span>
             </h2>
             <div className="mt-8 space-y-4 text-[14px] leading-loose text-[#222]">
               <p>ここに副院長のご挨拶文が入ります。診療にあたって大切にしていること、患者さんへのメッセージなどを掲載する想定です。原稿をいただき次第、差し替えいたします。</p>
               <p>ここに副院長のご挨拶文（続き）が入ります。専門分野やこれまでの経験、地域の患者さんへの想いなどを掲載いただけます。</p>
             </div>
-            <p className="mt-6 text-[11px] text-[#9a998e] tracking-wider">※ 氏名・文章はダミーです（確定原稿受領後に差し替え）</p>
+            <p className="mt-6 text-[11px] text-[#9a998e] tracking-wider">※ 挨拶文はダミーです（確定原稿受領後に差し替え）</p>
           </div>
         </div>
       </PageSection>

@@ -9,7 +9,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <SubPageLayout category="歯並びの種類・症状から矯正治療を知る" enTitle="OVERBITE" jpTitle="出っ歯（上顎前突）" heroSrc="/photos/hero-clinic.jpg">
+    <SubPageLayout category="歯並びの種類・症状から矯正治療を知る" enTitle="OVERBITE" jpTitle="出っ歯（上顎前突）" heroSrc="/photos/model-overbite-side.jpg">
       <PageSection enTitle="About" jpTitle="出っ歯とは">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div className="space-y-4 text-[14px] leading-loose text-[#222]">

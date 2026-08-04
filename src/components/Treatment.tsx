@@ -3,17 +3,17 @@ import Placeholder from "./Placeholder";
 import Photo from "./Photo";
 
 const BY_TYPE = [
-  { tag: "crowded", title: "乱杭歯（叢生）", href: "/symptoms/crowded/" },
-  { tag: "overbite", title: "出っ歯（上顎前突）", href: "/symptoms/overbite/" },
-  { tag: "underbite", title: "うけ口（下顎前突）", href: "/symptoms/underbite/" },
-  { tag: "open bite", title: "開咬", href: "/symptoms/openbite/" },
+  { tag: "crowded", title: "乱杭歯（叢生）", href: "/symptoms/crowded/", src: "/photos/model-crowded-front.jpg" },
+  { tag: "overbite", title: "出っ歯（上顎前突）", href: "/symptoms/overbite/", src: "/photos/model-overbite-front.jpg" },
+  { tag: "underbite", title: "うけ口（下顎前突）", href: "/symptoms/underbite/", src: "/photos/model-underbite-front.jpg" },
+  { tag: "open bite", title: "開咬", href: "/symptoms/openbite/", src: "/photos/model-openbite-front.jpg" },
 ];
 
 const RELATED = [
-  { tag: "appliance", title: "矯正装置", href: "/appliance/" },
-  { tag: "extraction", title: "抜歯について", href: "/extraction/" },
-  { tag: "aftercare", title: "アフターケア", href: "/aftercare/" },
-  { tag: "before/after", title: "治療前後の比較", href: "/before-after/" },
+  { tag: "appliance", title: "矯正装置", href: "/appliance/", src: "/photos/appliance-bracket.jpg" },
+  { tag: "process", title: "矯正治療の進め方", href: "/process/", src: "/photos/process-hero.jpg" },
+  { tag: "achievements", title: "年別症例件数", href: "/achievements/", src: "/photos/achievements-hero.jpg" },
+  { tag: "doctor & staff", title: "医師・スタッフ紹介", href: "/doctor/", src: "/photos/hero-team.jpg" },
 ];
 
 function DarkCard({
@@ -24,6 +24,7 @@ function DarkCard({
   ratio = "3/2",
   index = 0,
   size = "lg",
+  src,
 }: {
   tag: string;
   title: string;
@@ -32,6 +33,7 @@ function DarkCard({
   ratio?: string;
   index?: number;
   size?: "lg" | "sm";
+  src?: string;
 }) {
   const isLg = size === "lg";
   return (
@@ -40,8 +42,12 @@ function DarkCard({
       className={`anim anim-delay-${Math.min((index % 3) + 1, 3)} group relative block overflow-hidden`}
       style={{ aspectRatio: ratio }}
     >
-      <Placeholder label={title} className="absolute inset-0 w-full h-full" />
-      <div className="absolute inset-0 bg-[rgba(20,20,20,0.55)] group-hover:bg-[rgba(20,20,20,0.35)] transition" />
+      {src ? (
+        <Photo src={src} alt={title} className="absolute inset-0 w-full h-full" />
+      ) : (
+        <Placeholder label={title} className="absolute inset-0 w-full h-full" />
+      )}
+      <div className={`absolute inset-0 transition ${src ? "bg-[rgba(20,20,20,0.35)] group-hover:bg-[rgba(20,20,20,0.15)]" : "bg-[rgba(20,20,20,0.55)] group-hover:bg-[rgba(20,20,20,0.35)]"}`} />
       <div className="relative h-full flex flex-col items-center justify-center text-white px-6 text-center">
         <h4 className={`tracking-wider ${isLg ? "text-2xl lg:text-3xl" : "text-base lg:text-xl"}`}>{title}</h4>
         <div className="text-[11px] tracking-[0.3em] uppercase text-white/75 mt-2">{tag}</div>

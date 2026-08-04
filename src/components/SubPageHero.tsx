@@ -6,13 +6,14 @@ type Props = {
   enTitle: string;
   jpTitle: string;
   heroSrc?: string;
+  heroPosition?: string;
 };
 
-export default function SubPageHero({ category, enTitle, jpTitle, heroSrc = "/photos/subpage-hero.jpg" }: Props) {
+export default function SubPageHero({ category, enTitle, jpTitle, heroSrc = "/photos/subpage-hero.jpg", heroPosition }: Props) {
   return (
     <section className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[360px] lg:min-h-[640px] bg-white">
       <div className="hidden lg:block relative">
-        <Photo src={heroSrc} alt="" className="absolute inset-0 w-full h-full" />
+        <Photo src={heroSrc} alt="" position={heroPosition} className="absolute inset-0 w-full h-full" />
       </div>
 
       <div className="relative flex flex-col justify-center px-6 lg:px-16 py-12 lg:py-24">
