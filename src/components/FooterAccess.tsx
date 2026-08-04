@@ -39,7 +39,7 @@ export default function FooterAccess() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="anim">
-            <Photo src="/photos/footer-exterior.jpg" alt="クリニックが入るビルの外観" ratio="4/3" className="w-full" />
+            <Photo src="/photos/footer-exterior.jpg" alt="クリニックが入るビルの外観" className="w-full" />
           </div>
 
           <div className="anim anim-delay-1">

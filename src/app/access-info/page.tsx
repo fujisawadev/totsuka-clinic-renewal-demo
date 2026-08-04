@@ -17,9 +17,7 @@ const FACILITIES = [
   { name: "歯磨きスペース", body: "矯正治療中はこちらで毎回歯磨きレッスンを行います。", src: "/photos/facility-brushing.jpg" },
   { name: "診療室", body: "明るい診療室です。ベッドは4台あります。", src: "/photos/facility-treatment.jpg" },
   { name: "レントゲン室", body: "レントゲン室にはCTスキャンを完備しております。", src: "/photos/facility-xray.jpg" },
-  { name: "オートクレーブ", body: "使用した器具などを滅菌する装置です。", src: "/photos/facility-autoclave.jpg" },
   { name: "相談室", body: "治療についてのお話はこちらで行います。", src: "/photos/facility-consult.jpg" },
-  { name: "本棚", body: "子供向けの本を沢山ご用意しております。", src: "/photos/facility-books.jpg" },
 ];
 
 const INFO: Array<[string, React.ReactNode]> = [
