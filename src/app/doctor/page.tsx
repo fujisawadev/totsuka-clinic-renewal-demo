@@ -1,4 +1,3 @@
-import Link from "next/link";
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
 import Photo from "@/components/Photo";
@@ -149,18 +148,6 @@ export default function Page() {
 
       <PageSection enTitle="Community" jpTitle="地域医療">
         <List items={REGIONAL} />
-      </PageSection>
-
-      <PageSection bg="soft">
-        <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-10 items-center">
-          <div>
-            <p className="text-[#9a998e] text-xs tracking-[0.3em] mb-2">関連リンク</p>
-            <p className="text-[14px] leading-loose">横浜ドクターズにて、横浜市戸塚区の矯正歯科院長としてインタビューを受けました。</p>
-          </div>
-          <Link href="/interview/" className="inline-block bg-[#9a998e] text-white text-sm tracking-widest px-6 py-3 hover:bg-[#b5b4a8] transition w-fit lg:justify-self-end">
-            インタビュー記事を見る
-          </Link>
-        </div>
       </PageSection>
 
       <PageSection enTitle="Vice Director" jpTitle="副院長">

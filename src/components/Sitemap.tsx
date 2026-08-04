@@ -32,7 +32,6 @@ const COLUMNS = [
       { label: "年別症例件数", href: "/achievements/" },
       { label: "院内紹介・交通", href: "/access-info/" },
       { label: "初診の方へ", href: "/first-visit/" },
-      { label: "インタビュー記事", href: "/interview/" },
       { label: "採用情報", href: "/recruit/" },
     ],
   },

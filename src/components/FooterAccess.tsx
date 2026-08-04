@@ -27,18 +27,6 @@ const INFO: Array<[string, React.ReactNode]> = [
   ],
 ];
 
-function SnsCircle({ initial, label }: { initial: string; label: string }) {
-  return (
-    <a
-      href="#"
-      aria-label={label}
-      className="w-9 h-9 rounded-full bg-[#9a998e] text-white flex items-center justify-center text-sm hover:bg-[#b5b4a8] transition"
-    >
-      {initial}
-    </a>
-  );
-}
-
 export default function FooterAccess() {
   return (
     <section id="access" className="bg-[#f4f1ea]/30 py-16 lg:py-32 pb-20 lg:pb-32">
@@ -58,11 +46,6 @@ export default function FooterAccess() {
             <div className="mb-6">
               <p className="text-xl lg:text-2xl tracking-[0.15em]">ささき矯正歯科クリニック</p>
               <p className="text-[10px] sm:text-[11px] tracking-[0.25em] text-[#9a998e] mt-1">SASAKI ORTHODONTIC CLINIC</p>
-            </div>
-
-            <div className="flex gap-3 mb-8">
-              <SnsCircle initial="I" label="Instagram" />
-              <SnsCircle initial="T" label="Tiktok" />
             </div>
 
             <dl className="space-y-3 text-[13px] sm:text-[14px] leading-loose">
