@@ -2,8 +2,8 @@ import Link from "next/link";
 import Photo from "./Photo";
 
 const FEATURES = [
-  { num: "01", title: "1987年開業以来、地域に根ざした矯正治療", body: "開業から続く実績と臨床経験をもとに、患者さま一人ひとりに最適な治療をご提案します。", src: "/photos/feature-exterior.jpg" },
-  { num: "02", title: "6,000症例以上の臨床実績を持つ矯正専門医院", body: "矯正治療に特化した専門医院として、開業以来6,000症例を超える臨床実績。学会でも積極的に症例を発表しています。", src: "/photos/feature-director-desk.jpg" },
+  { num: "01", title: "1987年開業以来、地域に根ざした安心安全な矯正歯科治療", body: "開業から続く実績と臨床経験をもとに、地域の皆さまに寄り添いながら、患者さま一人ひとりに安心・安全な治療をご提案します。", src: "/photos/feature-exterior.jpg" },
+  { num: "02", title: "7,000症例以上の臨床実績を持つ矯正専門医院", body: "矯正治療に特化した専門医院として、開業以来7,000症例を超える臨床実績。学会でも積極的に症例を発表しています。", src: "/photos/feature-director-desk.jpg" },
   { num: "03", title: "日本矯正歯科学会認定医による診療", body: "歯学博士・日本矯正歯科学会認定医の院長が診療を担当。大学病院で臨床教授を務めた経験をもとに、患者さん本位の治療をご提供します。", src: "/photos/feature-certificates.jpg" },
 ];
 

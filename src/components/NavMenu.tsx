@@ -13,8 +13,8 @@ const SYMPTOMS = [
 ];
 const TREATMENT = [
   { label: "矯正治療について", href: "/treatment/" },
-  { label: "小児矯正（1期治療）", href: "/child/" },
-  { label: "成人矯正（2期治療）", href: "/adult/" },
+  { label: "小児矯正", href: "/child/" },
+  { label: "成人矯正", href: "/adult/" },
   { label: "矯正治療の進め方", href: "/process/" },
   { label: "矯正装置", href: "/appliance/" },
   { label: "外科治療", href: "/surgical/" },

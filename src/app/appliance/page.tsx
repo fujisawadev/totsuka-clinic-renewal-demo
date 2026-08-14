@@ -1,7 +1,6 @@
 import Link from "next/link";
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
-import Placeholder from "@/components/Placeholder";
 import Photo from "@/components/Photo";
 
 export const metadata = {
@@ -37,14 +36,25 @@ export default function Page() {
         </div>
       </PageSection>
 
-      <PageSection enTitle="Fixed Appliance" jpTitle="固定装置" bg="soft">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-          <div className="space-y-4 text-[14px] leading-loose text-[#222]">
-            <p>歯に固定して使用する装置で、取り外しができないぶん、確実に歯を動かしたり、永久歯が生えるためのスペースを確保したりすることができます。</p>
-            <p>歯列の内側から歯を動かす装置や、歯列の幅を広げる装置など種類はさまざまで、症例やお口の状態に合わせて、主にブラケット装置による治療と組み合わせて使用します。</p>
+      <PageSection enTitle="For Children" jpTitle="小児矯正装置" bg="soft">
+        <p className="text-[14px] leading-loose text-[#222] max-w-3xl">
+          お子さまの歯並びや顎の成長を整えるために使用する矯正装置です。歯をきれいに並べるためのスペースを確保したり、歯の生える位置を整えたりする目的で使用します。
+        </p>
+        <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          <div>
+            <Photo src="/photos/appliance-expansion.jpg" alt="拡大床装置" ratio="4/3" className="w-full" />
+            <h3 className="mt-5 text-base lg:text-lg tracking-wider">拡大床（取り外し式）</h3>
+            <p className="mt-3 text-[14px] leading-loose text-[#222]">主に上あごや歯列の幅を少しずつ広げ、歯が並ぶためのスペースを作る装置です。取り外し式のため、食事や歯みがきの際には外すことができます。</p>
           </div>
-          <Placeholder label="固定装置" ratio="4/3" className="w-full" />
+          <div>
+            <Photo src="/photos/appliance-lingual.jpg" alt="リンガルアーチ" ratio="4/3" className="w-full" />
+            <h3 className="mt-5 text-base lg:text-lg tracking-wider">リンガルアーチ（固定式）</h3>
+            <p className="mt-3 text-[14px] leading-loose text-[#222]">歯の裏側に沿って装着する固定式の装置です。ご自身で取り外すことはできませんが、装置を入れたまま使用できるため、歯列の幅を維持したり、奥歯の位置を支えたりすることができます。</p>
+          </div>
         </div>
+        <p className="mt-10 text-[14px] leading-loose text-[#222] max-w-3xl">
+          どちらの装置を使用するかは、歯並びや顎の成長、治療の目的などによって異なります。お子さま一人ひとりのお口の状態を確認したうえで、適した装置をご提案します。
+        </p>
       </PageSection>
 
       <PageSection>
