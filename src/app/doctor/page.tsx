@@ -49,6 +49,12 @@ const ROLES = [
   "鶴見大学歯学部歯科矯正学講座同門会・会長（平成12年〜令和元年）",
 ];
 
+const REGIONAL = [
+  "潮田幼稚園（鶴見区）・園歯科医（平成23年〜）",
+  "YMCA とつか保育園・園歯科医（令和2年〜）",
+  "YMCA とつか乳児保育園・園歯科医（令和2年〜）",
+];
+
 const VICE_QUALIFICATIONS = [
   "歯科医師（平成29年〜）鶴見大学歯学部卒業",
   "歯学博士（令和6年〜）歯科矯正学",
@@ -139,6 +145,10 @@ export default function Page() {
         <List items={ROLES} />
       </PageSection>
 
+      <PageSection enTitle="Community" jpTitle="地域医療">
+        <List items={REGIONAL} />
+      </PageSection>
+
       <PageSection enTitle="Vice Director" jpTitle="副院長">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-16 items-start">
           <Photo src="/photos/doctor-vice.jpg" alt="副院長" ratio="3/4" className="w-full" position="top" />
@@ -176,7 +186,7 @@ export default function Page() {
         </div>
       </PageSection>
 
-      <PageSection enTitle="Certified Orthodontists" jpTitle="認定医">
+      <PageSection enTitle="Certified Orthodontists" jpTitle="日本矯正歯科学会認定医">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:gap-16 max-w-3xl">
           {CERTIFIED_DOCTORS.map((d) => (
             <div key={d.name}>

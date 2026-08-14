@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <SubPageLayout category="治療方法" enTitle="APPLIANCE" jpTitle="矯正装置" heroSrc="/photos/appliance-hero.jpg">
       <PageSection>
-        <p className="text-[14px] leading-loose text-[#222] max-w-3xl">
+        <p className="text-[14px] leading-loose text-[#222] max-w-4xl">
           矯正装置にはさまざまな種類があり、矯正医は症例の特徴、年齢、習癖、患者さまのご希望などにより装置を選択して治療を行います。当院で用いる代表的な装置をご紹介します。
         </p>
       </PageSection>
@@ -37,7 +37,7 @@ export default function Page() {
       </PageSection>
 
       <PageSection enTitle="For Children" jpTitle="小児矯正装置" bg="soft">
-        <p className="text-[14px] leading-loose text-[#222] max-w-3xl">
+        <p className="text-[14px] leading-loose text-[#222]">
           お子さまの歯並びや顎の成長を整えるために使用する矯正装置です。歯をきれいに並べるためのスペースを確保したり、歯の生える位置を整えたりする目的で使用します。
         </p>
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -52,13 +52,13 @@ export default function Page() {
             <p className="mt-3 text-[14px] leading-loose text-[#222]">歯の裏側に沿って装着する固定式の装置です。ご自身で取り外すことはできませんが、装置を入れたまま使用できるため、歯列の幅を維持したり、奥歯の位置を支えたりすることができます。</p>
           </div>
         </div>
-        <p className="mt-10 text-[14px] leading-loose text-[#222] max-w-3xl">
+        <p className="mt-10 text-[14px] leading-loose text-[#222]">
           どちらの装置を使用するかは、歯並びや顎の成長、治療の目的などによって異なります。お子さま一人ひとりのお口の状態を確認したうえで、適した装置をご提案します。
         </p>
       </PageSection>
 
       <PageSection>
-        <p className="text-[14px] leading-loose text-[#222] max-w-3xl">
+        <p className="text-[14px] leading-loose text-[#222] max-w-4xl">
           どの装置が適しているかは、検査・診断のうえ患者さま一人ひとりに合わせてご提案します。まずは無料の初診相談でお気軽にご相談ください。
         </p>
         <div className="mt-8 text-[12px] text-[#666] leading-loose space-y-1">

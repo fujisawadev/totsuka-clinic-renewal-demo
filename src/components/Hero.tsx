@@ -1,18 +1,56 @@
 import HeroSlides from "./HeroSlides";
 
+// ── スマホ時のファーストビュー表示（PC は常に従来の全画面） ──────────
+// "image":  写真を 3:2 のまま切らずに表示し、テキストは写真下のダークパネルに置く
+// "aspect": 3:4 の高さで表示（左右の切れを抑えた折衷案）
+// "full":   従来どおり画面いっぱいに表示（元に戻すときはこちら）
+const MOBILE_HERO: "image" | "aspect" | "full" = "image";
+
+const SECTION_H = {
+  image: "",
+  aspect: "aspect-[3/4] lg:aspect-auto lg:min-h-screen lg:min-h-[720px]",
+  full: "min-h-screen min-h-[720px]",
+}[MOBILE_HERO];
+
+// 写真レイヤー: image モードのみモバイルで通常フロー(3:2)、lg では常に背景化
+const IMAGE_WRAP = {
+  image: "relative aspect-[3/2] lg:absolute lg:inset-0 lg:aspect-auto",
+  aspect: "absolute inset-0",
+  full: "absolute inset-0",
+}[MOBILE_HERO];
+
+// テキストレイヤー: image モードのみモバイルでダークパネル、lg では常にオーバーレイ
+const TEXT_WRAP = {
+  image: "relative z-10 flex flex-col bg-[#1a1a1a] lg:bg-transparent lg:min-h-screen lg:min-h-[720px]",
+  aspect: "relative z-10 flex flex-col h-full lg:h-auto lg:min-h-screen lg:min-h-[720px]",
+  full: "relative z-10 flex flex-col min-h-screen min-h-[720px]",
+}[MOBILE_HERO];
+
+const TEXT_PT = MOBILE_HERO === "image" ? "pt-10 lg:pt-32" : "pt-20 lg:pt-32";
+const TEXT_PB = MOBILE_HERO === "image" ? "pb-10 lg:pb-32" : "pb-20 lg:pb-32";
+const SPACER = MOBILE_HERO === "image" ? "h-8 lg:h-auto lg:flex-1" : "flex-1";
+
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen min-h-[720px] overflow-hidden text-white"
+      className={`relative overflow-hidden text-white ${SECTION_H}`}
     >
-      <div className="absolute inset-0">
+      <div className={IMAGE_WRAP}>
         <HeroSlides />
-        <div className="absolute inset-0 bg-[rgba(26,26,26,0.45)]" />
+        {MOBILE_HERO === "image" ? (
+          <>
+            {/* モバイル: ヘッダー文字の可読性用に上部だけ薄くグラデーション */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent lg:hidden" />
+            <div className="absolute inset-0 hidden lg:block bg-[rgba(26,26,26,0.45)]" />
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-[rgba(26,26,26,0.45)]" />
+        )}
       </div>
 
-      <div className="relative z-10 min-h-screen min-h-[720px] flex flex-col">
-        <div className="pt-20 lg:pt-32 px-6 lg:px-10">
+      <div className={TEXT_WRAP}>
+        <div className={`${TEXT_PT} px-6 lg:px-10`}>
           <p className="anim text-[12px] lg:text-[13px] tracking-[0.15em] text-white/95">戸塚駅東口より徒歩3分</p>
           <p className="anim text-[12px] lg:text-[13px] tracking-[0.15em] text-white/95">日本矯正歯科学会 認定医</p>
           <div className="w-12 h-px bg-white/70 my-4 lg:my-5" />
@@ -22,9 +60,9 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex-1" />
+        <div className={SPACER} />
 
-        <div className="px-6 lg:px-10 pb-20 lg:pb-32">
+        <div className={`px-6 lg:px-10 ${TEXT_PB}`}>
           <h1 className="anim anim-delay-2 text-base sm:text-lg lg:text-xl leading-[2] tracking-wider text-white">
             患者さんを笑顔に導く
             <br />

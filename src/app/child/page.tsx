@@ -50,7 +50,7 @@ export default function Page() {
       </PageSection>
 
       <PageSection enTitle="Appliance" jpTitle="小児矯正で使用する主な装置">
-        <p className="text-[14px] leading-loose text-[#222] max-w-3xl">
+        <p className="text-[14px] leading-loose text-[#222]">
           お子さまの歯並びや顎の成長を整えるために使用する矯正装置です。歯をきれいに並べるためのスペースを確保したり、歯の生える位置を整えたりする目的で使用します。
         </p>
         <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -65,7 +65,7 @@ export default function Page() {
             <p className="mt-3 text-[14px] leading-loose text-[#222]">リンガルアーチは、歯の裏側に沿って装着する固定式の装置です。ご自身で取り外すことはできませんが、装置を入れたまま使用できるため、歯列の幅を維持したり、奥歯の位置を支えたりすることができます。</p>
           </div>
         </div>
-        <p className="mt-10 text-[14px] leading-loose text-[#222] max-w-3xl">
+        <p className="mt-10 text-[14px] leading-loose text-[#222]">
           どちらの装置を使用するかは、歯並びや顎の成長、治療の目的などによって異なります。お子さま一人ひとりのお口の状態を確認したうえで、適した装置をご提案します。
         </p>
       </PageSection>
