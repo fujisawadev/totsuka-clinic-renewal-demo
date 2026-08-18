@@ -4,9 +4,9 @@ export default function Greeting() {
   return (
     <section id="greeting" className="bg-white pt-16 lg:pt-32 pb-16 lg:pb-40 relative">
       <div className="container-clinic mb-8 lg:mb-12">
-        <div className="anim flex flex-col items-start gap-1 lg:flex-row lg:items-end lg:gap-8">
+        <div className="anim">
           <h2 className="section-eyebrow">Greeting</h2>
-          <span className="text-[13px] lg:text-[14px] text-[#9a998e] tracking-wider lg:pb-2">院長あいさつ</span>
+          <p className="mt-2 text-[13px] lg:text-[14px] text-[#9a998e] tracking-wider">院長あいさつ</p>
         </div>
       </div>
 

@@ -121,9 +121,9 @@ export default function Treatment() {
       <Photo src="/photos/treatment-hero.jpg" alt="ささき矯正歯科クリニックの診療室" className="w-full aspect-[16/8] sm:aspect-[16/6] lg:aspect-[16/4]" />
 
       <div className="container-clinic pt-12 lg:pt-24">
-        <div className="anim flex flex-col items-start gap-1 lg:flex-row lg:items-end lg:gap-8 mb-12 lg:mb-20">
+        <div className="anim mb-12 lg:mb-20">
           <h2 className="section-eyebrow">Orthodontic Treatment</h2>
-          <span className="text-[13px] lg:text-[14px] text-[#9a998e] tracking-wider lg:pb-2">矯正治療について</span>
+          <p className="mt-2 text-[13px] lg:text-[14px] text-[#9a998e] tracking-wider">矯正治療について</p>
         </div>
 
         <div className="mb-14 lg:mb-20">

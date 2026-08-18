@@ -4,9 +4,9 @@ export default function Interview() {
   return (
     <section className="bg-white pt-16 lg:pt-32 pb-16 lg:pb-40">
       <div className="container-clinic">
-        <div className="anim flex flex-col items-start gap-1 lg:flex-row lg:items-end lg:gap-8 mb-8 lg:mb-12">
+        <div className="anim mb-8 lg:mb-12">
           <h2 className="section-eyebrow">Interview</h2>
-          <span className="text-[13px] lg:text-[14px] text-[#9a998e] tracking-wider lg:pb-2">メディア掲載</span>
+          <p className="mt-2 text-[13px] lg:text-[14px] text-[#9a998e] tracking-wider">メディア掲載</p>
         </div>
 
         <div className="anim anim-delay-1">

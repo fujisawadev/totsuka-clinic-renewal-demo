@@ -215,7 +215,6 @@ export default function Page() {
         <p className="mt-10 text-[14px] leading-loose text-[#222] max-w-3xl">
           当院には、院長・副院長のほかにも日本矯正歯科学会認定医が多数在籍しています。矯正治療に精通したドクターが、患者さま一人ひとりの治療にあたります。
         </p>
-        <p className="mt-6 text-[11px] text-[#9a998e] tracking-wider">※ 写真とお名前の対応は確認中です</p>
       </PageSection>
     </SubPageLayout>
   );
