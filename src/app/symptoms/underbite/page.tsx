@@ -2,6 +2,7 @@ import Link from "next/link";
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
 import Photo from "@/components/Photo";
+import { TYPE_VISUAL } from "@/lib/typeVisual";
 
 export const metadata = {
   title: "うけ口（下顎前突）｜ささき矯正歯科クリニック",
@@ -9,7 +10,7 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <SubPageLayout category="歯並びの種類・症状から矯正治療を知る" enTitle="UNDERBITE" jpTitle="うけ口（下顎前突）" heroSrc="/photos/model-underbite-side.jpg">
+    <SubPageLayout category="歯並びの種類・症状から矯正治療を知る" enTitle="UNDERBITE" jpTitle="うけ口（下顎前突）" heroSrc="/photos/model-underbite-side.jpg" heroIllust={TYPE_VISUAL === "illust" ? "/photos/illust-underbite.png" : undefined}>
       <PageSection enTitle="About" jpTitle="うけ口とは">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           <div className="space-y-4 text-[14px] leading-loose text-[#222]">

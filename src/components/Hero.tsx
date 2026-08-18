@@ -4,7 +4,7 @@ import HeroSlides from "./HeroSlides";
 // "image":  写真を 3:2 のまま切らずに表示し、テキストは写真下のダークパネルに置く
 // "aspect": 3:4 の高さで表示（左右の切れを抑えた折衷案）
 // "full":   従来どおり画面いっぱいに表示（元に戻すときはこちら）
-const MOBILE_HERO: "image" | "aspect" | "full" = "image";
+const MOBILE_HERO = "full" as "image" | "aspect" | "full";
 
 const SECTION_H = {
   image: "",

@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Placeholder from "./Placeholder";
 import Photo from "./Photo";
+import { TYPE_VISUAL } from "@/lib/typeVisual";
 
 const BY_TYPE = [
-  { tag: "crowded", title: "乱杭歯（叢生）", href: "/symptoms/crowded/", src: "/photos/model-crowded-front.jpg" },
-  { tag: "overbite", title: "出っ歯（上顎前突）", href: "/symptoms/overbite/", src: "/photos/model-overbite-front.jpg" },
-  { tag: "underbite", title: "うけ口（下顎前突）", href: "/symptoms/underbite/", src: "/photos/model-underbite-front.jpg" },
-  { tag: "open bite", title: "開咬", href: "/symptoms/openbite/", src: "/photos/model-openbite-front.jpg" },
+  { tag: "crowded", title: "乱杭歯（叢生）", href: "/symptoms/crowded/", src: "/photos/model-crowded-front.jpg", illust: "/photos/illust-crowded.png" },
+  { tag: "overbite", title: "出っ歯（上顎前突）", href: "/symptoms/overbite/", src: "/photos/model-overbite-front.jpg", illust: "/photos/illust-overbite.png" },
+  { tag: "underbite", title: "うけ口（下顎前突）", href: "/symptoms/underbite/", src: "/photos/model-underbite-front.jpg", illust: "/photos/illust-underbite.png" },
+  { tag: "open bite", title: "開咬", href: "/symptoms/openbite/", src: "/photos/model-openbite-front.jpg", illust: "/photos/illust-openbite.png" },
 ];
 
 const RELATED = [
@@ -66,6 +67,43 @@ function DarkCard({
   );
 }
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
+function IllustCard({
+  tag,
+  title,
+  href,
+  illust,
+  index = 0,
+}: {
+  tag: string;
+  title: string;
+  href: string;
+  illust: string;
+  index?: number;
+}) {
+  return (
+    <Link
+      href={href}
+      className={`anim anim-delay-${Math.min((index % 3) + 1, 3)} group flex flex-col overflow-hidden bg-[#f4f1ea] transition-colors hover:bg-[#ece7db]`}
+      style={{ aspectRatio: "1/1" }}
+    >
+      <div className="relative flex-1 min-h-0">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={`${BASE}${illust}`}
+          alt={title}
+          className="absolute inset-0 w-full h-full object-contain p-2 lg:p-4 transition-transform duration-500 group-hover:scale-[1.04]"
+        />
+      </div>
+      <div className="px-2 pb-4 lg:pb-5 text-center">
+        <h4 className="text-[13px] lg:text-lg tracking-wider text-[#222]">{title}</h4>
+        <div className="text-[10px] tracking-[0.3em] uppercase text-[#9a998e] mt-1">{tag}</div>
+      </div>
+    </Link>
+  );
+}
+
 function SubHeader({ jp }: { jp: string }) {
   return (
     <div className="anim mb-8 lg:mb-10">
@@ -91,9 +129,13 @@ export default function Treatment() {
         <div className="mb-14 lg:mb-20">
           <SubHeader jp="不正咬合の種類から探す" />
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-            {BY_TYPE.map((c, i) => (
-              <DarkCard key={c.tag} {...c} ratio="1/1" index={i} size="sm" />
-            ))}
+            {BY_TYPE.map((c, i) =>
+              TYPE_VISUAL === "illust" ? (
+                <IllustCard key={c.tag} tag={c.tag} title={c.title} href={c.href} illust={c.illust} index={i} />
+              ) : (
+                <DarkCard key={c.tag} tag={c.tag} title={c.title} href={c.href} src={c.src} ratio="1/1" index={i} size="sm" />
+              )
+            )}
           </div>
         </div>
 

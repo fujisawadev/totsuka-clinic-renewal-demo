@@ -95,6 +95,19 @@ function List({ items }: { items: string[] }) {
 export default function Page() {
   return (
     <SubPageLayout category="医院について" enTitle="DOCTOR & STAFF" jpTitle="医師・スタッフ紹介" heroSrc="/photos/hero-team.jpg">
+      <PageSection>
+        <p className="text-[15px] leading-loose text-[#222] max-w-[59rem]">
+          当院には、日本矯正歯科学会認定医の資格を持つ経験豊富なドクターと、矯正治療に精通したスタッフが在籍しています。カウンセリングから治療、日々のケアまで、チーム一丸となって患者さんに寄り添います。
+        </p>
+        {/* PC はページ上部のヒーローに集合写真が表示されるため、スマホのみここに掲載 */}
+        <Photo
+          src="/photos/hero-team.jpg"
+          alt="ささき矯正歯科クリニックのドクター・スタッフ"
+          ratio="3/2"
+          className="mt-8 w-full lg:hidden"
+        />
+      </PageSection>
+
       <PageSection enTitle="Director" jpTitle="院長">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 lg:gap-16 items-start">
           <Photo src="/photos/doctor-director.jpg" alt="院長 佐々木光司" ratio="3/4" className="w-full" position="top" />

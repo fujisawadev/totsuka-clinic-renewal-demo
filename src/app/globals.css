@@ -34,6 +34,9 @@
   }
   body {
     font-family: var(--font-mincho);
+    /* 日本語を文節単位で改行し、語の途中での不自然な折り返しを防ぐ
+       （未対応ブラウザは従来どおりの折り返しにフォールバック） */
+    word-break: auto-phrase;
   }
   img {
     max-width: 100%;

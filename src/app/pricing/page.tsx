@@ -40,6 +40,13 @@ const FEE_ROWS: Row[] = [
   { name: "診断書料", price: "¥5,500 〜 22,000", note: "" },
 ];
 
+// デンタルローン（スルガ銀行・アプラスは現行サイトから継承、エポスは新規追加）
+const LOANS = [
+  { en: "Dental Loan", name: "スルガ銀行", service: "デンタルローン", href: "https://www.surugabank.co.jp/reserved/landing/dental/" },
+  { en: "Dental Loan", name: "アプラス", service: "デンタルローン", href: "https://www.aplus.co.jp/loan/credit/dental/" },
+  { en: "Dental Credit", name: "エポスカード（マルイ）", service: "デンタルクレジット", href: "https://www.eposcard.co.jp/dental_cre/index.html" },
+];
+
 function PriceRow({ r, indent = 0 }: { r: Row; indent?: 0 | 1 | 2 }) {
   const indentClass =
     indent === 2
@@ -113,7 +120,30 @@ export default function Page() {
 
         <div className="mt-8 space-y-2 text-[12px] text-[#666] leading-loose">
           <p>※ 上記の治療費には消費税が含まれております。</p>
-          <p>※ スルガ銀行・アプラスのデンタルローン（分割払い）もご利用いただけます。</p>
+        </div>
+
+        {/* デンタルローン */}
+        <h3 className="mt-12 mb-2 text-base lg:text-lg tracking-widest text-[#222]">デンタルローンのご案内</h3>
+        <p className="mb-5 text-[12px] text-[#666] leading-loose">
+          治療費のお支払いには、下記のデンタルローン・デンタルクレジット（分割払い）もご利用いただけます。詳しくは各社の公式サイトをご確認ください。
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 lg:gap-4">
+          {LOANS.map((l) => (
+            <a
+              key={l.name}
+              href={l.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block bg-white border border-[#e3e3e3]/70 p-5 lg:p-6 transition-colors hover:border-[#9a998e]/60"
+            >
+              <p className="text-[10px] tracking-[0.25em] uppercase text-[#9a998e]">{l.en}</p>
+              <p className="mt-2 text-[15px] tracking-wider text-[#222]">{l.name}</p>
+              <p className="mt-1 text-[12px] text-[#666]">{l.service}</p>
+              <span className="mt-4 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] text-[#9a998e] group-hover:text-[#666] transition-colors">
+                公式サイトへ<span aria-hidden>↗</span>
+              </span>
+            </a>
+          ))}
         </div>
       </PageSection>
     </SubPageLayout>

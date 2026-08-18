@@ -5,7 +5,7 @@ import Photo from "./Photo";
 const SLIDES = [
   { src: "/photos/hero-clinic.jpg", alt: "ささき矯正歯科クリニックの診療室" },
   { src: "/photos/hero-smile.jpg", alt: "患者さんと笑顔で話す院長" },
-  { src: "/photos/hero-team.jpg", alt: "ささき矯正歯科クリニックのドクター・スタッフ" },
+  { src: "/photos/hero-treatment.jpg", alt: "患者さんを診療する副院長" },
 ];
 
 export default function HeroSlides() {

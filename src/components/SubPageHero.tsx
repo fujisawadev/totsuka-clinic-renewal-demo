@@ -1,20 +1,35 @@
 import Link from "next/link";
 import Photo from "./Photo";
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 type Props = {
   category: string;
   enTitle: string;
   jpTitle: string;
   heroSrc?: string;
   heroPosition?: string;
+  /** 指定すると写真の代わりにイラスト（透過PNG）を淡い背景で表示する */
+  heroIllust?: string;
 };
 
-export default function SubPageHero({ category, enTitle, jpTitle, heroSrc = "/photos/subpage-hero.jpg", heroPosition }: Props) {
+export default function SubPageHero({ category, enTitle, jpTitle, heroSrc = "/photos/subpage-hero.jpg", heroPosition, heroIllust }: Props) {
   return (
     <section className="relative grid grid-cols-1 lg:grid-cols-2 min-h-[360px] lg:min-h-[640px] bg-white">
-      <div className="hidden lg:block relative">
-        <Photo src={heroSrc} alt="" position={heroPosition} className="absolute inset-0 w-full h-full" />
-      </div>
+      {heroIllust ? (
+        <div className="hidden lg:block relative bg-[#f4f1ea]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`${BASE}${heroIllust}`}
+            alt=""
+            className="absolute inset-0 w-full h-full object-contain p-16 xl:p-24"
+          />
+        </div>
+      ) : (
+        <div className="hidden lg:block relative">
+          <Photo src={heroSrc} alt="" position={heroPosition} className="absolute inset-0 w-full h-full" />
+        </div>
+      )}
 
       <div className="relative flex flex-col justify-center px-6 lg:px-16 py-12 lg:py-24">
         <div className="anim">

@@ -11,7 +11,7 @@ export default function Page() {
   return (
     <SubPageLayout category="治療方法" enTitle="APPLIANCE" jpTitle="矯正装置" heroSrc="/photos/appliance-hero.jpg">
       <PageSection>
-        <p className="text-[14px] leading-loose text-[#222] max-w-4xl">
+        <p className="text-[14px] leading-loose text-[#222] max-w-[62rem]">
           矯正装置にはさまざまな種類があり、矯正医は症例の特徴、年齢、習癖、患者さまのご希望などにより装置を選択して治療を行います。当院で用いる代表的な装置をご紹介します。
         </p>
       </PageSection>
@@ -53,7 +53,7 @@ export default function Page() {
           </div>
         </div>
         <p className="mt-10 text-[14px] leading-loose text-[#222]">
-          どちらの装置を使用するかは、歯並びや顎の成長、治療の目的などによって異なります。お子さま一人ひとりのお口の状態を確認したうえで、適した装置をご提案します。
+          使用する装置は、歯並びや顎の成長、治療の目的などによって異なります。ここでご紹介した以外にもさまざまな装置がありますので、お子さま一人ひとりのお口の状態を確認したうえで、適した装置をご提案します。
         </p>
       </PageSection>
 
