@@ -8,6 +8,9 @@ const BY_TYPE = [
   { tag: "overbite", title: "出っ歯（上顎前突）", href: "/symptoms/overbite/", src: "/photos/model-overbite-front.jpg", illust: "/photos/illust-overbite.png" },
   { tag: "underbite", title: "うけ口（下顎前突）", href: "/symptoms/underbite/", src: "/photos/model-underbite-front.jpg", illust: "/photos/illust-underbite.png" },
   { tag: "open bite", title: "開咬", href: "/symptoms/openbite/", src: "/photos/model-openbite-front.jpg", illust: "/photos/illust-openbite.png" },
+  // ↓ 模型写真は未支給のため src なし（TYPE_VISUAL="photo" 時は Placeholder 表示）
+  { tag: "spaced teeth", title: "すきっ歯（空隙歯列）", href: "/symptoms/spaced/", src: "", illust: "/photos/illust-spaced.png" },
+  { tag: "deep bite", title: "過蓋咬合", href: "/symptoms/deepbite/", src: "", illust: "/photos/illust-deepbite.png" },
 ];
 
 const RELATED = [
@@ -128,9 +131,9 @@ export default function Treatment() {
 
         <div className="mb-14 lg:mb-20">
           <SubHeader jp="不正咬合の種類から探す" />
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
             {BY_TYPE.map((c, i) =>
-              TYPE_VISUAL === "illust" ? (
+              TYPE_VISUAL === "illust" && c.illust ? (
                 <IllustCard key={c.tag} tag={c.tag} title={c.title} href={c.href} illust={c.illust} index={i} />
               ) : (
                 <DarkCard key={c.tag} tag={c.tag} title={c.title} href={c.href} src={c.src} ratio="1/1" index={i} size="sm" />

@@ -10,6 +10,8 @@ const SYMPTOMS = [
   { label: "出っ歯（上顎前突）", href: "/symptoms/overbite/" },
   { label: "乱杭歯（叢生）", href: "/symptoms/crowded/" },
   { label: "開咬", href: "/symptoms/openbite/" },
+  { label: "すきっ歯（空隙歯列）", href: "/symptoms/spaced/" },
+  { label: "過蓋咬合", href: "/symptoms/deepbite/" },
 ];
 const TREATMENT = [
   { label: "矯正治療について", href: "/treatment/" },
