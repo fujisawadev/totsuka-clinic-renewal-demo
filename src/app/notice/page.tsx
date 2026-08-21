@@ -2,7 +2,7 @@ import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
 
 export const metadata = {
-  title: "患者さんへのお願い｜ささき矯正歯科クリニック",
+  title: "患者様へのお願い｜ささき矯正歯科クリニック",
 };
 
 const ITEMS = [
@@ -18,10 +18,10 @@ const ITEMS = [
 
 export default function Page() {
   return (
-    <SubPageLayout category="ご来院前にお読みください" enTitle="NOTICE" jpTitle="患者さんへのお願い">
+    <SubPageLayout category="ご来院前にお読みください" enTitle="NOTICE" jpTitle="患者様へのお願い">
       <PageSection>
         <p className="text-[14px] leading-loose text-[#222] max-w-3xl mb-10">
-          より良い治療結果を得るため、また予定どおりに治療を進めるためには、患者さんや保護者の方の協力が非常に大切です。注意事項を守り、一日も早く健康で美しい歯ならびになるように頑張ってください。
+          より良い治療結果を得るため、また予定どおりに治療を進めるためには、患者様や保護者の方の協力が非常に大切です。注意事項を守り、一日も早く健康で美しい歯ならびになるように頑張ってください。
         </p>
         <ul className="space-y-6">
           {ITEMS.map((it, i) => (

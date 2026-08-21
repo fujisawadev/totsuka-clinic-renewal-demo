@@ -20,7 +20,7 @@ export default function Counseling() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-12 items-start max-w-[1400px] mx-auto mb-12 lg:mb-20">
           <div className="anim lg:pt-0">
-            <Photo src="/photos/counseling-1.jpg" alt="待合室で問診票を記入する患者さん" ratio="3/4" className="w-full max-w-sm mx-auto lg:ml-auto" />
+            <Photo src="/photos/counseling-1.jpg" alt="待合室で問診票を記入する患者様" ratio="3/4" className="w-full max-w-sm mx-auto lg:ml-auto" />
           </div>
 
           <div className="anim anim-delay-1 max-w-md text-center text-[14px] leading-[2] text-[#222] lg:pt-20">

@@ -64,7 +64,7 @@ export default function Hero() {
 
         <div className={`px-6 lg:px-10 ${TEXT_PB}`}>
           <h1 className="anim anim-delay-2 text-base sm:text-lg lg:text-xl leading-[2] tracking-wider text-white">
-            患者さんを笑顔に導く
+            患者様を笑顔に導く
             <br />
             横浜市戸塚区の矯正歯科専門医院
           </h1>

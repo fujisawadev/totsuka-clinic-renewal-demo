@@ -143,7 +143,7 @@ export default function Page() {
           </button>
         </form>
         <p className="mt-6 text-[12px] text-[#666] max-w-2xl mx-auto">
-          ※ このフォームは現時点ではダミーです。本番では、現行予約システム <span className="font-mono">/yoyaku/</span> と同等のバックエンド処理（管理画面への登録／医院へのメール通知／患者さまへの確認メール）を実装します。
+          ※ このフォームは現時点ではダミーです。本番では、現行予約システム <span className="font-mono">/yoyaku/</span> と同等のバックエンド処理（管理画面への登録／医院へのメール通知／患者様への確認メール）を実装します。
         </p>
       </PageSection>
 

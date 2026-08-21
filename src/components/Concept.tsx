@@ -2,9 +2,9 @@ import Link from "next/link";
 import Photo from "./Photo";
 
 const FEATURES = [
-  { num: "01", title: "1987年開業以来、地域に根ざした安心安全な矯正歯科治療", body: "開業から続く実績と臨床経験をもとに、地域の皆さまに寄り添いながら、患者さま一人ひとりに安心・安全な治療をご提案します。", src: "/photos/feature-exterior.jpg" },
+  { num: "01", title: "1987年開業以来、地域に根ざした安心安全な矯正歯科治療", body: "開業から続く実績と臨床経験をもとに、地域の皆さまに寄り添いながら、患者様一人ひとりに安心・安全な治療をご提案します。", src: "/photos/feature-exterior.jpg" },
   { num: "02", title: "7,000症例以上の臨床実績を持つ矯正専門医院", body: "矯正治療に特化した専門医院として、開業以来7,000症例を超える臨床実績。学会でも積極的に症例を発表しています。", src: "/photos/feature-director-desk.jpg" },
-  { num: "03", title: "日本矯正歯科学会認定医による診療", body: "歯学博士・日本矯正歯科学会認定医の院長が診療を担当。大学病院で臨床教授を務めた経験をもとに、患者さん本位の治療をご提供します。", src: "/photos/feature-certificates.jpg" },
+  { num: "03", title: "日本矯正歯科学会認定医による診療", body: "歯学博士・日本矯正歯科学会認定医の院長が診療を担当。大学病院で臨床教授を務めた経験をもとに、患者様に寄り添った治療をご提供します。", src: "/photos/feature-certificates.jpg" },
 ];
 
 const CHECKLIST = [
@@ -45,16 +45,16 @@ export default function Concept() {
           <div className="lg:col-span-6 anim anim-delay-1">
             <div className="space-y-5 text-[15px] leading-loose text-[#222]">
               <p>
-                ささき矯正歯科クリニックは、矯正専門の歯科医院です。1987年の開業以来、地域に根ざし、矯正専門の歯科医として大学病院での勤務経験と長年の臨床経験をもとに、患者さん一人ひとりに最適な矯正治療をご提供しています。
+                ささき矯正歯科クリニックは、矯正専門の歯科医院です。1987年の開業以来、地域に根ざし、矯正専門の歯科医として大学病院での勤務経験と長年の臨床経験をもとに、患者様一人ひとりに最適な矯正治療をご提供しています。
               </p>
               <p>
-                アットホームな雰囲気のなかで、患者さん本位の診療を行っておりますので、安心して通院いただけます。
+                アットホームな雰囲気のなかで、患者様に寄り添った診療を行っておりますので、安心して通院いただけます。
               </p>
             </div>
             <div className="w-full h-px bg-[#e3e3e3] my-10" />
           </div>
           <div className="lg:col-span-4 anim anim-delay-2">
-            <Photo src="/photos/concept-counseling.jpg" alt="患者さんと対話する院長" ratio="3/4" className="w-full" />
+            <Photo src="/photos/concept-counseling.jpg" alt="患者様と対話する院長" ratio="3/4" className="w-full" />
           </div>
         </div>
 
