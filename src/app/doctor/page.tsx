@@ -78,8 +78,8 @@ const VICE_REGIONAL = [
 ];
 
 const CERTIFIED_DOCTORS = [
+  { name: "藤澤 靖子", en: "Yasuko Fujisawa", title: "日本矯正歯科学会 認定医", src: "/photos/doctor-fujisawa.jpg" },
   { name: "磯野 亜由美", en: "Ayumi Isono", title: "日本矯正歯科学会 認定医", src: "/photos/doctor-isono.jpg" },
-  { name: "藤沢 のぶこ", en: "Nobuko Fujisawa", title: "日本矯正歯科学会 認定医", src: "/photos/doctor-fujisawa.jpg" },
 ];
 
 function List({ items }: { items: string[] }) {
