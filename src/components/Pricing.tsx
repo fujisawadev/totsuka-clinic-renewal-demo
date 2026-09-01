@@ -75,7 +75,7 @@ export default function Pricing() {
 
         <div className="anim mt-8 space-y-2 text-[12px] text-[#666] leading-loose">
           <p>※ 装置がお口の中に装着されてから、Aの場合は1年以内、BCDの場合は6か月以内に矯正施術料を分割または一括で納入いただきます。</p>
-          <p>※ スルガ銀行・アプラスのデンタルローン（分割払い）もご利用いただけます。</p>
+          <p>※ スルガ銀行のデンタルローン（分割払い）もご利用いただけます。</p>
           <p>※ 詳細は <a href="#counseling" className="link-underline">初診相談</a> にてご説明いたします。</p>
         </div>
       </div>

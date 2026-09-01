@@ -40,10 +40,9 @@ const FEE_ROWS: Row[] = [
   { name: "診断書料", price: "¥5,500 〜 22,000", note: "" },
 ];
 
-// デンタルローン（スルガ銀行・アプラスは現行サイトから継承、エポスは新規追加）
+// デンタルローン（スルガ銀行は現行サイトから継承、エポスは新規追加）
 const LOANS = [
   { en: "Dental Loan", name: "スルガ銀行", service: "デンタルローン", href: "https://www.surugabank.co.jp/reserved/landing/dental/" },
-  { en: "Dental Loan", name: "アプラス", service: "デンタルローン", href: "https://www.aplus.co.jp/loan/credit/dental/" },
   { en: "Dental Credit", name: "エポスカード（マルイ）", service: "デンタルクレジット", href: "https://www.eposcard.co.jp/dental_cre/index.html" },
 ];
 
