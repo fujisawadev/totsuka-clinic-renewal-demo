@@ -78,8 +78,8 @@ const VICE_REGIONAL = [
 ];
 
 const CERTIFIED_DOCTORS = [
-  { name: "藤澤 靖子", en: "Yasuko Fujisawa", title: "日本矯正歯科学会 認定医", src: "/photos/doctor-fujisawa.jpg" },
   { name: "磯野 亜由美", en: "Ayumi Isono", title: "日本矯正歯科学会 認定医", src: "/photos/doctor-isono.jpg" },
+  { name: "藤澤 靖子", en: "Yasuko Fujisawa", title: "日本矯正歯科学会 認定医", src: "/photos/doctor-fujisawa.jpg" },
 ];
 
 function List({ items }: { items: string[] }) {
@@ -94,17 +94,17 @@ function List({ items }: { items: string[] }) {
 
 export default function Page() {
   return (
-    <SubPageLayout category="医院について" enTitle="DOCTOR & STAFF" jpTitle="医師・スタッフ紹介" heroSrc="/photos/hero-team.jpg">
+    <SubPageLayout category="医院について" enTitle="DOCTOR & STAFF" jpTitle="医師・スタッフ紹介">
       <PageSection>
         <p className="text-[15px] leading-loose text-[#222] max-w-[59rem]">
           当院には、日本矯正歯科学会認定医の資格を持つ経験豊富なドクターと、矯正治療に精通したスタッフが在籍しています。カウンセリングから治療、日々のケアまで、チーム一丸となって患者様に寄り添います。
         </p>
-        {/* PC はページ上部のヒーローに集合写真が表示されるため、スマホのみここに掲載 */}
+        {/* 集合写真は切り抜かず全体を表示する（ヒーローに入れると PC で見切れるため本文に掲載） */}
         <Photo
           src="/photos/hero-team.jpg"
           alt="ささき矯正歯科クリニックのドクター・スタッフ"
           ratio="3/2"
-          className="mt-8 w-full lg:hidden"
+          className="mt-8 w-full"
         />
       </PageSection>
 
@@ -214,6 +214,18 @@ export default function Page() {
         </div>
         <p className="mt-10 text-[14px] leading-loose text-[#222] max-w-3xl">
           当院には、院長・副院長のほかにも日本矯正歯科学会認定医が多数在籍しています。矯正治療に精通したドクターが、患者様一人ひとりの治療にあたります。
+        </p>
+      </PageSection>
+
+      <PageSection enTitle="Staff" jpTitle="スタッフ" bg="soft">
+        <Photo
+          src="/photos/recruit-staff.jpg"
+          alt="ささき矯正歯科クリニックのスタッフ"
+          ratio="3/2"
+          className="w-full"
+        />
+        <p className="mt-8 text-[14px] leading-loose text-[#222] max-w-3xl">
+          矯正治療に精通したスタッフが、受付から診療のサポートまで、患者様を温かくお迎えいたします。
         </p>
       </PageSection>
     </SubPageLayout>
