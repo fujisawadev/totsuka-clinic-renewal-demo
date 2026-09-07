@@ -12,7 +12,7 @@ export default function Page() {
     <SubPageLayout category="ご相談・お問い合わせ" enTitle="FAQ" jpTitle="よくある質問">
       <PageSection>
         <p className="text-[14px] leading-loose text-[#444] mb-10 max-w-2xl">
-          患者様からよく頂く質問と回答をまとめています。こちらをご覧いただいてもご不明な点、ご心配な点などございましたら、お気軽にお問い合わせください。
+          患者さんからよく頂く質問と回答をまとめています。こちらをご覧いただいてもご不明な点、ご心配な点などございましたら、お気軽にお問い合わせください。
         </p>
         <FAQ headless />
       </PageSection>

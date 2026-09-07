@@ -49,7 +49,7 @@ export default function Page() {
             <p className="text-[#9a998e] text-xs tracking-[0.3em] mb-3">スタッフ募集</p>
             <h2 className="text-2xl lg:text-3xl tracking-wider mb-6">私たちと一緒に働きませんか？</h2>
             <p className="text-[14px] leading-loose text-[#222]">
-              ささき矯正歯科クリニックでは、患者様に寄り添った診療を一緒に作り上げてくださる方を募集しています。<br />
+              ささき矯正歯科クリニックでは、患者さんに寄り添った診療を一緒に作り上げてくださる方を募集しています。<br />
               アットホームな雰囲気のなかで、長く活躍できる職場を目指しています。
             </p>
           </div>

@@ -43,7 +43,7 @@ const COLUMNS = [
       { label: "よくある質問", href: "/faq/" },
       { label: "矯正歯科コラム", href: "/columns/" },
       { label: "お知らせ", href: "/news/" },
-      { label: "患者様へのお願い", href: "/notice/" },
+      { label: "患者さんへのお願い", href: "/notice/" },
       { label: "治療に関するご注意", href: "/precautionary/" },
       { label: "リスク・副作用について", href: "/risk/" },
       { label: "リンク集", href: "/links/" },
