@@ -38,6 +38,7 @@ export default function Counseling() {
               </a>
               <Link
                 href="/booking/"
+                data-ga-event="reserve_click"
                 className="inline-flex items-center justify-center whitespace-nowrap border border-[#9a998e] text-[#9a998e] text-sm tracking-widest px-6 py-4 hover:bg-[#9a998e] hover:text-white transition"
               >
                 ネット予約はこちら →

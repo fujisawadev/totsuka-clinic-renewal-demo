@@ -1,0 +1,31 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/kyouseitoha.html", "destination": "/treatment/", "permanent": true },
+    { "source": "/susumekata.html", "destination": "/process/", "permanent": true },
+    { "source": "/annai.html", "destination": "/access-info/", "permanent": true },
+    { "source": "/first.html", "destination": "/first-visit/", "permanent": true },
+    { "source": "/plan.html", "destination": "/pricing/", "permanent": true },
+    { "source": "/ukekuti.html", "destination": "/symptoms/underbite/", "permanent": true },
+    { "source": "/deppa.html", "destination": "/symptoms/overbite/", "permanent": true },
+    { "source": "/rankoukaiko.html", "destination": "/symptoms/crowded/", "permanent": true },
+    { "source": "/geka.html", "destination": "/surgical/", "permanent": true },
+    { "source": "/bassi.html", "destination": "/extraction/", "permanent": true },
+    { "source": "/afutakea.html", "destination": "/aftercare/", "permanent": true },
+    { "source": "/hikaku.html", "destination": "/before-after/", "permanent": true },
+    { "source": "/souti.html", "destination": "/appliance/", "permanent": true },
+    { "source": "/risk.html", "destination": "/risk/", "permanent": true },
+    { "source": "/precautionary.html", "destination": "/precautionary/", "permanent": true },
+    { "source": "/notice.html", "destination": "/notice/", "permanent": true },
+    { "source": "/question.html", "destination": "/faq/", "permanent": true },
+    { "source": "/link.html", "destination": "/links/", "permanent": true },
+    { "source": "/news.cgi", "destination": "/news/", "permanent": true },
+    { "source": "/businessblog", "destination": "/news/", "permanent": true },
+    { "source": "/businessblog/:path*", "destination": "/news/", "permanent": true },
+    { "source": "/yokohama-orthodontic-dentistry", "destination": "/columns/", "permanent": true },
+    { "source": "/yokohama-orthodontic-dentistry/", "destination": "/columns/", "permanent": true },
+    { "source": "/yokohama-orthodontic-dentistry/index.html", "destination": "/columns/", "permanent": true },
+    { "source": "/yokohama-orthodontic-dentistry/:slug(faq\\d+)\\.html", "destination": "/columns/:slug/", "permanent": true }
+  ]
+}

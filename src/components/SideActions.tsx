@@ -43,6 +43,7 @@ export default function SideActions() {
             <Link
               key={a.label}
               href={a.href}
+              data-ga-event="reserve_click"
               className="w-12 h-32 bg-[#f4f1ea] text-[#9a998e] hover:bg-[#e9e3d6] hover:text-[#222] transition flex items-center justify-center text-[13px] tracking-[0.25em]"
               style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
             >
@@ -68,6 +69,7 @@ export default function SideActions() {
             <Link
               key={a.label}
               href={a.href}
+              data-ga-event="reserve_click"
               className="bg-[#f4f1ea] text-[#9a998e] hover:bg-[#e9e3d6] transition flex items-center justify-center min-h-[52px] py-4 text-xs tracking-wider"
             >
               {a.label}
