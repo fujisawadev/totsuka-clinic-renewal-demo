@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Photo from "./Photo";
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 type Props = {
   category: string;
   enTitle: string;
@@ -20,7 +18,7 @@ export default function SubPageHero({ category, enTitle, jpTitle, heroSrc = "/ph
         <div className="hidden lg:block relative bg-[#f4f1ea]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={`${BASE}${heroIllust}`}
+            src={heroIllust}
             alt=""
             className="absolute inset-0 w-full h-full object-contain p-16 xl:p-24"
           />
