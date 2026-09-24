@@ -16,6 +16,9 @@ concurrency:
 
 jobs:
   build:
+    # デモ用リポジトリ(fujisawadev)でのみ GitHub Pages へデプロイする。
+    # 本番リポジトリ(間宮氏アカウント)では Vercel が担うため、このワークフローはスキップされる。
+    if: github.repository_owner == 'fujisawadev'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
