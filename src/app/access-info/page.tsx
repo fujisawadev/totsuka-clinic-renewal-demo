@@ -2,6 +2,7 @@ import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
 import Photo from "@/components/Photo";
 import GoogleMap from "@/components/GoogleMap";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 export const metadata = {
   title: "院内紹介・交通｜ささき矯正歯科クリニック",
@@ -63,6 +64,26 @@ export default function Page() {
               <p className="text-[12px] text-[#666] leading-loose">{f.body}</p>
             </article>
           ))}
+        </div>
+      </PageSection>
+
+      <PageSection enTitle="Route" jpTitle="戸塚駅からの道順">
+        <div className="max-w-3xl">
+          <p className="text-[14px] leading-loose text-[#222] mb-6">
+            戸塚駅東口から当院までの徒歩ルートを動画でご案内しています。初めてお越しの方はご来院前にご覧ください。
+          </p>
+          <YouTubeEmbed videoId="6EFHxlZ3g5o" title="ささき矯正歯科クリニックの徒歩ルート（戸塚駅から）" />
+          <p className="mt-3 text-[12px] text-[#9a998e] tracking-wider">
+            動画提供: 横浜ドクターズ ／{" "}
+            <a
+              href="https://www.youtube.com/watch?v=6EFHxlZ3g5o"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline"
+            >
+              YouTube で開く
+            </a>
+          </p>
         </div>
       </PageSection>
 
