@@ -70,8 +70,6 @@ function DarkCard({
   );
 }
 
-const BASE = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 function IllustCard({
   tag,
   title,
@@ -94,7 +92,7 @@ function IllustCard({
       <div className="relative flex-1 min-h-0">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={`${BASE}${illust}`}
+          src={illust}
           alt={title}
           className="absolute inset-0 w-full h-full object-contain p-2 lg:p-4 transition-transform duration-500 group-hover:scale-[1.04]"
         />
